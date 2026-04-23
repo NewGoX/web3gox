@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课程体系 — Web3系统学习营</title>
+<link rel="stylesheet" href="style.css">
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+  /* L1/L2/L3/L4 一级标题：比文章链接+2号 = 15.5px */
+  .sidebar-section-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* 章节二级标题：比文章链接+1号 = 14.5px */
+  .sidebar-chapter {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  /* 正文段落不缩进 */
+  .body-p {
+    text-indent: 0 !important;
+  }
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">GoX</span><span class="logo-text">Web3系统学习营</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="courses.html" class="nav-dropdown-toggle active">课程体系 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="courses.html#l1">L1  ·  读懂Web3</a>
+          <a href="courses.html#l2">L2  ·  Web3实操入门</a>
+          <a href="courses.html#l3">L3  ·  Web3实操进阶</a>
+          <a href="courses.html#l4">L4  ·  DeFi 协议实战</a>
+          <a href="courses.html#l5">L5  ·  Web3项目研究</a>
+        </div>
+      </div>
+      <a href="research.html">项目研究</a>
+      <a href="tools.html">Web3 工具</a>
+      <a href="topics.html">专题系列</a>
+      <a href="about.html">关于</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+      <a href="about.html#join" class="btn btn-primary btn-sm">加入社群</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="mobile-section-title">课程体系</div>
+    <a href="courses.html#l1" class="mobile-sub">读懂 Web3</a>
+    <a href="courses.html#l2" class="mobile-sub">Web3实操入门</a>
+    <a href="courses.html#l3" class="mobile-sub">Web3实操进阶</a>
+    <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
+    <a href="courses.html#l5" class="mobile-sub">Web3项目研究</a>
+    <a href="research.html">项目研究</a>
+    <a href="tools.html">Web3 工具</a>
+    <a href="topics.html">专题系列</a>
+    <a href="about.html">关于</a>
+    <a href="about.html#join" class="mobile-cta">加入社群 →</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">课程体系</div>
+    <h1>四阶段 · 完整学习路径</h1>
+    <p>从完全零基础到能独立做项目研究，每个阶段都有清晰的能力目标</p>
+  </div>
+</div>
+<div class="course-layout">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-title">目录导航</div>
+    <div style="padding:0 0 8px;"><a href="#overview" class="sidebar-link">课程概览</a></div>
+    <div class="sidebar-section-title" data-section="l1"><span class="s-dot s-teal"></span> Level 1 · 读懂 Web3</div>
+    <div class="sidebar-section">
+      <div class="sidebar-chapter">第一章 · 认知觉醒</div>
+      <a href="#l1-01" class="sidebar-link">1-01 : 互联网的进化:Web1到Web3</a>
+      <a href="#l1-02" class="sidebar-link">1-02 : 数据所有权:Web3最核心的革命</a>
+      <a href="#l1-03" class="sidebar-link">1-03 : 去中心化是什么意思？</a>
+      <div class="sidebar-chapter">第二章 · 区块链运作逻辑</div>
+      <a href="#l1-04" class="sidebar-link">1-04 : 数字钱包与私钥</a>
+      <a href="#l1-05" class="sidebar-link">1-05 : 区块链到底是什么？</a>
+      <a href="#l1-06" class="sidebar-link">1-06 : 交易如何被记录和确认？</a>
+      <div class="sidebar-chapter">第三章 · 认识主流公链</div>
+      <a href="#l1-07" class="sidebar-link">1-07 : 比特币是什么？</a>
+      <a href="#l1-08" class="sidebar-link">1-08 : 以太坊是什么？</a>
+      <a href="#l1-09" class="sidebar-link">1-09 : Solana 是什么？</a>
+      <a href="#l1-10" class="sidebar-link">1-10 : 三条链横向对比</a>
+      <div class="sidebar-chapter">第四章 · 机会与风险</div>
+      <a href="#l1-11" class="sidebar-link">1-11 : Web3 里有哪些真实机会</a>
+      <a href="#l1-12" class="sidebar-link">1-12 : Web3 里有哪些真实陷阱</a>
+      <a href="#l1-13" class="sidebar-link">1-13 : 普通人参与 Web3 的正确姿势</a>
+      <div class="sidebar-chapter">第五章 · 项目生态图谱</div>
+      <a href="#l1-14" class="sidebar-link">1-14 : 稳定币是什么？</a>
+      <a href="#l1-15" class="sidebar-link">1-15 : 去中心化交易所（DEX）</a>
+      <a href="#l1-16" class="sidebar-link">1-16 : 链上借贷协议</a>
+      <a href="#l1-17" class="sidebar-link">1-17 : 流动性挖矿和质押</a>
+      <a href="#l1-18" class="sidebar-link">1-18 : 预测市场</a>
+      <a href="#l1-19" class="sidebar-link">1-19 : 股票代币化与 RWA</a>
+      <a href="#l1-20" class="sidebar-link">1-20 : NFT、GameFi、Web3 生态全景</a>
+    </div>
+    <div class="sidebar-section-title" data-section="l2"><span class="s-dot s-blue"></span>Level 2 · Web3实操入门</div>
+    <div class="sidebar-section">
+      <div class="sidebar-chapter">第一章 · 交易所注册</div>
+      <a href="#l2-1" class="sidebar-link">2-01 CEX vs DEX 如何选择</a>
+      <a href="#l2-2" class="sidebar-link">2-02 币安注册教程</a>
+      <a href="#l2-3" class="sidebar-link">2-03 OKX 注册教程</a>
+      <a href="#l2-4" class="sidebar-link">2-04 Bybit 注册教程</a>
+      <a href="#l2-5" class="sidebar-link">2-05 Bitget 注册教程</a>
+      <a href="#l2-6" class="sidebar-link">2-06 Backpack 注册教程</a>
+      <a href="#l2-7" class="sidebar-link">2-07 Kraken 注册教程</a>
+      <div class="sidebar-chapter">第二章 · 法币出入金</div>
+      <a href="#l2-8" class="sidebar-link">2-08 币安 C2C 入金</a>
+      <a href="#l2-9" class="sidebar-link">2-09 币安法币入金</a>
+      <a href="#l2-10" class="sidebar-link">2-10 币安 C2C 出金</a>
+      <a href="#l2-11" class="sidebar-link">2-11 币安法币出金</a>
+      <a href="#l2-12" class="sidebar-link">2-12 Backpack 出金</a>
+      <a href="#l2-13" class="sidebar-link">2-13 Kraken 出金</a>
+      <div class="sidebar-chapter">第三章 · 钱包管理</div>
+      <a href="#l2-14" class="sidebar-link">2-14 钱包不是存钱的</a>
+      <a href="#l2-15" class="sidebar-link">2-15 钱包怎么选</a>
+      <a href="#l2-16" class="sidebar-link">2-16 助记词是什么</a>
+      <a href="#l2-17" class="sidebar-link">2-17 助记词怎么保管</a>
+      <a href="#l2-18" class="sidebar-link">2-18 MetaMask 安装与使用</a>
+      <a href="#l2-19" class="sidebar-link">2-19 给钱包添加网络</a>
+      <a href="#l2-20" class="sidebar-link">2-20 管理多个钱包账户</a>
+      <div class="sidebar-chapter">第四章 · 链上操作</div>
+      <a href="#l2-21" class="sidebar-link">2-21 Gas 费是什么</a>
+      <a href="#l2-22" class="sidebar-link">2-22 交易所提币到钱包</a>
+      <a href="#l2-23" class="sidebar-link">2-23 钱包发代币到交易所</a>
+      <a href="#l2-24" class="sidebar-link">2-24 钱包之间如何转账</a>
+      <a href="#l2-25" class="sidebar-link">2-25 如何查看转账记录</a>
+    </div>
+    <div class="sidebar-section-title" data-section="l3"><span class="s-dot s-gold"></span> Level 3 · Web3实操进阶</div>
+    <div class="sidebar-section">
+      <div class="sidebar-chapter">第一章 · 底层机制</div>
+      <a href="#l3-1" class="sidebar-link">3-01 DeFi 是什么</a>
+      <a href="#l3-2" class="sidebar-link">3-02 利息收益 从哪里来？</a>
+      <a href="#l3-3" class="sidebar-link">3-03 DEX 是如何定价的</a>
+      <a href="#l3-4" class="sidebar-link">3-04 DeFi 三大核心风险</a>
+      <div class="sidebar-chapter">第二章 · 实战策略</div>
+      <a href="#l3-5" class="sidebar-link">3-05 稳定币收益策略</a>
+      <a href="#l3-6" class="sidebar-link">3-06 LSD 流动质押入门</a>
+      <a href="#l3-7" class="sidebar-link">3-07 空投策略：系统参与</a>
+      <a href="#l3-8" class="sidebar-link">3-08 DefiLlama 数据解读</a>
+      <a href="#l3-9" class="sidebar-link">3-09 聪明钱追踪方法</a>
+      <a href="#l3-10" class="sidebar-link">3-10 Dune Analytics 入门</a>
+      <a href="#l3-11" class="sidebar-link">3-11 DeFi 风险管理框架</a>
+      <a href="#l3-12" class="sidebar-link">3-12 加密资产税务与合规</a>
+    </div>
+    <div class="sidebar-section-title" data-section="l4"><span class="s-dot s-purple"></span> Level 4 · DeFi 协议实战</div>
+    <div class="sidebar-section">
+      <a href="#l4-1" class="sidebar-link">4-01 Uniswap 实操</a>
+      <a href="#l4-2" class="sidebar-link">4-02 Jupiter 实操</a>
+      <a href="#l4-3" class="sidebar-link">4-03 Curve 实操</a>
+      <a href="#l4-4" class="sidebar-link">4-04 Lido 质押实操</a>
+      <a href="#l4-5" class="sidebar-link">4-05 EigenLayer 再质押</a>
+      <a href="#l4-6" class="sidebar-link">4-06 Aave 借贷实操</a>
+      <a href="#l4-7" class="sidebar-link">4-07 Sky（MakerDAO）实操</a>
+      <a href="#l4-8" class="sidebar-link">4-08 Morpho 实操</a>
+      <a href="#l4-9" class="sidebar-link">4-09 Ethena 实操</a>
+      <a href="#l4-10" class="sidebar-link">4-10 Pendle 实操</a>
+      <a href="#l4-11" class="sidebar-link">4-11 Xstock 实操</a>
+      <a href="#l4-12" class="sidebar-link">4-12 Polymarket 实操</a>
+      <a href="#l4-13" class="sidebar-link">4-13 Hyperliquid 实操</a>
+    </div>
+    <div class="sidebar-section-title" data-section="l5"><span class="s-dot s-rose"></span> Level 5 · Web3项目研究</div>
+    <div class="sidebar-section">
+      <div class="sidebar-chapter">第一章 · 研究框架</div>
+      <a href="#l5-1" class="sidebar-link">5-01 如何评估一个 Web3 项目</a>
+      <a href="#l5-2" class="sidebar-link">5-02 白皮书怎么读</a>
+      <a href="#l5-3" class="sidebar-link">5-03 团队背景调查方法</a>
+      <div class="sidebar-chapter">第二章 · 链上数据分析</div>
+      <a href="#l5-4" class="sidebar-link">5-04 链上数据分析基础</a>
+      <a href="#l5-5" class="sidebar-link">5-05 TVL 与协议收入解读</a>
+      <a href="#l5-6" class="sidebar-link">5-06 聪明钱追踪方法</a>
+      <a href="#l5-7" class="sidebar-link">5-07 Dune Analytics 实战</a>
+      <div class="sidebar-chapter">第三章 · 代币经济模型</div>
+      <a href="#l5-8" class="sidebar-link">5-08 代币经济模型分析</a>
+      <a href="#l5-9" class="sidebar-link">5-09 解锁计划与抛压评估</a>
+      <a href="#l5-10" class="sidebar-link">5-10 如何辨别早期项目机会</a>
+    </div>
+    
+  </div>
+</aside>
+<article class="course-content">
+<section id="overview" class="content-section">
+  <h2>课程概览</h2>
+  <p style="font-size:14.5px;color:var(--text2);line-height:1.75;margin-bottom:16px;">四个阶段按能力递进设计，全部内容完全免费开放：</p>
+  <div class="overview-levels">
+    <div class="ov-item ov-teal"><span class="ov-label">Level 1</span><span class="ov-text">读懂 Web3，建立完整的认知体系  <strong></strong></span></div>
+    <div class="ov-item ov-blue"><span class="ov-label">Level 2</span><span class="ov-text">能独立操作链上，识别并规避常见风险  <strong></strong></span></div>
+    <div class="ov-item ov-gold"><span class="ov-label">Level 3</span><span class="ov-text">能参与 DeFi，理解收益来源并管理风险 · <strong>近期更新</strong></span></div>
+    <div class="ov-item ov-purple"><span class="ov-label">Level 4</span><span class="ov-text">熟悉主流 DeFi 协议，能独立完成链上实操 · <strong>近期更新</strong></span></div>
+    <div class="ov-item ov-rose"><span class="ov-label">Level 5</span><span class="ov-text">掌握 Web3 项目研究方法，抓下轮潜在十倍项目 · <strong>近期更新</strong></span></div>
+  </div>
+</section>
+
+<section id="l1" class="level-section">
+  <div class="level-header lh-teal">
+    <div class="level-num">01</div>
+    <div class="level-header-content">
+      <div class="level-tag" style="color:var(--teal);">Level 1 · 20 篇课程 · 免费开放</div>
+      <h2>读懂 Web3</h2>
+      <p>不是教你操作，是帮你建立完整认知。从互联网演变到链上生态全景，看懂 Web3 世界的底层逻辑。</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <div class="chapter-title">第一章 · 认知觉醒：为什么要关注 Web3？</div>
+    <div class="module" id="l1-01">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-01', this)">
+        <div class="module-title">Web1、Web2、Web3：互联网三个时代的本质区别</div>
+        <div class="module-desc">互联网的三次进化，本质上是一部关于控制权归属的演变史。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-01"><p class="body-p">互联网的三次进化，本质上是一部关于<strong>控制权归属</strong>的演变史。每一次迭代都重新回答同一个问题：谁拥有数据，谁制定规则，谁获取价值。</p>
+<h3>Web1：只能看，不能说话的互联网（1991—2004）</h3>
+<p class="body-p">Web1 时代的互联网功能极为单一：内容由少数人发布，其他所有人只能阅读。没有评论区，没有账号。雅虎、新浪这类门户网站是这一时代的代表——内容流向是单向的：从发布者到读者。Web1 真正解决的问题只有一个：让全球任何地方的人都能以极低成本获取信息。</p>
+<h3>Web2：你创造内容，平台拥有一切（2004—至今）</h3>
+<p class="body-p">Web2 让用户从"读者"变成"参与者"——但这个创新有一个隐藏代价：你创造的所有内容和行为数据，所有权归平台。微信有权删除你的账号，抖音有权限流你的视频。你以为自己在"使用"这些平台，实际上你是原材料——你的注意力和数据，才是平台真正出售的商品。</p>
+<h3>Web3：让用户真正拥有自己的数字资产</h3>
+<p class="body-p">Web3 的核心命题是：能不能在不依赖任何平台的前提下，让用户真正拥有自己的数字资产和身份？区块链技术给出了一个可能的答案——把资产所有权记录在一个任何人都无法单独控制的账本上。你的代币不存在任何公司的服务器里，而是存在于全球分布式节点共同维护的账本上。</p>
+<blockquote><p><strong>本篇小结：</strong>Web1 是只读互联网，Web2 是读写互联网（但平台拥有数据），Web3 是读写拥有互联网（用户真正拥有数字资产）。这三个时代的核心区别不是技术，而是控制权和价值归属的逻辑。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-02">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-02', this)">
+        <div class="module-title">数据所有权：Web3 最核心的革命</div>
+        <div class="module-desc">Web2 的商业模式本质是：你用数据交换服务。Web3 试图颠覆这一点。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-02"><p class="body-p">你在微信发的每一条朋友圈、在淘宝的每一次购买行为——这些数据的法律意义上的所有权，全部属于平台。你无法带走，无法转移，平台可以随时访问、分析、出售。这不是阴谋论，是这些平台用户协议里写明的条款。</p>
+<h3>为什么数据所有权重要？</h3>
+<p class="body-p">数据所有权的缺失带来三个直接问题：第一，你创造的内容价值被平台截留；第二，你的数字身份完全依附于平台，账号被封则积累归零；第三，平台可以随时修改规则，你对此毫无制衡能力。</p>
+<h3>Web3 如何解决这个问题？</h3>
+<p class="body-p"><strong>NFT</strong> 证明了数字资产唯一所有权的可能性，你的链上资产由你的私钥控制，不依附于任何平台；<strong>去中心化身份（DID）</strong>让你的数字身份跨平台、不可撤销；<strong>智能合约</strong>把平台规则写进代码，收益自动按比例分配给贡献者，而非全部流向平台股东。</p>
+<blockquote><p><strong>本篇小结：</strong>数据所有权是 Web3 最核心的价值主张。NFT、去中心化身份、智能合约收益分配，都是这一主张的具体实现形式。理解这一点，才能分清 Web3 的真实价值与投机炒作。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-03">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-03', this)">
+        <div class="module-title">去中心化是什么意思？</div>
+        <div class="module-desc">去中心化不是一个开关，而是一个程度问题。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-03"><p class="body-p">去中心化这个词被用烂了。项目方动辄宣称"完全去中心化"，但除非你知道它真正指的是什么，否则这个词对你几乎没有实际意义。</p>
+<h3>中心化 vs 去中心化：控制权在哪里？</h3>
+<p class="body-p">中心化的本质是：存在一个单一实体，可以单方面修改规则、冻结账户、关闭服务。银行可以冻结你的账户；微信可以封号。去中心化网络中，控制权分散在数千个独立节点手里。以太坊上没有任何一个实体可以单方面修改协议规则，因为需要全网大多数节点达成共识才能改变任何东西。</p>
+<h3>去中心化的程度谱系</h3>
+<p class="body-p">去中心化不是非黑即白，而是一个连续的谱系。比特币是迄今去中心化程度最高的网络——没有创始人、没有基金会可以关闭它。大多数 DeFi 协议仍有团队多签控制升级权限，治理代币高度集中在早期投资人手中。辨别方法：看智能合约是否可升级、多签密钥由谁持有、治理代币分布如何——这三个问题比任何营销文案都诚实。</p>
+<blockquote><p><strong>本篇小结：</strong>去中心化的实质是控制权的分散程度。评估一个项目是否真的"去中心化"，要看谁能修改规则、谁持有关键密钥，而不是听项目方的自我标榜。</p></blockquote></div>
+    </div>
+    <div class="chapter-title">第二章 · 区块链运作逻辑</div>
+    <div class="module" id="l1-04">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-04', this)">
+        <div class="module-title">数字钱包与私钥：你真正需要理解的 Web3 入口</div>
+        <div class="module-desc">钱包不存钱，它存的是你的私钥——控制链上资产的唯一凭证。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-04"><p class="body-p">Web3 里最重要的一课，不是哪个协议值得投，而是理解私钥——你的资产安全的唯一保障，也是唯一威胁。</p>
+<h3>钱包的本质：私钥管理工具</h3>
+<p class="body-p">数字钱包不像银行账户一样"存"着你的资产。你的代币实际上记录在区块链的账本里。钱包的作用是储存你的<strong>私钥</strong>，让你能够用私钥签署交易，向网络证明"这笔操作经过账户持有人授权"。私钥本质上是一串 256 位的随机数，由它派生出公钥，再派生出你的钱包地址。</p>
+<h3>助记词：私钥的人类可读版本</h3>
+<p class="body-p">256 位随机数太难记忆，所以标准钱包用 12 或 24 个英文单词（助记词/Seed Phrase）来表示私钥。助记词 = 私钥，两者一一对应。任何人只要有你的助记词，就可以完全控制你的所有资产。一旦丢失，链上资产永久无法找回。</p>
+<h3>最重要的安全原则</h3>
+<p class="body-p">助记词只抄写在纸上，不截图，不存手机，不存云端，不发给任何人（包括"官方客服"）。没有任何正规平台需要你提供助记词。这不是建议，是规则。</p>
+<blockquote><p><strong>本篇小结：</strong>钱包 = 私钥管理工具。助记词 = 私钥的备份，拥有助记词就拥有资产控制权。丢失助记词 = 永久丢失资产。泄露助记词 = 资产被盗。这是 Web3 最重要的一课，没有之一。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-05">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-05', this)">
+        <div class="module-title">区块链到底是什么？一本谁都能看、谁都不能改的账本</div>
+        <div class="module-desc">区块链是一种由全球分散节点共同维护的账本，用数学和经济博弈替代了对中间机构的信任依赖。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-05"><p class="body-p">区块链这个词被滥用到几乎失去意义。理解区块链的真实含义，需要从它解决的具体问题入手。</p>
+<h3>核心问题：如何在没有中间人的情况下建立信任</h3>
+<p class="body-p">假设你要和一个陌生人做交易——没有银行、没有支付宝担保。区块链的解决思路是：让交易记录被全球数千个互不相识的人同时保存，且任何单一参与者都无法修改已有记录。</p>
+<h3>区块的结构</h3>
+<p class="body-p">每个区块包含三个核心要素：<strong>交易数据</strong>、<strong>时间戳</strong>、<strong>前一个区块的哈希值</strong>（上一批记录的数学指纹）。哈希函数的特性是：输入数据哪怕改变一个字符，输出的哈希值会完全不同。因此，修改历史区块的数据会导致后续所有区块的哈希都需要重新计算，全网节点会立即发现不一致。这就是不可篡改性的技术来源。</p>
+<h3>共识机制：谁有权打包下一个区块</h3>
+<p class="body-p"><strong>工作量证明（PoW）：</strong>比特币使用的机制，通过大量计算竞争出块权，诚实挖矿的经济收益远超作弊。<strong>权益证明（PoS）：</strong>以太坊 2022 年转用的机制，验证者质押代币获得出块资格，恶意行为导致质押代币被销毁，能耗比 PoW 低约 99.95%。</p>
+<blockquote><p><strong>本篇小结：</strong>区块链是全球分散节点共同维护的账本，哈希函数确保历史记录无法被悄悄篡改，共识机制确保新区块的产生规则被所有参与者认可。这套设计用数学和经济博弈替代了对中间机构的信任依赖。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-06">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-06', this)">
+        <div class="module-title">交易是如何被记录和确认的？从发出到上链的全过程</div>
+        <div class="module-desc">点击发送到余额到账——这中间的几秒到几十秒里发生了什么？</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-06"><p class="body-p">点击"发送"，到余额真正到账——理解这个过程，能帮你看懂交易为什么会"卡住"，Gas 费为什么会波动，以及"确认数"代表什么。</p>
+<h3>第一步：签署交易</h3>
+<p class="body-p">你在钱包里输入收款地址、金额、Gas 费，点击确认后，钱包用你的私钥对这笔交易数据进行数字签名。签名的作用是向网络证明：这笔交易确实由该地址的持有者授权，且内容未被篡改（任何篡改都会导致签名验证失败）。</p>
+<h3>第二步：广播至 Mempool</h3>
+<p class="body-p">签署后的交易被广播至网络，节点初步验证后放入"待处理交易池"（Mempool）并继续转发。几秒内，交易会扩散至全网大多数节点的 Mempool。</p>
+<h3>第三步：矿工/验证者打包</h3>
+<p class="body-p">验证者从 Mempool 中挑选交易打包进下一个区块，选择标准主要是 Gas 费高低——出价越高，越优先被打包。以太坊 EIP-1559 升级后引入基础费（Base Fee，网络自动调整）+ 优先费（用户设置小费）的双层结构。</p>
+<h3>第四步：区块确认</h3>
+<p class="body-p">交易被打包进区块后，该区块需要得到其他节点的验证认可，才算完成"1 次确认"。随后每产生一个新区块，确认数 +1。确认数越多，交易被逆转的可能性越低。以太坊 PoS 下约 12 分钟后达到"最终确定"状态，之后从协议层面不可逆转。</p>
+<blockquote><p><strong>本篇小结：</strong>一笔链上交易经历四个阶段：私钥签署 → 广播至 Mempool → 验证者打包 → 多次区块确认。Gas 费决定打包优先级，确认数代表安全强度。</p></blockquote></div>
+    </div>
+    <div class="chapter-title">第三章 · 认识主流公链</div>
+    <div class="module" id="l1-07">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-07', this)">
+        <div class="module-title">比特币是什么？为什么它是整个行业的数字黄金</div>
+        <div class="module-desc">比特币 2100 万枚的硬上限和四年减半机制，创造了算法可验证的稀缺性。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-07"><p class="body-p">比特币是整个加密货币行业的起点，也是目前市值最高、共识最广泛的数字资产。</p>
+<h3>比特币诞生的背景</h3>
+<p class="body-p">2008 年 10 月，金融危机高峰期，化名"中本聪"的人发布了比特币白皮书，目标是构建一套无需任何可信第三方的点对点电子现金系统。2009 年 1 月 3 日，比特币创世区块上线。</p>
+<h3>总量固定：稀缺性的技术实现</h3>
+<p class="body-p">比特币总量硬上限为 2100 万枚，写入协议代码，无法被任何人修改。每约 4 年发生一次"减半"——2009 年初始奖励 50 BTC；2024 年 4 月减至 3.125 BTC。最后一枚比特币预计在 2140 年前后被挖出。这套设计创造了算法上可验证的稀缺性——总量、发行速率、每一笔历史交易，任何人都可以独立验证。</p>
+<h3>为什么是价值存储而非支付货币</h3>
+<p class="body-p">比特币每秒约处理 7 笔交易，手续费在拥堵期可达数十美元，确认时间约 10 分钟——这些参数决定了它不适合日常小额支付。它真正被市场认可的定位是<strong>价值存储</strong>：总量固定、抗审查、无发行机构、全球 7×24 小时可转移。</p>
+<blockquote><p><strong>本篇小结：</strong>比特币 2100 万枚的硬上限和四年减半机制创造了算法可验证的稀缺性。受限于性能参数，它被定位为数字黄金（价值存储），而非日常支付工具。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-08">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-08', this)">
+        <div class="module-title">以太坊是什么？智能合约如何改变了一切</div>
+        <div class="module-desc">以太坊通过引入智能合约，将区块链从单纯的账本变成了可运行任意逻辑的去中心化计算平台。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-08"><p class="body-p">比特币证明了去中心化账本的可行性，但它几乎只能做一件事：记录谁向谁转了多少比特币。以太坊的出发点是：如果区块链上不只能存数据，还能运行程序，会发生什么？</p>
+<h3>智能合约：区块链上的自动执行程序</h3>
+<p class="body-p">智能合约是部署在区块链上的代码，一旦部署，任何人都可以调用，执行逻辑由代码决定，不受任何人控制，结果对所有人可见。"如果条件 A 满足，则自动执行操作 B"——不需要律师、银行、平台的介入。一份托管合约可以自动验证交货凭证后释放款项，若超时未确认，自动退款。</p>
+<h3>EVM：以太坊虚拟机</h3>
+<p class="body-p">以太坊虚拟机（EVM）是运行智能合约的执行环境，部署在全球数千个节点上。EVM 的设计影响深远：BNB Chain、Polygon、Arbitrum、Optimism 均兼容 EVM，意味着同一份合约可以在这些链上直接部署运行。</p>
+<h3>以太坊催生的生态</h3>
+<p class="body-p">智能合约能力直接催生了整个 DeFi 生态：去中心化交易所（Uniswap）、借贷协议（Aave、Compound）、稳定币（DAI），本质上都是智能合约组合。整个 Web3 的核心基础设施，建立在以太坊的智能合约能力之上。</p>
+<blockquote><p><strong>本篇小结：</strong>以太坊通过引入智能合约，将区块链从单纯的账本变成了可运行任意逻辑的去中心化计算平台。DeFi、NFT、DAO 等整个链上应用生态，都建立在以太坊的智能合约能力之上。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-09">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-09', this)">
+        <div class="module-title">Solana 是什么？为什么它是目前最活跃的公链生态</div>
+        <div class="module-desc">Solana 通过历史证明机制实现高吞吐低手续费，2024 年链上 DEX 交易量多次超过以太坊主网。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-09"><p class="body-p">Solana 在 2021 年牛市中崛起，2022 年 FTX 崩盘后几乎被市场判了死刑，2023—2024 年又强势回归，成为链上交易量最活跃的公链之一。</p>
+<h3>历史证明（PoH）：时间戳的技术创新</h3>
+<p class="body-p">Solana 的核心创新是<strong>历史证明（Proof of History）</strong>：在链上内置了一个可验证的时钟，用密码学方法证明事件发生的先后顺序，无需节点间反复通信确认时间。这让交易排序可以并行处理，大幅提升吞吐量。实际效果：理论峰值超过 65,000 TPS，实际运行在 2,000~4,000 TPS；平均手续费约 $0.0001，远低于以太坊主网。</p>
+<h3>代价：对硬件要求极高</h3>
+<p class="body-p">高性能建立在高硬件要求之上——运行验证节点需要 128GB+ 内存、企业级固态硬盘。这导致节点数量不如以太坊，去中心化程度受到批评。Solana 历史上也多次出现网络中断。</p>
+<h3>为什么 Solana 成了最活跃的生态</h3>
+<p class="body-p">低手续费和快速确认，使 Solana 成为 Meme 币交易的理想战场。Jupiter（聚合交易所）、Pump.fun（Meme 币发射平台）、Kamino（收益协议）构成了完整的链上金融生态。2024 年，Solana 的链上 DEX 交易量多次超过以太坊主网（不含 L2）。</p>
+<blockquote><p><strong>本篇小结：</strong>Solana 通过历史证明机制实现了高吞吐、低手续费，代价是更高的硬件门槛和相对较低的去中心化程度。与以太坊的关系不是替代，而是各自适配不同的使用场景。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-10">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-10', this)">
+        <div class="module-title">三条链横向对比：速度、费用、生态，新手该从哪里开始</div>
+        <div class="module-desc">比特币、以太坊、Solana 各有定位。新手的最优路径建议。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-10"><p class="body-p">比特币、以太坊、Solana 是目前市值最高、生态最完善的三条公链，也是新手最可能先接触到的三个名字。</p>
+<h3>核心参数对比</h3>
+<table>
+  <tr><th>维度</th><th>比特币</th><th>以太坊</th><th>Solana</th></tr>
+  <tr><td>定位</td><td>数字黄金 / 价值存储</td><td>智能合约平台</td><td>高性能应用链</td></tr>
+  <tr><td>TPS</td><td>约 7</td><td>主网 15-30（L2 数千）</td><td>2,000-4,000+</td></tr>
+  <tr><td>手续费</td><td>拥堵期数十美元</td><td>主网数美元；L2 约 $0.01</td><td>约 $0.0001</td></tr>
+  <tr><td>确认时间</td><td>约 10 分钟</td><td>约 12 秒</td><td>约 0.4 秒</td></tr>
+  <tr><td>去中心化</td><td>极高</td><td>高</td><td>中等</td></tr>
+</table>
+<h3>新手从哪条链开始？</h3>
+<p class="body-p"><strong>如果主要想持有保值：</strong>比特币是最简单的选择。<strong>如果想学习 DeFi：</strong>以太坊生态（含 Arbitrum、Optimism 等 L2）是最完整的学习场所。<strong>如果想低成本频繁操作：</strong>Solana 是最实用的选择，低手续费让试错成本极低。</p>
+<p class="body-p">建议新手先在 Solana 上完成基础操作练习（成本低、速度快），再逐步扩展到以太坊生态。三条链不互斥，多数活跃用户都会同时使用。</p>
+<blockquote><p><strong>本篇小结：</strong>比特币是价值存储，以太坊是 DeFi 核心基础设施，Solana 是高频操作首选。新手可以用比特币入门持有，Solana 入门操作练习，以太坊 L2 系统学习 DeFi。</p></blockquote></div>
+    </div>
+    <div class="chapter-title">第四章 · 机会与风险</div>
+    <div class="module" id="l1-11">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-11', this)">
+        <div class="module-title">Web3 里有哪些真实机会：DeFi、空投、研究、内容创作</div>
+        <div class="module-desc">剥离投机叙事和全盘否定两种极端后，普通人真实可参与的机会有四类。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-11"><p class="body-p">Web3 的机会被两种极端叙事所遮蔽：一边是"一夜暴富"的投机故事，另一边是"全是骗局"的全盘否定。剥离这两层噪音后，普通人在 Web3 里真实可参与的机会主要有四类。</p>
+<h3>DeFi 收益：链上理财</h3>
+<p class="body-p">持有稳定币参与 DeFi 借贷或流动性提供，可以获取利息收益。Aave 等主流借贷协议的稳定币存款年化通常在 3%~15% 之间，高于多数传统银行存款利率。风险主要来自智能合约漏洞——选择经过多年运行、代码经过多次审计的主流协议，风险可以控制在合理范围内。</p>
+<h3>空投：参与早期项目的奖励</h3>
+<p class="body-p">Web3 项目通常通过空投向早期用户分发代币。Uniswap 2020 年空投价值约 1,200 美元的 UNI；Arbitrum 2023 年空投，部分活跃用户获得价值数千至数万美元的 ARB。空投不是稳定收益，但对于愿意系统性参与真实协议交互的用户，历史数据显示回报可观。</p>
+<h3>研究与分析：信息不对称的红利</h3>
+<p class="body-p">Web3 行业信息透明但理解门槛高——所有链上数据公开，但能读懂的人极少。具备链上数据分析能力的人，可以通过独立研究获取信息优势，用于自己的投资判断或变现为内容。</p>
+<h3>内容创作与教育：稀缺的中文优质内容</h3>
+<p class="body-p">Web3 中文优质内容极度稀缺，多数内容停留在喊单和价格预测层面。系统性、客观的中文 Web3 教育内容，在各渠道均有真实市场需求。</p>
+<blockquote><p><strong>本篇小结：</strong>Web3 对普通人真实可参与的机会有四类：DeFi 稳定币理财、系统性参与空投、链上数据研究、Web3 内容创作。这些机会都需要知识积累和时间投入，是可以系统学习、逐步建立的能力。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-12">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-12', this)">
+        <div class="module-title">Web3 里有哪些真实陷阱：骗局类型全景扫描</div>
+        <div class="module-desc">在 Web3 赚到钱的人，首先是没有在这些陷阱里亏钱的人。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-12"><p class="body-p">在 Web3 赚到钱之前，你首先需要避免亏钱。这个行业的诈骗密度远超传统互联网，且骗局形式不断升级迭代。</p>
+<h3>私钥/助记词钓鱼</h3>
+<p class="body-p">最直接、损失最大的骗局。通过伪造的"官方客服"、假冒的钱包升级页面、钓鱼链接诱导你输入助记词。记住：没有任何场合需要你输入助记词，包括所谓的"验证身份"、"恢复钱包"、"领取空投"。</p>
+<h3>Rug Pull（卷款跑路）</h3>
+<p class="body-p">项目方在获得大量资金后，直接清空流动性池或关闭项目，携款消失。特征：匿名团队、无法审计的合约、高度夸张的收益承诺、快速拉升后砸盘。识别方法：看合约是否开源并经过审计，看团队是否实名，看流动性是否锁定。</p>
+<h3>虚假交易所 / 钱包 App</h3>
+<p class="body-p">应用商店中存在大量仿冒的交易所和钱包 App，视觉上与正版几乎完全相同，会在你输入私钥或转账时将资金转走。永远只从官方网站下载 App，不点击任何来历不明的链接。</p>
+<h3>"高收益"投资骗局</h3>
+<p class="body-p">承诺每月 20%+ 稳定收益、"内部消息"、"大佬带单"——这些在传统金融里是经典诈骗特征，在 Web3 里依然是。高承诺等于高风险，通常是 Ponzi 模型。</p>
+<blockquote><p><strong>本篇小结：</strong>Web3 的主要陷阱包括：私钥钓鱼、Rug Pull、假 App、高收益骗局。这些骗局利用的不是技术漏洞，而是信息不对称和贪婪心理。最好的防御是建立正确的认知。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-13">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-13', this)">
+        <div class="module-title">普通人参与 Web3 的正确姿势</div>
+        <div class="module-desc">安全第一，收益第二。建立安全习惯在前，寻找机会在后。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-13"><p class="body-p">学完前面十二篇，你对 Web3 的基本面有了清晰认知。在真正入场之前，有几条原则值得单独强调——它们是在这个行业里长期存活的前提条件。</p>
+<h3>只用输得起的资金</h3>
+<p class="body-p">任何加密资产的价格都可能归零——不是理论上可能，而是历史上已经反复发生。入场之前，先问自己：如果这笔钱全部消失，会影响我的正常生活吗？如果会，请缩减规模直到答案变成"不会"。</p>
+<h3>从理解开始，不从追热点开始</h3>
+<p class="body-p">Web3 的节奏非常快，每隔几个月就有一个新叙事成为焦点。追热点的问题在于：当你看到的时候，早期参与者已经获利，你的入场可能正好成为他们的出场流动性。用理解驱动决策，而不是用 FOMO 驱动决策。</p>
+<h3>第一笔操作先从小额开始</h3>
+<p class="body-p">流程走通比金额重要。第一次从交易所提币到钱包，先转 20 美元，确认到账后再考虑更大金额。</p>
+<h3>定期检查钱包授权</h3>
+<p class="body-p">每次你和 DeFi 协议交互，都会给予它一定的代币使用授权。使用 Revoke.cash 定期检查并清理不再需要的授权，这是链上安全的基本卫生。</p>
+<blockquote><p><strong>本篇小结：</strong>正确姿势的核心是四个字：先守后攻。建立安全意识在前，寻找机会在后。资金规模量力而行，流程验证先小后大，定期清理钱包授权——这些习惯比任何投资技巧都重要。</p></blockquote></div>
+    </div>
+    <div class="chapter-title">第五章 · 项目生态图谱</div>
+    <div class="module" id="l1-14">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-14', this)">
+        <div class="module-title">稳定币是什么？DeFi 的基础货币</div>
+        <div class="module-desc">稳定币是价格锚定美元的加密资产，是 DeFi 收益策略的核心工具——但并非零风险。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-14"><p class="body-p">稳定币是 DeFi 的基础货币——在高度波动的加密市场里，稳定币让用户在不退出 Web3 的前提下保留价值，同时参与各类 DeFi 收益策略。</p>
+<h3>三种稳定币类型</h3>
+<p class="body-p"><strong>储备型（法币抵押）：</strong>USDT（Tether）和 USDC（Circle）是最主流的代表，理论上每枚都有等值美元资产背书。优势是价格稳定，劣势是依赖中心化发行方的诚信和合规。<strong>超额抵押型：</strong>DAI 由 MakerDAO 发行，用 ETH 等资产超额抵押铸造，无需信任任何公司，抵押率通常在 150% 以上。<strong>算法型：</strong>UST 崩盘（2022 年）导致 400 亿美元蒸发，是这类模型失败的经典案例。</p>
+<h3>为什么稳定币不是零风险？</h3>
+<p class="body-p">储备不透明、智能合约漏洞、发行机构监管风险、脱钩风险——每一类稳定币都有其特定的风险结构。在 DeFi 里使用稳定币赚取收益，需要先理解你使用的是哪种类型，以及它的主要风险在哪里。</p>
+<blockquote><p><strong>本篇小结：</strong>稳定币分为储备型（USDT/USDC）、超额抵押型（DAI）和算法型三类。不同类型有不同的风险结构——使用前必须理解面临的具体风险，而不是仅仅因为"价格稳定"就放松警惕。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-15">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-15', this)">
+        <div class="module-title">去中心化交易所（DEX）：没有账号，直接换币</div>
+        <div class="module-desc">DEX 让你在无需注册账号的情况下直接交换代币，核心是 AMM 自动做市商模型。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-15"><p class="body-p">中心化交易所的核心问题是：你的资产存在交易所账户里，而不是你的钱包里。FTX 崩盘让数百万用户损失数十亿美元，根本原因就在此。DEX 解决的正是这个问题：直接在你的钱包与流动性池之间交换，不需要把资产托管给任何人。</p>
+<h3>AMM：自动做市商，用算法代替订单簿</h3>
+<p class="body-p">Uniswap 发明了 AMM（Automated Market Maker）模型：流动性由普通用户存入（两种代币对），价格由公式 x × y = k 决定（恒定乘积做市商）。你买入 ETH，池子里的 ETH 减少、USDC 增加，ETH 价格因此上涨——完全由数学公式自动执行，不需要任何人工干预。</p>
+<h3>流动性提供者的收益与风险</h3>
+<p class="body-p">向 DEX 提供流动性可以获得交易手续费分成（通常每笔 0.05%~1%）。但流动性提供者面临<strong>无常损失（Impermanent Loss）</strong>风险——当两种代币的价格比例发生变化时，你取回的资产价值可能低于直接持有两种代币的价值。</p>
+<blockquote><p><strong>本篇小结：</strong>DEX 通过 AMM 模型实现无需信任的链上代币交换，你的资产全程在自己的钱包里。主流 DEX：Uniswap（以太坊生态）、Jupiter（Solana）、Curve（稳定币对）。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-16">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-16', this)">
+        <div class="module-title">链上借贷协议：Aave、Compound 是怎么运作的</div>
+        <div class="module-desc">链上借贷让你用加密资产作抵押品借出其他资产，全程无需信用评分，智能合约自动执行清算。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-16"><p class="body-p">传统银行贷款需要信用评分、抵押房产、漫长审批。DeFi 借贷协议用智能合约把这个流程压缩到几分钟：存入抵押品，立即借出资金，利率由市场实时决定，清算由合约自动执行。</p>
+<h3>超额抵押：DeFi 借贷的安全机制</h3>
+<p class="body-p">你必须存入比借出金额更多价值的抵押品。例如在 Aave 上，存入价值 150 美元的 ETH，最多借出 100 美元的 USDC（抵押率 150%）。当 ETH 价格下跌导致抵押率低于安全线时，智能合约自动触发清算——整个过程无需任何人工干预。</p>
+<h3>DeFi 借贷的主要用途</h3>
+<p class="body-p">链上借贷不仅仅是"缺钱时借钱"：<strong>杠杆做多</strong>——存入 ETH，借出 USDC，再买更多 ETH；<strong>做空</strong>——借出资产后卖出，待价格下跌后买回偿还；<strong>税务优化</strong>——在不卖出资产的前提下获取流动资金；<strong>流动性释放</strong>——持有长期资产的同时参与其他机会。这些策略都有其特定风险。</p>
+<blockquote><p><strong>本篇小结：</strong>DeFi 借贷通过超额抵押和智能合约自动清算机制，实现了无需信任的链上借贷。主要协议包括 Aave、Compound、Morpho。主要用途包括杠杆、做空、税务优化和流动性释放。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-17">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-17', this)">
+        <div class="module-title">流动性挖矿和质押：收益从哪里来？</div>
+        <div class="module-desc">理解收益来源比追逐高 APY 数字更重要。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-17"><p class="body-p">DeFi Summer（2020）里，各种协议动辄提供 100%+ 年化收益率的"流动性挖矿"机会。大多数人只看到了收益，没有看清楚收益的来源——而收益来源决定了这个策略能否持续，以及实际风险在哪里。</p>
+<h3>流动性挖矿：为协议提供流动性，获取激励</h3>
+<p class="body-p">向 DEX 提供代币对流动性，获取两种收益：交易手续费分成（真实、可持续），以及协议发放的代币奖励（通常不可持续）。后者是高 APY 的主要来源——协议用自己的代币奖励早期流动性提供者。但代币奖励本质上是通货膨胀：协议印钱发给你，你的奖励代币卖压会压低代币价格，形成"挖卖提"循环。高 APY 往往是短期的。</p>
+<h3>质押：支持网络安全，获取协议奖励</h3>
+<p class="body-p">ETH 质押（通过 Lido 等流动质押协议）支持以太坊网络安全，获取验证者奖励，年化约 3-5%。这是目前 DeFi 里最接近"无风险利率"的收益来源，相对稳定且有明确的协议来源。代币质押（锁定某协议的治理代币）收益较高但风险也更大。</p>
+<blockquote><p><strong>本篇小结：</strong>流动性挖矿的收益来自手续费分成（可持续）和代币通胀激励（通常不可持续）。质押分为网络质押（ETH，相对稳健）和代币质押（收益和风险都更高）。理解收益来源比追逐高 APY 数字更重要。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-18">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-18', this)">
+        <div class="module-title">预测市场：链上集体智慧的金融化</div>
+        <div class="module-desc">Polymarket 是目前最大的链上预测市场，2024 年美国大选期间日交易量超过 1 亿美元。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-18"><p class="body-p">预测市场让用户用真实资金对未来事件的结果下注，而价格本身反映了市场对概率的集体判断。这不只是赌博，更是一种信息聚合机制——在重要事件上，预测市场往往比传统民调更准确。</p>
+<h3>Polymarket 是怎么运作的？</h3>
+<p class="body-p">用户购买代表某个结果的份额，份额价格在 0 到 1 美元之间浮动，代表市场认为该结果发生的概率。价格 0.65 意味着市场认为该事件有 65% 的概率发生。事件结果确定后，正确预测的份额以 1 美元结算，错误预测的份额归零。所有交易在 Polygon 区块链上执行，资金托管在智能合约里。</p>
+<h3>预测市场的价值</h3>
+<p class="body-p">2024 年美国大选期间，Polymarket 给出的特朗普胜选概率比多数民调机构更早反映出实际结果。原因：参与者用真实资金下注，有强烈的激励去做出准确判断，而不是表达情绪或观点。</p>
+<blockquote><p><strong>本篇小结：</strong>预测市场通过真实金融激励实现集体智慧的信息聚合，往往比传统调查更准确。Polymarket 是目前最大的链上预测市场。主要风险包括流动性较低、事件解决机制争议和监管不确定性。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-19">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-19', this)">
+        <div class="module-title">股票代币化与 RWA：传统金融资产搬上链</div>
+        <div class="module-desc">RWA 是 2024-2025 年机构背书最多、增速最快的 DeFi 赛道。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-19"><p class="body-p">RWA（Real World Assets，真实世界资产）是将传统金融资产——美国国债、股票、房地产——通过智能合约包装成链上代币的过程。这是当前 DeFi 与传统金融结合最深的方向。</p>
+<h3>为什么 RWA 重要？</h3>
+<p class="body-p">DeFi 原生资产的高波动性长期困扰着寻求稳健收益的用户。RWA 提供了一个解法：将现实世界中已有成熟定价和收益的资产（如美国国债年化约 4-5%）搬到链上，让 DeFi 用户无需开设海外账户也能持有，同时让 DeFi 协议的稳定币储备产生真实收益。贝莱德 BUIDL 基金（链上货币市场基金）2024 年上线，标志着全球最大资产管理机构认可了这一方向。</p>
+<h3>主要协议与风险</h3>
+<p class="body-p">Ondo Finance（美债代币化）、Backed Finance（股票代币化）是目前主要的 RWA 平台。主要风险：RWA 仍依赖中心化发行方持有和管理底层资产，大多数平台有 KYC 要求，链上代币与底层资产挂钩的技术实现仍有一定脆弱性。</p>
+<blockquote><p><strong>本篇小结：</strong>RWA 是将美债、股票等传统金融资产代币化上链的赛道，2024-2025 年高速增长，贝莱德等机构背书。主要风险是对中心化发行方的依赖和监管不确定性。</p></blockquote></div>
+    </div>
+    <div class="module" id="l1-20">
+      <div class="module-toggle" onclick="toggleArticle('art-l1-20', this)">
+        <div class="module-title">NFT、GameFi、Web3 生态全景总结</div>
+        <div class="module-desc">NFT 泡沫之后剩下了什么？GameFi 的经济模型为什么难以持续？</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l1-20"><p class="body-p">完成前十九篇，你已经建立了 Web3 的基础认知框架。这最后一篇做一次生态全景扫描，对几个重要赛道的当前现状做客观评估。</p>
+<h3>NFT：泡沫之后的真实价值</h3>
+<p class="body-p">2021 年 NFT 交易量峰值超过 250 亿美元，随后暴跌 95%+。泡沫消退后，NFT 的真实应用逐渐清晰：数字所有权凭证（活动门票、会员资格、游戏道具）；创作者版税（每次二级市场交易自动分配给原创作者）；品牌社区工具。"JPEG NFT"的大规模投机基本结束，但底层技术仍在被各行业探索。</p>
+<h3>GameFi：游戏性才是根本</h3>
+<p class="body-p">Axie Infinity 在 2021 年创造了"边玩边赚"（P2E）叙事，随后其代币经济崩盘，游戏几乎消亡。核心问题：当游戏的主要激励是代币奖励而非游戏本身的乐趣，一旦代币价格下跌，玩家大量流失，形成死亡螺旋。真正能持续的链上游戏，必须先是好游戏，其次才是"链上"。</p>
+<h3>Web3 生态的整体图谱</h3>
+<p class="body-p">目前 Web3 生态中最成熟、最有实际用户和真实收入的方向依次是：DeFi（借贷、交易、收益）、稳定币与支付、RWA（真实资产上链）、链上永续合约（Hyperliquid）。NFT、元宇宙、P2E 游戏正在经历从泡沫到沉淀的过程。</p>
+<blockquote><p><strong>Level 1 总结：</strong>恭喜你完成了 Level 1 的全部 20 篇课程。你现在理解了 Web3 的底层逻辑、区块链运作机制、主流公链特点、真实的机会与风险，以及主要赛道基本面。这是系统参与 Web3 的认知基础。接下来，Level 2 将带你完成所有基础链上操作。</p></blockquote></div>
+    </div>
+    <div class="article-cta">
+      <h3>🎉 Level 1 全部完成！</h3>
+      <p>你已经建立了 Web3 的完整认知框架。想要继续 Level 2～4 的深度内容和实操指南？</p>
+      <a href="#l2" class="btn btn-primary">继续深入学习 Level 2～4 →</a>
+    </div>
+  </div>
+</section>
+
+<section id="l2" class="level-section">
+  <div class="level-header lh-blue">
+    <div class="level-num">02</div>
+    <div class="level-header-content">
+      <div class="level-tag" style="color:var(--accent);">Level 2 · 25 篇课程 · 免费学习</div>
+      <h2>Web3实操入门</h2>
+      <p>交易所注册、法币出入金、钱包管理到第一笔链上转账，手把手带你完成所有基础链上操作。</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <div class="chapter-title">第一章 · 交易所注册（7篇）</div>
+    <div class="module" id="l2-1">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-1', this)">
+        <div class="module-title">2-01 CEX vs DEX：如何选择你的第一个交易平台</div>
+        <div class="module-desc">中心化交易所与去中心化交易所的核心区别、适用场景，以及新手的选择建议。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-1"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-2">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-2', this)">
+        <div class="module-title">2-02 币安交易所注册教程（含 KYC 全流程）</div>
+        <div class="module-desc">币安注册、KYC 身份验证、安全设置全流程图文教程，2026 年最新版。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-2"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-3">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-3', this)">
+        <div class="module-title">2-03 OKX 注册教程</div>
+        <div class="module-desc">OKX 注册流程、KYC 验证与安全设置，以及中国用户的注意事项。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-3"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-4">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-4', this)">
+        <div class="module-title">2-04 Bybit 注册教程</div>
+        <div class="module-desc">Bybit 注册流程及账户安全配置。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-4"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-5">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-5', this)">
+        <div class="module-title">2-05 Bitget 注册教程</div>
+        <div class="module-desc">Bitget 注册与跟单交易功能介绍及风险提示。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-5"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-6">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-6', this)">
+        <div class="module-title">2-06 Backpack 注册教程</div>
+        <div class="module-desc">新一代交易所 Backpack 的注册流程与独特功能介绍。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-6"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-7">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-7', this)">
+        <div class="module-title">2-07 Kraken 注册教程</div>
+        <div class="module-desc">合规交易所 Kraken 的注册流程，适合重视合规的用户。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-7"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第二章 · 法币出入金（6篇）</div>
+    <div class="module" id="l2-8">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-8', this)">
+        <div class="module-title">2-08 币安 C2C 入金教程（2026 最新）</div>
+        <div class="module-desc">通过 C2C 将人民币转换为 USDT 的完整流程，包括选择商家和风险规避。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-8"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-9">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-9', this)">
+        <div class="module-title">2-09 币安法币入金教程</div>
+        <div class="module-desc">使用信用卡/借记卡直接购买加密资产的流程与费率分析。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-9"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-10">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-10', this)">
+        <div class="module-title">2-10 币安 C2C 出金教程</div>
+        <div class="module-desc">将 USDT 转换回人民币的完整流程，以及安全出金的注意事项。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-10"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-11">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-11', this)">
+        <div class="module-title">2-11 币安法币出金教程</div>
+        <div class="module-desc">通过银行转账出金的完整流程和合规注意事项。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-11"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-12">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-12', this)">
+        <div class="module-title">2-12 Backpack 出金教程</div>
+        <div class="module-desc">从 Backpack 交易所提现的完整操作流程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-12"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-13">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-13', this)">
+        <div class="module-title">2-13 Kraken 出金教程</div>
+        <div class="module-desc">通过 Kraken 合规出金到银行账户的完整流程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-13"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第三章 · 钱包管理（7篇）</div>
+    <div class="module" id="l2-14">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-14', this)">
+        <div class="module-title">2-14 钱包不是存钱的：彻底理解钱包的本质</div>
+        <div class="module-desc">深度解析私钥、公钥、钱包地址的关系，以及非托管的真正含义。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-14"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-15">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-15', this)">
+        <div class="module-title">2-15 钱包怎么选：热钱包、冷钱包、硬件钱包对比</div>
+        <div class="module-desc">不同类型钱包的安全级别与使用场景，以及新手的选择建议。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-15"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-16">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-16', this)">
+        <div class="module-title">2-16 助记词是什么：BIP-39 标准与 12/24 词的区别</div>
+        <div class="module-desc">助记词的技术原理与标准规范，以及为什么它等同于你的私钥。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-16"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-17">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-17', this)">
+        <div class="module-title">2-17 助记词怎么保管：防丢防盗的完整方案</div>
+        <div class="module-desc">纸质备份、金属板备份、分散存储策略，以及常见错误备份方式的风险。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-17"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-18">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-18', this)">
+        <div class="module-title">2-18 MetaMask 安装与使用完整教程</div>
+        <div class="module-desc">MetaMask 安装、创建/导入钱包、网络设置、代币添加的全流程图文指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-18"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-19">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-19', this)">
+        <div class="module-title">2-19 如何给钱包添加自定义网络</div>
+        <div class="module-desc">添加 Arbitrum、Optimism、BNB Chain、Polygon 等 EVM 网络的操作教程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-19"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-20">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-20', this)">
+        <div class="module-title">2-20 如何管理多个钱包账户</div>
+        <div class="module-desc">多账户的使用场景、命名管理方法，以及空投账户的隔离策略。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-20"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第四章 · 第一笔链上操作（5篇）</div>
+    <div class="module" id="l2-21">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-21', this)">
+        <div class="module-title">2-21 Gas 费是什么：以太坊 EIP-1559 机制详解</div>
+        <div class="module-desc">Gas 费的计算方式、Base Fee 与 Priority Fee 的区别，以及如何合理设置 Gas。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-21"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-22">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-22', this)">
+        <div class="module-title">2-22 如何从交易所提币到钱包</div>
+        <div class="module-desc">选择正确网络、地址确认、小额测试的完整操作流程，以及常见错误预防。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-22"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-23">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-23', this)">
+        <div class="module-title">2-23 如何从钱包发送代币到交易所</div>
+        <div class="module-desc">钱包提币到交易所充值地址的操作流程，以及网络选择错误的后果与应对。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-23"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-24">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-24', this)">
+        <div class="module-title">2-24 钱包之间如何转账</div>
+        <div class="module-desc">钱包间直接转账的操作流程，地址校验方法，以及转账前后的确认步骤。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-24"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-25">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-25', this)">
+        <div class="module-title">2-25 如何查看转账记录和确认状态</div>
+        <div class="module-desc">使用 Etherscan、Solscan 查看交易记录、确认数，以及处理 pending 交易的方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-25"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="l3" class="level-section">
+  <div class="level-header lh-gold">
+    <div class="level-num">03</div>
+    <div class="level-header-content">
+      <div class="level-tag" style="color:var(--gold);">Level 3 · 12 篇课程 · 免费学习</div>
+      <h2>Web3实操进阶</h2>
+      <p>DeFi 是什么、APY 怎么来、DEX 如何定价、三大核心风险。真正参与 DeFi 前必须理解的底层机制与实战策略。</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <div class="chapter-title">第一章 · 底层机制（4篇）</div>
+    <div class="module" id="l3-1">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-1', this)">
+        <div class="module-title">3-01 DeFi 是什么：去中心化金融的完整图谱</div>
+        <div class="module-desc">DeFi 与传统金融的本质区别、主要协议类别概览。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-1">
+<blockquote><p><strong>【文章摘要】</strong> 传统金融依靠机构信用运转，DeFi 用智能合约取代机构信用，把借贷、交易、利息结算写进代码自动执行。本文从"银行在做什么"出发，拆解 DeFi 的底层替代逻辑，厘清"去中心化"的实际含义与现实局限，帮助完成链上操作入门的读者建立参与
+DeFi 的正确认知框架。</p></blockquote>
+
+<h3>你存银行的钱，银行拿去干了什么</h3>
+<p class="body-p">2025年5月20日新一轮降息后，国有六大行（工农中建交邮储）一年期定期存款（整存整取）挂牌利率集体跌破1%。同期，全国企业贷款平均利率约为 <strong>3.3%</strong>。</p>
+<p class="body-p">这中间的 <strong>2.3 个百分点</strong>，就是银行系统每年从储户和借款人之间抽走的利差。截至2025年末，中国居民储蓄总额超过 <strong>160 万亿元</strong>，按这个利差粗算，每年有超过 <strong>3.68 万亿元</strong>的收益没有流向储户，而是流向了银行的股东和运营体系。</p>
+<p class="body-p">这不是阴谋，是公开透明的商业模式——银行从未隐瞒过这件事。问题在于：你有没有其他选择？</p>
+<p class="body-p">答案取决于人群的知识结构。在传统金融里，答案是：对大多数人而言，几乎没有。钱放银行被稀释，买理财有门槛，炒股靠运气。大多数人的资产，在"安全"的名义下，以每年 1-2% 的速度被通胀和利差慢慢消耗。DeFi 打开的，是一扇银行系统之外的门。</p>
+
+<h3>第一个改变：利差回到你手上</h3>
+<p class="body-p">Aave 是以太坊上最大的借贷协议，总存款规模超过 <strong>130 亿美元</strong>。它的运作逻辑和银行完全一样——吸收存款，发放贷款，赚取利差。<strong>唯一的区别是：利差没有股东，全部分配给存款人。</strong></p>
+<p class="body-p">2024 年，Aave 上 USDC 存款年化收益率在 <strong>4-8%</strong> 之间浮动。这笔钱不是平台补贴，是真实借款人支付的利息，通过智能合约直接打给存款人，没有任何机构从中截留。</p>
+<p class="body-p"><strong>所以你可以做的事：</strong>把原本放在余额宝（当前年化约 1.6%）的稳定币资产，存入 Aave，在同等风险敞口下，收益提高 2-5 倍。具体操作流程在 L4-06 Aave 实操篇，你会看到这件事在技术上有多简单。</p>
+<p class="body-p"><strong>反直觉的地方：</strong>Aave 过去五年的坏账率接近零。银行靠人工审核加征信体系控制坏账，Aave 靠超额抵押机制——借 100 美元必须先锁入至少 133 美元的抵押品，一旦抵押率不足，智能合约自动清算，不需要任何人介入。代码比人工审核更严格，这是多数人没想到的。</p>
+<p class="body-p">（注：2026年4月，因受KelpDAO被黑客攻击事件牵连，截止本文发布时间，粗略估算坏账接近1.5亿美元，最终处理需等官方进一步公告。）</p>
+<p class="body-p">你在 Aave 存入 1,000 美元的那一刻，这笔资金的去向、当前利率、协议总存款规模、借款人的抵押品构成——全部实时写在链上，任何人打开 Aave 官网或 DefiLlama 就能看到，不需要申请，不需要等年报。银行的资产负债表，每季度披露一次，且只披露监管要求的科目。2023 年硅谷银行倒闭前三天，它的财务报告仍显示"资产状况良好"。链上协议没有这种信息差——资金在哪里、值多少钱、风险敞口有多大，每隔 12 秒更新一次。</p>
+<p class="body-p"><strong>需要正视的真实风险：</strong>Aave 的机制设计是严谨的，但仍有几件事必须说清楚。第一，智能合约存在被黑客攻击的可能，历史上已有多个协议因合约漏洞损失数千万美元；第二，抵押借贷存在清算风险，若抵押品价格下跌触及清算线，资产会被自动卖出；第三，稳定币本身也存在脱锚风险，2022 年 UST 崩盘就是前车之鉴。这些风险不是吓退你，而是给你敬畏之心——DeFi 的参与需要系统性的认知准备，而不是看一篇文章就冲进去。</p>
+
+<h3>第二个改变：你可以成为"庄家"</h3>
+<p class="body-p">在 A 股，散户和交易所之间隔着一套不对等的利润分配结构。以 2025 年为例，沪深两市全年成交额约 420 万亿元，按万分之二点五的佣金下限估算，券商仅佣金收入就超过 1 万亿。这笔钱来自每一位在手机上"买卖"的散户。除此之外，交易所还向券商收取经手费，做市商通过买卖价差（bid-ask spread）赚取隐性收益，这部分从未在你的交易记录里单独显示，但每笔交易都在发生。</p>
+<p class="body-p">你在 A 股的角色是：贡献流动性，承担风险，但不分享市场运营的利润。整套交易系统的受益方是交易所、券商和做市商，散户是这套系统的原材料。</p>
+<p class="body-p">Uniswap 把这个结构翻转了。它没有中央撮合引擎，也没有专职做市商。流动性来自普通用户——任何人可以把自己的代币资产存入 Uniswap 的流动性池，成为这个市场的做市商，赚取每笔交易 0.05%-1% 的手续费分成。Uniswap 2025 年交易手续费超过 <strong>10 亿美元</strong>，全部分配给流动性提供者，没有任何机构截留。</p>
+<p class="body-p"><strong>所以你可以做的事：</strong>如果你长期持有 ETH 和 USDC 且短期不打算卖出，可以把这对资产存入 Uniswap 的流动性池，在持有资产的同时赚取手续费收益。这件事在传统金融里没有对应物——没有任何一家券商会让散户分享它的交易手续费。</p>
+<p class="body-p"><strong>需要正视的真实风险：</strong>这不是无风险的操作。当 ETH 价格剧烈波动时，你的资产会被自动重新平衡，产生"无常损失"——你拿回来的总价值，可能低于你单纯持有不动的结果。做市商的收益，不是免费的午餐。这个机制会在 3-03 精确拆解。</p>
+
+<h3>第三个改变：持有稳定币，让你的资产拥有全球流动性</h3>
+<p class="body-p">持有人民币资产，意味着你的财富只能在一套金融轨道上流动——受汇率波动影响，跨境转账受限，配置海外资产的渠道窄且门槛高。个人每年购汇上限 5 万美元，全球资产配置路径越来越窄。</p>
+<p class="body-p">持有以 USDC 为代表的美元稳定币，意味着你在链上，可以在任何时间、任意金额、向全球任何相关地址发送资金，不需要银行审批，不需要解释资金用途，几分钟内到达，手续费以美分计，不经过任何传统银行清算系统。</p>
+<p class="body-p">持有 USDC 能做什么？存入 Aave 赚取 4-8% 年化利息；参与全球 DeFi 协议的流动性挖矿；在加密市场行情不明朗时，把资产停泊在稳定币上规避波动，同时保持随时可部署的流动性。</p>
+<p class="body-p"><strong>所以你需要理解的事：</strong>USDC 是 DeFi 整个收益体系的基础货币。后续几乎所有策略——稳定币收益、链上借贷、流动性挖矿——都以 USDC 或其他稳定币作为计价和结算单位。理解它的本质，是理解后续所有内容的前提。</p>
+
+<h3>第四个改变：美股正在上链，你不需要券商账户就能买苹果</h3>
+<p class="body-p">2025年，国内各大自媒体全部下架与海外券商相关的文章、视频，投资美股的渠道基本被切断。而反观海外，股票代币化（Tokenized Stocks）开始真正落地。Coinbase 旗下的 Base 链上，Backed Finance 等协议已推出锚定苹果、特斯拉、英伟达等美股的代币资产；xStocks 平台提供超过 60 支美股和 ETF 的链上版本，底层由真实股票托管支撑，价格与纳斯达克实时同步。</p>
+<p class="body-p">对中国投资者而言，这件事的意义是：开一个美股账户，过去需要香港或美国银行账户、繁琐的 KYC 流程、漫长的等待周期。股票代币化把这个流程压缩到：持有稳定币 → 在链上协议买入对应代币，整个过程不超过十分钟，没有地域限制。</p>
+<p class="body-p">这个方向目前仍处于早期，合规框架在不同地区差异巨大，流动性和托管风险需要仔细评估。但趋势已经确立：传统资本市场的资产，正在逐步搬上链。在 L4 的 xStocks 实操篇，我们会完整走一遍从稳定币到持有美股代币的全流程。</p>
+
+<h3>第五个改变：你的资产可以同时打几份工</h3>
+<p class="body-p">传统金融里，一笔资产只能出现在一个地方。存银行就不能炒股，买了基金就不能同时做定期。想要提高资产利用效率，对大多数人而言，在传统金融里是结构性不可能。DeFi 的可组合性打破了这个限制。</p>
+<p class="body-p">一个真实的策略路径：① 把 ETH 质押到 <strong>Lido</strong>，得到 stETH（质押凭证），同时赚取以太坊网络质押年化收益约 <strong>3.5%</strong>；② 把 stETH 存入 <strong>Aave</strong> 作为抵押品，再赚取一层存款利息；③ 以 stETH 为抵押，从 Aave 借出 USDC——你的 ETH 还在，钱也出来了；④ 把 USDC 存入 <strong>Curve</strong> 稳定币池，赚取 4-6% 年化。同一笔 ETH，在四个协议里同时运转，综合收益可达 7-12%——底层资产始终在你的钱包控制下，每一步都在链上实时可查。</p>
+<p class="body-p">需要指出的是，这套策略不是无风险的，嵌套的层数越多，风险越高：清算风险、合约漏洞、稳定币脱锚都是真实存在的威胁。但它说明了一件事：<strong>你的资产能做的事，比你在传统金融里被允许做的多得多。</strong></p>
+<p class="body-p">如果你不想手动执行上述四步，<strong>Yearn Finance</strong> 是替代方案，它相当于你的数字基金经理，你存入 USDC，它的智能合约自动在 Aave、Compound、Curve 之间寻找最高收益，自动轮换，自动复利。本质是链上主动管理基金，但策略逻辑完全公开，没有基金经理，没有管理费。在动用 Yearn 或任何收益聚合器之前，先理解它在底层做什么。不理解底层机制就追求收益，和买银行理财不看条款是一回事。</p>
+
+<blockquote><p><strong>最后，请记住：</strong>DeFi 不是"区块链版的余额宝"，也不是"无风险的高息存款"。它本质上是一套重新分配金融利润的机制——把原本流入银行股东和中间机构的那部分，重新分配给直接参与者。代价是：<strong>你必须亲自承担以前由机构分散的风险</strong>。后续三篇，会把参与之前必须搞清楚的问题逐一拆开：APY 数字背后到底是哪三种收益来源、风险属性有何不同（3-02）；AMM 定价机制和无常损失的精确计算方法（3-03）；以及智能合约漏洞、清算风险、无常损失的识别框架和规避逻辑（3-04）。在你把真实资金放进任何协议之前，这三篇是必读项。</p></blockquote>
+</div>
+    </div>
+    <div class="module" id="l3-2">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-2', this)">
+        <div class="module-title">3-02 APY 从哪里来：DeFi 收益的五种来源</div>
+        <div class="module-desc">手续费分成、代币通胀激励、协议收入分配、利息差、现实资产收益——五种收益来源的可持续性分析。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-2"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-3">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-3', this)">
+        <div class="module-title">3-03 DEX 是如何定价的：AMM 数学原理深度解析</div>
+        <div class="module-desc">恒定乘积 AMM、集中流动性（Uniswap v3）、稳定交换曲线（Curve）的数学原理与适用场景。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-3"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-4">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-4', this)">
+        <div class="module-title">3-04 DeFi 三大核心风险：智能合约、清算、无常损失</div>
+        <div class="module-desc">三大风险的量化分析，以及对应的风险管理策略。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-4"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第二章 · 实战策略（8篇）</div>
+    <div class="module" id="l3-5">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-5', this)">
+        <div class="module-title">3-05 稳定币收益策略：守住本金的链上理财方法</div>
+        <div class="module-desc">USDT/USDC 在主流协议上的稳定收益策略，风险评估方法与推荐配置比例。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-5"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-6">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-6', this)">
+        <div class="module-title">3-06 LSD 流动质押入门：ETH 质押的正确方式</div>
+        <div class="module-desc">以太坊质押原理、Lido stETH 与 Rocket Pool rETH 的区别，以及流动质押的风险与收益。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-6"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-7">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-7', this)">
+        <div class="module-title">3-07 空投策略：系统参与，而非碰运气</div>
+        <div class="module-desc">如何筛选有空投预期的协议、系统性交互策略、防 Sybil 攻击的操作方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-7"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-8">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-8', this)">
+        <div class="module-title">3-08 DefiLlama 数据解读：如何用链上数据做决策</div>
+        <div class="module-desc">TVL、协议收入、费用等核心指标的含义，以及如何用 DefiLlama 筛选高质量协议。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-8"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-9">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-9', this)">
+        <div class="module-title">3-09 聪明钱追踪：跟着大户发现机会</div>
+        <div class="module-desc">如何使用 Nansen、Arkham 追踪聪明钱钱包，以及从链上行为读取信号的方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-9"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-10">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-10', this)">
+        <div class="module-title">3-10 Dune Analytics 入门：读懂并复用链上数据看板</div>
+        <div class="module-desc">如何在 Dune 上找到高质量看板，读懂关键指标，以及对现有 SQL 查询的简单修改。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-10"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-11">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-11', this)">
+        <div class="module-title">3-11 DeFi 风险管理框架：仓位配置 / 止损 / 多链分散</div>
+        <div class="module-desc">DeFi 参与者的风险管理框架：如何分配资金、设置止盈止损、分散跨链风险。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-11"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l3-12">
+      <div class="module-toggle" onclick="toggleArticle('art-l3-12', this)">
+        <div class="module-title">3-12 加密资产税务与合规：中国用户必了解的常识</div>
+        <div class="module-desc">加密资产的税务基础知识，交易记录的整理方法，以及合规操作建议。（非法律建议）</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l3-12"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="l4" class="level-section">
+  <div class="level-header lh-purple">
+    <div class="level-num">04</div>
+    <div class="level-header-content">
+      <div class="level-tag" style="color:var(--purple);">Level 4 · 13 篇课程 · 免费学习</div>
+      <h2>DeFi 协议实战</h2>
+      <p>13 个主流协议的完整实操指南，每篇内置协议背景简介、核心机制、操作步骤与风险提示。</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <div class="module" id="l4-1">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-1', this)">
+        <div class="module-title">4-01 Uniswap 实操</div>
+        <div class="module-desc">以太坊生态最大 DEX，AMM 模型发明者。学会代币兑换、流动性提供与集中流动性策略。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-1"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-2">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-2', this)">
+        <div class="module-title">4-02 Jupiter 实操</div>
+        <div class="module-desc">Solana 生态最大聚合交易所，低手续费链上交易首选。完整操作流程 + 限价单使用指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-2"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-3">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-3', this)">
+        <div class="module-title">4-03 Curve 实操</div>
+        <div class="module-desc">稳定币兑换专业 DEX，极低滑点。稳定币大额兑换与流动性提供操作指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-3"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-4">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-4', this)">
+        <div class="module-title">4-04 Lido 质押实操</div>
+        <div class="module-desc">ETH 流动质押协议，stETH 获取与再利用。质押、取消质押全流程操作教程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-4"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-5">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-5', this)">
+        <div class="module-title">4-05 EigenLayer 再质押</div>
+        <div class="module-desc">再质押协议，用 stETH 获取额外收益。再质押操作流程与风险评估。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-5"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-6">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-6', this)">
+        <div class="module-title">4-06 Aave 借贷实操</div>
+        <div class="module-desc">DeFi 最大借贷协议。存款赚利息、超额抵押借款的完整操作流程与清算线管理。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-6"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-7">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-7', this)">
+        <div class="module-title">4-07 Sky（MakerDAO）实操</div>
+        <div class="module-desc">DAI 稳定币发行协议，链上最老 DeFi 蓝筹。Vault 开仓、DAI 铸造操作指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-7"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-8">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-8', this)">
+        <div class="module-title">4-08 Morpho 实操</div>
+        <div class="module-desc">优化型借贷聚合器，在 Aave/Compound 基础上提高资金效率，更高存款利率获取方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-8"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-9">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-9', this)">
+        <div class="module-title">4-09 Ethena 实操</div>
+        <div class="module-desc">合成美元 USDe 协议，Delta 中性策略。USDe 铸造、sUSDe 质押收益操作完整指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-9"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-10">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-10', this)">
+        <div class="module-title">4-10 Pendle 实操</div>
+        <div class="module-desc">收益代币化协议，PT/YT 机制拆解。固定利率策略与收益投机操作完整教程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-10"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-11">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-11', this)">
+        <div class="module-title">4-11 Xstock 实操</div>
+        <div class="module-desc">链上股票代币化平台。美股代币购买、持有与赎回的完整操作流程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-11"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-12">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-12', this)">
+        <div class="module-title">4-12 Polymarket 实操</div>
+        <div class="module-desc">链上预测市场。如何筛选市场、购买份额、管理仓位，以及事件结算流程。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-12"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l4-13">
+      <div class="module-toggle" onclick="toggleArticle('art-l4-13', this)">
+        <div class="module-title">4-13 Hyperliquid 实操</div>
+        <div class="module-desc">链上永续合约交易所，订单簿模式的去中心化期货平台。开仓、止损、资金划转完整指南。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l4-13"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="l5" class="level-section">
+  <div class="level-header lh-rose">
+    <div class="level-num">05</div>
+    <div class="level-header-content">
+      <div class="level-tag" style="color:var(--rose);">Level 5 · 10 篇课程 · 免费学习</div>
+      <h2>Web3项目研究</h2>
+      <p>从研究框架、链上数据到代币经济模型，系统掌握评估 Web3 项目质量与潜力的完整方法论。</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <div class="chapter-title">第一章 · 研究框架（3篇）</div>
+    <div class="module" id="l5-1">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-1', this)">
+        <div class="module-title">5-01 如何评估一个 Web3 项目：完整研究框架</div>
+        <div class="module-desc">从赛道、团队、产品、代币四个维度建立系统性项目评估框架，避免被营销话术误导。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-1"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-2">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-2', this)">
+        <div class="module-title">5-02 白皮书怎么读：提取关键信息的方法</div>
+        <div class="module-desc">白皮书的结构拆解、需要重点关注的部分，以及识别空洞承诺与技术硬核内容的方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-2"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-3">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-3', this)">
+        <div class="module-title">5-03 团队背景调查方法：如何核实创始人信息</div>
+        <div class="module-desc">LinkedIn、GitHub、链上历史的交叉验证方法，以及识别匿名团队风险的实操技巧。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-3"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第二章 · 链上数据分析（4篇）</div>
+    <div class="module" id="l5-4">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-4', this)">
+        <div class="module-title">5-04 链上数据分析基础：读懂项目的真实使用情况</div>
+        <div class="module-desc">活跃地址数、交易量、DAU 等核心链上指标的含义与局限性，以及常见数据刷量识别方法。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-4"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-5">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-5', this)">
+        <div class="module-title">5-05 TVL 与协议收入解读：区分真实价值与虚假繁荣</div>
+        <div class="module-desc">TVL 的构成与水分识别，协议收入 vs 代币激励收入的区别，以及 P/F 等估值指标的使用。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-5"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-6">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-6', this)">
+        <div class="module-title">5-06 聪明钱追踪：用链上数据发现机构动向</div>
+        <div class="module-desc">如何用 Nansen、Arkham 追踪知名投资机构和鲸鱼钱包的链上行为，提前发现资金流向。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-6"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-7">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-7', this)">
+        <div class="module-title">5-07 Dune Analytics 实战：读懂并复用链上数据看板</div>
+        <div class="module-desc">如何在 Dune 上找到高质量看板，读懂关键指标，以及对现有 SQL 查询的简单修改与应用。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-7"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="chapter-title">第三章 · 代币经济模型（3篇）</div>
+    <div class="module" id="l5-8">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-8', this)">
+        <div class="module-title">5-08 代币经济模型分析：判断一个代币是否值得持有</div>
+        <div class="module-desc">供应总量、流通比例、通胀机制、使用场景的分析框架，以及代币设计中的常见陷阱。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-8"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-9">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-9', this)">
+        <div class="module-title">5-09 解锁计划与抛压评估：别在大户出货时接盘</div>
+        <div class="module-desc">Team/VC 代币解锁时间表的查询方法，解锁比例与市场抛压的关系，以及如何规避关键解锁节点。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-9"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l5-10">
+      <div class="module-toggle" onclick="toggleArticle('art-l5-10', this)">
+        <div class="module-title">5-10 如何辨别早期项目机会：Testnet 与空投研究方法</div>
+        <div class="module-desc">筛选有空投预期协议的信号、Testnet 交互策略、防 Sybil 的操作要点及历史成功案例复盘。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l5-10"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+  </div>
+</section>
+
+</article>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-mark">GoX</span><span class="logo-text">Web3系统学习营</span></div>
+        <p>面向中文用户的 Web3 系统知识库，帮你安全、系统地建立链上认知与操作能力。</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">课程体系</div>
+        <a href="#l1">读懂 Web3</a><a href="#l2">Web3实操入门</a>
+        <a href="#l3">Web3实操进阶</a><a href="#l4">DeFi 协议实战</a><a href="#l5">Web3项目研究</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">更多内容</div>
+        <a href="research.html">项目研究</a><a href="tools.html">Web3 工具</a>
+        <a href="topics.html">专题系列</a><a href="about.html#join">加入社群</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Web3系统学习营 · 内容仅供教育目的，不构成投资建议</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
