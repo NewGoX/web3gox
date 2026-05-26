@@ -47,13 +47,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const sectionId   = title.getAttribute('data-section');
     const mainSection = document.getElementById(sectionId);
 
+    /* 默认折叠所有侧边栏分组（主内容区保持展开，仅折叠左侧目录） */
+    title.classList.add('collapsed');
+    if (sideSection) {
+      sideSection.classList.add('collapsed');
+      sideSection.style.display = 'none';
+    }
+
     title.addEventListener('click', function() {
       const isCollapsed = title.classList.toggle('collapsed');
 
       /* 收起/展开侧边栏链接列表 */
       if (sideSection) {
-        if (isCollapsed) sideSection.classList.add('collapsed');
-        else sideSection.classList.remove('collapsed');
+        if (isCollapsed) {
+          sideSection.classList.add('collapsed');
+          sideSection.style.display = 'none';
+        } else {
+          sideSection.classList.remove('collapsed');
+          sideSection.style.display = '';
+        }
       }
 
       /* 收起/展开主内容区章节列表 */

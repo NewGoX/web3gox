@@ -128,10 +128,10 @@ html[data-theme='dark'] .navbar {
 .dropdown-arrow { font-size: 10px; transition: transform var(--tr); opacity: .6; }
 .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
 .nav-dropdown-menu {
-  position: absolute; top: calc(100% + 8px); left: 0;
+  position: absolute; top: 100%; left: 0;
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r); box-shadow: var(--shadow-lg);
-  min-width: 180px; padding: 6px;
+  min-width: 180px; padding: 6px; padding-top: 14px;
   opacity: 0; visibility: hidden; transform: translateY(-6px);
   transition: opacity var(--tr), visibility var(--tr), transform var(--tr);
   pointer-events: none;
