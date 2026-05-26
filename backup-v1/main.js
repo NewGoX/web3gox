@@ -1,4 +1,4 @@
-/* Theme bootstrap (also runs inline in <head>) */
+/* ── Theme Toggle ── */
 (function() {
   const saved = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* Nav scroll state (legacy) */
+  /* Nav scroll shadow */
   const navbar = document.getElementById('navbar');
   if (navbar) {
     window.addEventListener('scroll', function() {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* Sidebar section title: click → collapse/expand */
+  /* Sidebar section title: click → 折叠/展开侧边栏链接 + 主内容 module-list */
   document.querySelectorAll('.sidebar-section-title[data-section]').forEach(function(title) {
     const arrow = document.createElement('span');
     arrow.className = 'sidebar-arrow';
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
     title.style.cursor = 'pointer';
     title.appendChild(arrow);
 
-    const sideSection = title.nextElementSibling;
+    const sideSection = title.nextElementSibling; // .sidebar-section
     const sectionId   = title.getAttribute('data-section');
     const mainSection = document.getElementById(sectionId);
 
-    /* Default collapsed */
+    /* 默认折叠所有侧边栏分组（主内容区保持展开，仅折叠左侧目录） */
     title.classList.add('collapsed');
     if (sideSection) {
       sideSection.classList.add('collapsed');
@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     title.addEventListener('click', function() {
       const isCollapsed = title.classList.toggle('collapsed');
+
+      /* 收起/展开侧边栏链接列表 */
       if (sideSection) {
         if (isCollapsed) {
           sideSection.classList.add('collapsed');
@@ -65,9 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
           sideSection.style.display = '';
         }
       }
+
+      /* 收起/展开主内容区章节列表 */
       if (mainSection) {
         const moduleList = mainSection.querySelector('.module-list');
-        if (moduleList) moduleList.style.display = isCollapsed ? 'none' : '';
+        if (moduleList) {
+          moduleList.style.display = isCollapsed ? 'none' : '';
+        }
+        /* 展开时滚动到该 Level */
         if (!isCollapsed) {
           showAllModules();
           requestAnimationFrame(function() {
@@ -79,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Article expand/collapse */
+  /* Course article expand/collapse */
   window.toggleArticle = function(id, toggleEl) {
     const body = document.getElementById(id);
     if (!body) return;
@@ -88,13 +95,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (toggleEl) toggleEl.classList.toggle('open', !isOpen);
   };
 
+  /* Sidebar click → scroll to module, show only that one */
   let currentModuleId = null;
 
   function showOnlyModule(moduleId) {
     document.querySelectorAll('.module').forEach(function(m) {
       m.style.display = m.id === moduleId ? '' : 'none';
     });
-    document.querySelectorAll('.chapter-title').forEach(function(el) { el.style.display = 'none'; });
+    document.querySelectorAll('.chapter-title').forEach(function(el) {
+      el.style.display = 'none';
+    });
     const target = document.getElementById(moduleId);
     if (!target) return;
     const body = target.querySelector('.article-body');
@@ -138,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Scroll-based sidebar highlight */
+  /* Scroll-based sidebar highlight (full view only) */
   const sidebarItems = [];
   document.querySelectorAll('.sidebar-link[href^="#"]').forEach(function(link) {
     const el = document.getElementById(link.getAttribute('href').slice(1));
@@ -146,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   window.addEventListener('scroll', function() {
     if (currentModuleId) return;
-    const pos = window.pageYOffset + 100;
+    const pos = window.pageYOffset + 88;
     let active = null;
     sidebarItems.forEach(function(item) {
       if (item.el.offsetTop <= pos) active = item;
@@ -157,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, { passive: true });
 
-  /* Research sidebar */
+  /* Research sidebar link highlight */
   document.querySelectorAll('.research-sidebar .sidebar-link[href^="#"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -172,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Active nav link based on current page */
+  /* Mark current page nav link active */
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function(a) {
     const href = a.getAttribute('href') || '';

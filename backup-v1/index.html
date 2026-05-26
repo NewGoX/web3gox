@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3实操学习营 — 安全进入 Web3 世界</title>
+<meta name="description" content="不是教你炒币，是帮你建立系统认知。从理论入门到链上实操，从DeFi实战到项目研究，一套完整的学习路径。">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<style>
+  /* 修改2：删除 Level 卡片顶部彩色横线 */
+  .level-card.lc-teal,
+  .level-card.lc-blue,
+  .level-card.lc-gold,
+  .level-card.lc-purple {
+    border-top: 1px solid var(--border);
+  }
+
+  /* 修改3：社群 CTA 金色左边框 + 轻微渐变 */
+  .community-cta {
+    background: linear-gradient(90deg, rgba(212,175,55,0.18) 0%, var(--surface2) 55%);
+    border-left: 3px solid var(--gold, #D4AF37);
+    border-top: 1px solid rgba(212,175,55,0.2);
+    color: var(--text);
+    padding-left: 2rem;
+  }
+  .community-cta::before { display: none; }
+  .community-cta h2 { color: var(--text); }
+  .community-cta p { opacity: 1; color: var(--text2); 
+  }
+
+  /* 修改4：Hero 区左对齐居中偏左（参考 index2） */
+  .hero {
+    text-align: left;
+  }
+  .hero .container {
+    padding-left: 22%;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+  }
+  .hero-sub {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .hero h1 {
+    letter-spacing: 4px;
+  }
+  .hero h1 em {
+    letter-spacing: 4px;
+  }
+  .hero-actions {
+    justify-content: flex-start;
+  }
+  .hero-actions {
+    gap: 16px;
+  }
+  .hero-actions .btn-outline {
+    margin-left: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">Web3实操学习营</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="courses.html" class="nav-dropdown-toggle">课程体系 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="courses.html#l1">L1  ·  读懂Web3</a>
+          <a href="courses.html#l2">L2  ·  Web3实操入门</a>
+          <a href="courses.html#l3">L3  ·  Web3实操进阶</a>
+          <a href="courses.html#l4">L4  ·  DeFi 协议实战</a>
+          <a href="courses.html#l5">L5  ·  Web3项目研究</a>
+        </div>
+      </div>
+      <a href="research.html">项目研究</a>
+      <a href="tools.html">Web3 工具</a>
+      <a href="topics.html">专题系列</a>
+      <a href="about.html">关于</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <a href="about.html#join" class="btn btn-primary btn-sm">加入社群</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="mobile-section-title">课程体系</div>
+    <a href="courses.html#l1" class="mobile-sub">读懂 Web3</a>
+    <a href="courses.html#l2" class="mobile-sub">Web3实操入门</a>
+    <a href="courses.html#l3" class="mobile-sub">Web3实操进阶</a>
+    <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
+    <a href="courses.html#l5" class="mobile-sub">Web3项目研究</a>
+    <a href="research.html">项目研究</a>
+    <a href="tools.html">Web3 工具</a>
+    <a href="topics.html">专题系列</a>
+    <a href="about.html">关于</a>
+    <a href="about.html#join" class="mobile-cta">加入社群 →</a>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow fade-up">📚 Web3 系统知识库 · 持续更新</div>
+    <h1 class="fade-up fade-up-1">安全进入<br><em>Web3 世界</em></h1>
+    <p class="hero-sub fade-up fade-up-2">
+      不是教你炒币，是帮你建立一套完整系统认知。<br>
+      从理论入门到链上实操，从DeFi实战到项目研究，<br>
+      30+钱包资产被盗解析及防御指南，15+Web3主流潜在10倍项目解析
+    </p>
+    <div class="hero-actions fade-up fade-up-3">
+      <a href="courses.html" class="btn btn-outline btn-lg">查看完整课程</a>
+      <a href="courses.html" class="btn btn-primary btn-lg">开始入门学习 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats ── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">70+</div>
+      <div class="stat-label">篇系统课程</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">学习阶段</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">15</div>
+      <div class="stat-label">项目研究案例</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">52+</div>
+      <div class="stat-label">每周内容更新</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Course Overview ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">四阶段 · 完整学习路径</div>
+    <p class="section-sub">授人以鱼不如授渔，方法论与实操结合，重点强化安全意识，从完全零基础，层层递进构建系统学习路径，到能独立识别风险项目，能自己研究并挑选项目</p>
+    <div class="level-grid">
+      <a href="courses.html#l1" class="level-card lc-teal" style="text-decoration:none;color:inherit;">
+        <div class="level-card-num lc-teal">Level 1</div>
+        <h3>读懂 Web3</h3>
+        <p>不是教你操作，是帮你建立完整认知。从互联网演变到链上生态全景，看懂 Web3 世界的底层逻辑。</p>
+        <div class="level-card-meta">
+          <span>20 篇课程</span>
+          <span class="badge badge-free">免费学习</span>
+        </div>
+      </a>
+      <a href="courses.html#l2" class="level-card lc-blue" style="text-decoration:none;color:inherit;">
+        <div class="level-card-num lc-blue">Level 2</div>
+        <h3>链上基础实操</h3>
+        <p>交易所注册、法币出入金、钱包管理、第一笔链上转账。手把手带你完成全部基础链上操作。</p>
+        <div class="level-card-meta">
+          <span>25 篇课程</span>
+          <span class="badge badge-vip">免费学习</span>
+        </div>
+      </a>
+      <a href="courses.html#l3" class="level-card lc-gold" style="text-decoration:none;color:inherit;">
+        <div class="level-card-num lc-gold">Level 3</div>
+        <h3>DeFi 底层逻辑</h3>
+        <p>DeFi 是什么、APY 从哪来、DEX 如何定价、三大核心风险。真正参与 DeFi 前必须理解的底层机制。</p>
+        <div class="level-card-meta">
+          <span>12 篇课程</span>
+          <span class="badge badge-vip">VIP 解锁</span>
+        </div>
+      </a>
+      <a href="courses.html#l4" class="level-card lc-purple" style="text-decoration:none;color:inherit;">
+        <div class="level-card-num lc-purple">Level 4</div>
+        <h3>DeFi 协议实战</h3>
+        <p>Uniswap、Aave、Lido、Pendle 等 13 个主流协议的完整实操指南，每篇内置协议背景与操作步骤。</p>
+        <div class="level-card-meta">
+          <span>13 篇课程</span>
+          <span class="badge badge-vip">VIP 解锁</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Update Log ── -->
+<section class="section-sm" style="padding-top:0;">
+  <div class="container">
+    <div class="update-log">
+      <div class="update-log-title">📌 更新日志</div>
+      <div class="update-item">
+        <span class="update-date">04/20</span>
+        <span class="update-dot"></span>
+        <span class="update-text">项目研究 · 新增 Ethena USDe 合成美元协议深度解读</span>
+        <span class="update-tag">项目研究</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/18</span>
+        <span class="update-dot"></span>
+        <span class="update-text">新增 L4-10 Pendle 收益代币化实操指南</span>
+        <span class="update-tag">课程</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/15</span>
+        <span class="update-dot"></span>
+        <span class="update-text">专题系列 · 「Web3 资产安全·全景防御」第一篇上线</span>
+        <span class="update-tag">专题</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/12</span>
+        <span class="update-dot"></span>
+        <span class="update-text">新增 L2-08 币安 C2C 入金教程（2026 年最新版）</span>
+        <span class="update-tag">课程</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/10</span>
+        <span class="update-dot"></span>
+        <span class="update-text">项目研究 · Jupiter 聚合交易所深度案例更新至 2026Q1</span>
+        <span class="update-tag">项目研究</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/08</span>
+        <span class="update-dot"></span>
+        <span class="update-text">新增 L1-19 流动性挖矿和质押</span>
+        <span class="update-tag">课程</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">04/05</span>
+        <span class="update-dot"></span>
+        <span class="update-text">专题系列 · 「加密货币出入金合规」开篇文章发布</span>
+        <span class="update-tag">专题</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Community CTA ── -->
+<section class="section-sm">
+  <div class="container">
+    <div class="community-cta">
+      <h2>加入 DF 的 Web3 VIP 成长社群</h2>
+      <p>一次加入，解锁全部课程内容 + 社群交流 + 持续更新。<br>守住本金的前提下，和志同道合的人一起挖掘链上机会。</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="about.html#join" class="btn btn-primary btn-lg">了解详情 →</a>
+        <a href="courses.html" class="btn btn-outline btn-lg">马上进入学习</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-mark">Web3实操学习营</span>
+        </div>
+        <p>面向中文用户的 Web3 系统知识库，帮你安全、系统地建立链上认知与操作能力。</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">课程体系</div>
+        <a href="courses.html#l1">L1  ·  读懂Web3</a>
+        <a href="courses.html#l2">L2  ·  Web3实操入门</a>
+        <a href="courses.html#l3">L3  ·  Web3实操进阶</a>
+        <a href="courses.html#l4">L4  ·  DeFi 协议实战</a>
+        <a href="courses.html#l5">L5  ·  Web3项目研究</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">内容</div>
+        <a href="research.html">项目研究</a>
+        <a href="tools.html">Web3 工具</a>
+        <a href="topics.html">专题系列</a>
+        <a href="about.html">关于 / 加入社群</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Web3实操学习营 · 内容仅供教育目的，不构成投资建议</span>
+      <span>守住本金，系统认知，安全参与</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
