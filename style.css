@@ -1,6 +1,6 @@
 /* ========================================================
    Web3 实操学习营 — editorial / research publication
-   Direction: 中文研究刊物气质，纸质感，3 色系
+   Direction: 中文研究课程气质，纸质感，3 色系
    3 colors: ink / paper / vermillion
    Fonts: Fraunces + Instrument Serif + IBM Plex Sans/Mono + Noto Serif SC
    ======================================================== */
@@ -208,7 +208,7 @@ img { max-width: 100%; display: block; }
 .display {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(48px, 6.4vw, 84px);
+  font-size: clamp(40px, 5.4vw, 72px);
   line-height: 1.04;
   letter-spacing: -0.025em;
   color: var(--ink);
@@ -216,7 +216,7 @@ img { max-width: 100%; display: block; }
   font-variation-settings: "opsz" 144, "SOFT" 30;
 }
 .display em {
-  font-family: var(--serif-it); font-style: italic;
+  font-family: var(--serif); font-style: normal;
   color: var(--vermillion); font-weight: 400;
 }
 .under {
@@ -230,9 +230,33 @@ img { max-width: 100%; display: block; }
   font-size: 19px;
   line-height: 1.65;
   color: var(--ink-2);
-  max-width: 560px;
+  max-width: 600px;
   margin-bottom: 40px;
   font-weight: 400;
+}
+.lede .l1 {
+  display: block;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.lede .l2,
+.lede .l3 {
+  display: block;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.lede .l4 {
+  display: block;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-top: 10px;
+}
+.lede .hl {
+  color: var(--vermillion);
+  font-weight: 600;
 }
 
 .hero-actions {
@@ -326,12 +350,13 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   background: var(--paper-3);
-  padding: 36px 32px;
+  padding: 36px 0;
 }
 .manifesto p {
-  max-width: 900px; margin: 0 auto;
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 32px;
   font-family: var(--serif); font-size: 22px;
-  line-height: 1.55; text-align: center;
+  line-height: 1.55; text-align: left;
   color: var(--ink-2); font-weight: 400;
 }
 
@@ -1765,7 +1790,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   .hero::before { font-size: 320px; right: -60px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .hero-side { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); padding-top: 40px; }
-  .display { font-size: clamp(40px, 9vw, 64px); }
+  .display { font-size: clamp(34px, 7.8vw, 54px); }
   .note-inner { grid-template-columns: 1fr; gap: 32px; }
   .note-side { min-height: auto; flex-direction: row; justify-content: space-between; align-items: center; }
   .path { padding: 64px 24px; }
@@ -1805,9 +1830,9 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   .mb-date { display: none; }
   .nav-inner { padding: 14px 20px; gap: 16px; }
   .navbar .nav-inner { padding: 14px 20px; }
-  .display { font-size: clamp(36px, 11vw, 52px); }
-  .manifesto p { font-size: 18px; }
-  .manifesto { padding: 28px 20px; }
+  .display { font-size: clamp(30px, 9.5vw, 44px); }
+  .manifesto p { font-size: 18px; padding: 0 20px; }
+  .manifesto { padding: 28px 0; }
   .path { padding: 48px 20px; }
   .section-h, .section-title { font-size: 30px; }
   .note { padding: 48px 20px; }

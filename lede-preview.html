@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lede 三方案对比预览</title>
+<link rel="stylesheet" href="style.css">
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+  body { padding: 60px 80px; background: var(--paper); }
+  .preview-block {
+    max-width: 720px;
+    margin: 0 auto 80px;
+    padding: 40px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .preview-block:first-of-type { border-top: none; }
+  .preview-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--vermillion);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .preview-desc {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 28px;
+  }
+
+  /* ── 方案 A：轻调整 ── */
+  .lede-a {
+    font-family: var(--serif);
+    color: var(--ink-2);
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+  .lede-a .l1 {
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .lede-a .l2,
+  .lede-a .l3 {
+    font-size: 17px;
+    line-height: 1.65;
+    display: block;
+  }
+  .lede-a .l3 { margin-top: 6px; }
+  .lede-a .hl {
+    color: var(--vermillion);
+    font-weight: 600;
+  }
+
+  /* ── 方案 B：三段拆分 ── */
+  .lede-b {
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+  .lede-b .l1 {
+    font-family: var(--serif);
+    font-size: 24px;
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: -0.005em;
+  }
+  .lede-b .l1 em {
+    font-style: normal;
+    color: var(--vermillion);
+    font-weight: 600;
+  }
+  .lede-b .l2 {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    display: block;
+    margin-bottom: 14px;
+  }
+  .lede-b .l3 {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-3);
+    display: block;
+    padding-left: 14px;
+    border-left: 2px solid var(--vermillion);
+  }
+  .lede-b .l3 strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ── 方案 C：课程数据条 ── */
+  .lede-c {
+    max-width: 660px;
+    margin-bottom: 40px;
+  }
+  .lede-c .l1 {
+    font-family: var(--serif);
+    font-size: 23px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 16px;
+  }
+  .lede-c .l1 em {
+    font-style: italic;
+    color: var(--vermillion);
+    font-weight: 600;
+  }
+  .lede-c .l2 {
+    font-family: var(--serif);
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    display: block;
+    margin-bottom: 22px;
+  }
+  .lede-c .badges {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+  }
+  .lede-c .badge {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: var(--sans);
+    padding: 0 18px;
+  }
+  .lede-c .badge + .badge {
+    border-left: 1px solid var(--rule);
+  }
+  .lede-c .badge:first-child { padding-left: 0; }
+  .lede-c .badge .num {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--vermillion);
+    line-height: 1;
+  }
+  .lede-c .badge .txt {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-block">
+  <span class="preview-label">方案 A · 轻调整</span>
+  <p class="preview-desc">保持原段落感，首行加大加粗作为钩子，关键词朱红色强调。改动最小，最贴近原设计。</p>
+  <p class="lede-a">
+    <span class="l1">不是教你炒币，是通过 Web3 带你了解<span class="hl">传统金融运作逻辑</span></span>
+    <span class="l2">从开户、入金到链上实操，从 DeFi 实战到项目研究，零基础入门到精通全程手把手指导</span>
+    <span class="l3"><span class="hl">30+</span> 钱包资产被盗解析及防御指南，<span class="hl">15+</span> Web3 主流潜在 N 倍项目解析</span>
+  </p>
+</div>
+
+<div class="preview-block">
+  <span class="preview-label">方案 B · 三段拆分</span>
+  <p class="preview-desc">三行视觉权重明显不同：首行 24px 副标题感，第二行常规正文，第三行用朱红竖线引出价值卖点。层次最清晰。</p>
+  <div class="lede-b">
+    <span class="l1">不是教你炒币，是通过 Web3 带你了解<em>传统金融运作逻辑</em></span>
+    <span class="l2">从开户、入金到链上实操，从 DeFi 实战到项目研究，零基础入门到精通全程手把手指导</span>
+    <span class="l3"><strong>30+</strong> 钱包资产被盗解析及防御指南 · <strong>15+</strong> Web3 主流潜在 N 倍项目解析</span>
+  </div>
+</div>
+
+<div class="preview-block">
+  <span class="preview-label">方案 C · 课程数据条</span>
+  <p class="preview-desc">第三行的数字卖点拆成上下细线包夹的"数据条"，信息密度最高，但偏离原 hero 简洁调性。</p>
+  <div class="lede-c">
+    <span class="l1">不是教你炒币，是通过 Web3 带你了解<em>传统金融运作逻辑</em></span>
+    <span class="l2">从开户、入金到链上实操，从 DeFi 实战到项目研究，零基础入门到精通全程手把手指导</span>
+    <div class="badges">
+      <div class="badge"><span class="num">30+</span><span class="txt">钱包被盗复盘<br>与防御指南</span></div>
+      <div class="badge"><span class="num">15+</span><span class="txt">Web3 主流潜在<br>N 倍项目解析</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
