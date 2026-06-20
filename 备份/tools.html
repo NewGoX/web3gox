@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3 工具 — Web3实操学习营</title>
+<link rel="stylesheet" href="style.css">
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">Web3实操学习营</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="courses.html" class="nav-dropdown-toggle">课程体系 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="courses.html#l1">读懂 Web3</a><a href="courses.html#l2">链上基础实操</a>
+          <a href="courses.html#l3">DeFi 底层逻辑</a><a href="courses.html#l4">DeFi 协议实战</a>
+        </div>
+      </div>
+      <a href="research.html">项目研究</a>
+      <a href="tools.html" class="active">Web3 工具</a>
+      <a href="topics.html">专题系列</a>
+      <a href="about.html">关于</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+      <a href="about.html#join" class="btn btn-primary btn-sm">加入社群</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="mobile-section-title">课程体系</div>
+    <a href="courses.html#l1" class="mobile-sub">读懂 Web3</a>
+    <a href="courses.html#l2" class="mobile-sub">链上基础实操</a>
+    <a href="courses.html#l3" class="mobile-sub">DeFi 底层逻辑</a>
+    <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
+    <a href="research.html">项目研究</a>
+    <a href="tools.html">Web3 工具</a>
+    <a href="topics.html">专题系列</a>
+    <a href="about.html">关于</a>
+    <a href="about.html#join" class="mobile-cta">加入社群 →</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Web3 工具</div>
+    <h1>常用工具导航</h1>
+    <p>精选 Web3 必备工具，按类别整理，快速找到你需要的工具</p>
+  </div>
+</div>
+
+<div class="tools-section">
+  <div class="container">
+  <div class="tools-category">
+    <div class="tools-category-title">钱包与资产管理</div>
+    <div class="tools-grid">
+    <a href="https://metamask.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🦊</div>
+      <div>
+        <div class="tool-name">MetaMask</div>
+        <div class="tool-desc">以太坊生态最主流热钱包，浏览器扩展 + 移动端</div>
+        <span class="tool-tag">EVM 钱包</span>
+      </div>
+    </a>
+    <a href="https://rabby.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🐇</div>
+      <div>
+        <div class="tool-name">Rabby Wallet</div>
+        <div class="tool-desc">交易前自动模拟，安全提示更完善，设计优于 MetaMask</div>
+        <span class="tool-tag">EVM 钱包</span>
+      </div>
+    </a>
+    <a href="https://phantom.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">👻</div>
+      <div>
+        <div class="tool-name">Phantom</div>
+        <div class="tool-desc">Solana 生态最主流钱包，同时支持以太坊和比特币</div>
+        <span class="tool-tag">多链钱包</span>
+      </div>
+    </a>
+    <a href="https://ledger.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔐</div>
+      <div>
+        <div class="tool-name">Ledger</div>
+        <div class="tool-desc">全球最主流硬件钱包品牌，大额资产必备冷存储</div>
+        <span class="tool-tag">硬件钱包</span>
+      </div>
+    </a>
+    <a href="https://safe.global" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔒</div>
+      <div>
+        <div class="tool-name">Safe (Gnosis)</div>
+        <div class="tool-desc">多签钱包，团队资金管理首选，需多个私钥授权才能操作</div>
+        <span class="tool-tag">多签钱包</span>
+      </div>
+    </a>
+    <a href="https://backpack.exchange" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🎒</div>
+      <div>
+        <div class="tool-name">Backpack</div>
+        <div class="tool-desc">下一代 Web3 超级钱包，支持 xNFT 链上应用</div>
+        <span class="tool-tag">超级钱包</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="tools-category">
+    <div class="tools-category-title">DeFi 数据平台</div>
+    <div class="tools-grid">
+    <a href="https://defillama.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🦙</div>
+      <div>
+        <div class="tool-name">DefiLlama</div>
+        <div class="tool-desc">最全面的 DeFi 数据平台，TVL、协议收入、链上数据一站式</div>
+        <span class="tool-tag">必备数据</span>
+      </div>
+    </a>
+    <a href="https://dune.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔎</div>
+      <div>
+        <div class="tool-name">Dune Analytics</div>
+        <div class="tool-desc">链上数据分析平台，可查询自定义 SQL，最强数据仪表盘</div>
+        <span class="tool-tag">数据分析</span>
+      </div>
+    </a>
+    <a href="https://nansen.ai" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🧠</div>
+      <div>
+        <div class="tool-name">Nansen</div>
+        <div class="tool-desc">聪明钱追踪平台，标记钱包地址，发现大户链上行为</div>
+        <span class="tool-tag">聪明钱</span>
+      </div>
+    </a>
+    <a href="https://arkhamintelligence.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🕵️</div>
+      <div>
+        <div class="tool-name">Arkham Intelligence</div>
+        <div class="tool-desc">链上地址身份归因平台，追踪机构和名人钱包</div>
+        <span class="tool-tag">地址分析</span>
+      </div>
+    </a>
+    <a href="https://tokenterminal.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📈</div>
+      <div>
+        <div class="tool-name">Token Terminal</div>
+        <div class="tool-desc">协议基本面数据，P/S、P/F 等估值指标一目了然</div>
+        <span class="tool-tag">基本面</span>
+      </div>
+    </a>
+    <a href="https://messari.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📚</div>
+      <div>
+        <div class="tool-name">Messari</div>
+        <div class="tool-desc">加密资产研究数据库，代币经济学与项目报告</div>
+        <span class="tool-tag">研究数据</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="tools-category">
+    <div class="tools-category-title">链上数据分析</div>
+    <div class="tools-grid">
+    <a href="https://etherscan.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔍</div>
+      <div>
+        <div class="tool-name">Etherscan</div>
+        <div class="tool-desc">以太坊区块链浏览器，查交易、合约、地址的必备工具</div>
+        <span class="tool-tag">区块浏览器</span>
+      </div>
+    </a>
+    <a href="https://solscan.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🌐</div>
+      <div>
+        <div class="tool-name">Solscan</div>
+        <div class="tool-desc">Solana 区块链浏览器，查看 Solana 链上所有交易和账户</div>
+        <span class="tool-tag">区块浏览器</span>
+      </div>
+    </a>
+    <a href="https://arbiscan.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔵</div>
+      <div>
+        <div class="tool-name">Arbiscan</div>
+        <div class="tool-desc">Arbitrum 区块链浏览器</div>
+        <span class="tool-tag">L2 浏览器</span>
+      </div>
+    </a>
+    <a href="https://dune.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📊</div>
+      <div>
+        <div class="tool-name">Dune Analytics</div>
+        <div class="tool-desc">自定义 SQL 查询链上数据，最强链上数据分析工具</div>
+        <span class="tool-tag">数据分析</span>
+      </div>
+    </a>
+    <a href="https://flipsidecrypto.xyz" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🐬</div>
+      <div>
+        <div class="tool-name">Flipside Crypto</div>
+        <div class="tool-desc">另一个链上数据分析平台，支持多链数据查询</div>
+        <span class="tool-tag">数据分析</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="tools-category">
+    <div class="tools-category-title">价格与行情工具</div>
+    <div class="tools-grid">
+    <a href="https://coingecko.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🦎</div>
+      <div>
+        <div class="tool-name">CoinGecko</div>
+        <div class="tool-desc">最全面的加密资产价格数据，支持 10,000+ 代币</div>
+        <span class="tool-tag">价格数据</span>
+      </div>
+    </a>
+    <a href="https://coinmarketcap.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📊</div>
+      <div>
+        <div class="tool-name">CoinMarketCap</div>
+        <div class="tool-desc">老牌加密市值排名与价格追踪网站</div>
+        <span class="tool-tag">市值排名</span>
+      </div>
+    </a>
+    <a href="https://tradingview.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📉</div>
+      <div>
+        <div class="tool-name">TradingView</div>
+        <div class="tool-desc">专业级图表工具，技术分析必备，支持加密资产</div>
+        <span class="tool-tag">图表工具</span>
+      </div>
+    </a>
+    <a href="https://birdeye.so" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🦅</div>
+      <div>
+        <div class="tool-name">Birdeye</div>
+        <div class="tool-desc">Solana 链上代币价格图表与交易数据，Meme 币追踪必备</div>
+        <span class="tool-tag">Solana 数据</span>
+      </div>
+    </a>
+    <a href="https://geckoterminal.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🦎</div>
+      <div>
+        <div class="tool-name">GeckoTerminal</div>
+        <div class="tool-desc">链上 DEX 实时价格与交易量，多链覆盖</div>
+        <span class="tool-tag">DEX 数据</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="tools-category">
+    <div class="tools-category-title">安全工具</div>
+    <div class="tools-grid">
+    <a href="https://revoke.cash" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🚫</div>
+      <div>
+        <div class="tool-name">Revoke.cash</div>
+        <div class="tool-desc">检查并撤销钱包对合约的代币授权，定期检查是安全必修课</div>
+        <span class="tool-tag">授权管理</span>
+      </div>
+    </a>
+    <a href="https://de.fi" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔒</div>
+      <div>
+        <div class="tool-name">De.Fi Scanner</div>
+        <div class="tool-desc">智能合约安全扫描，检测合约风险、蜜罐代币</div>
+        <span class="tool-tag">合约安全</span>
+      </div>
+    </a>
+    <a href="https://gopluslabs.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">✅</div>
+      <div>
+        <div class="tool-name">GoPlus Security</div>
+        <div class="tool-desc">代币安全检测 API，判断代币是否存在蜜罐/高税率等风险</div>
+        <span class="tool-tag">代币检测</span>
+      </div>
+    </a>
+    <a href="https://pocketuniverse.app" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🌌</div>
+      <div>
+        <div class="tool-name">Pocket Universe</div>
+        <div class="tool-desc">交易签名前自动模拟，防止钓鱼授权与恶意合约</div>
+        <span class="tool-tag">交易保护</span>
+      </div>
+    </a>
+    <a href="https://webacy.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🛡️</div>
+      <div>
+        <div class="tool-name">Webacy</div>
+        <div class="tool-desc">钱包风险评分与资产保护，全面的链上安全监控</div>
+        <span class="tool-tag">风险监控</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="tools-category">
+    <div class="tools-category-title">出入金与实用工具</div>
+    <div class="tools-grid">
+    <a href="https://binance.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🏦</div>
+      <div>
+        <div class="tool-name">Binance</div>
+        <div class="tool-desc">全球最大中心化交易所，C2C 出入金首选</div>
+        <span class="tool-tag">中心化交易所</span>
+      </div>
+    </a>
+    <a href="https://okx.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">⭕</div>
+      <div>
+        <div class="tool-name">OKX</div>
+        <div class="tool-desc">主流中心化交易所，内置 Web3 钱包</div>
+        <span class="tool-tag">中心化交易所</span>
+      </div>
+    </a>
+    <a href="https://jumper.exchange" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🏃</div>
+      <div>
+        <div class="tool-name">Jumper Exchange</div>
+        <div class="tool-desc">多链跨链聚合器，一站式跨链换币，支持 20+ 条链</div>
+        <span class="tool-tag">跨链工具</span>
+      </div>
+    </a>
+    <a href="https://layerzeroscan.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🌉</div>
+      <div>
+        <div class="tool-name">LayerZero Scan</div>
+        <div class="tool-desc">跨链消息追踪工具，查看跨链交易状态</div>
+        <span class="tool-tag">跨链追踪</span>
+      </div>
+    </a>
+    <a href="https://gas.zip" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">⛽</div>
+      <div>
+        <div class="tool-name">Gas.zip</div>
+        <div class="tool-desc">一站式 Gas 补充工具，向多链钱包快速补充 Gas 费</div>
+        <span class="tool-tag">Gas 工具</span>
+      </div>
+    </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-mark">Web3实操学习营</span></div>
+        <p>面向中文用户的 Web3 系统知识库，帮你安全、系统地建立链上认知与操作能力。</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">课程体系</div>
+        <a href="courses.html#l1">读懂 Web3</a><a href="courses.html#l2">链上基础实操</a>
+        <a href="courses.html#l3">DeFi 底层逻辑</a><a href="courses.html#l4">DeFi 协议实战</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">更多内容</div>
+        <a href="research.html">项目研究</a><a href="topics.html">专题系列</a>
+        <a href="about.html">关于</a><a href="about.html#join">加入社群</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Web3实操学习营 · 内容仅供教育目的，不构成投资建议</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

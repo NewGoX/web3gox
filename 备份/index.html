@@ -38,8 +38,8 @@
 <!-- ── Nav ── -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">Web3实操学习营</span></a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
       <div class="nav-dropdown">
         <a href="courses.html" class="nav-dropdown-toggle">课程体系 <span class="dropdown-arrow">▾</span></a>
         <div class="nav-dropdown-menu">
@@ -57,7 +57,7 @@
     </div>
     <div class="nav-right">
       <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
-      <a href="about.html" class="btn btn-primary btn-sm">加入社群</a>
+      <a href="about.html#join" class="btn btn-primary btn-sm">加入社群</a>
     </div>
     <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
   </div>
@@ -72,14 +72,65 @@
     <a href="tools.html">Web3 工具</a>
     <a href="topics.html">专题系列</a>
     <a href="about.html">关于</a>
-    <a href="about.html" class="mobile-cta">加入社群 →</a>
+    <a href="about.html#join" class="mobile-cta">加入社群 →</a>
   </div>
 </nav>
 
-<!-- ── Path（打开首页第一屏） ── -->
+<!-- ── Hero ── -->
+<header class="hero">
+  <div class="hero-grid">
+
+    <div class="hero-main">
+      <h1 class="display">
+        安全进入<br>
+        <em>Web3 世界</em>
+      </h1>
+
+      <p class="lede">
+        <span class="l2">从开户、入金到链上实操，从 DeFi 实战到项目研究</span>
+        <span class="l3">零基础入门到精通，全程手把手指导，参与链上新经济</span>
+        <span class="l4"><span class="hl">30+</span> 钱包资产被盗解析及防御指南，<span class="hl">15+</span> Web3 主流潜在 N 倍项目解析</span>
+      </p>
+
+      <div class="hero-actions">
+        <a href="courses.html" class="btn-ink">开始第一章 →</a>
+        <a href="research.html" class="btn-ghost">阅读最新研究</a>
+      </div>
+
+      <dl class="hero-stats">
+        <div><dt>70+</dt><dd>系统课程</dd></div>
+        <div><dt>04</dt><dd>学习阶段</dd></div>
+        <div><dt>15</dt><dd>项目研究</dd></div>
+        <div><dt>52</dt><dd>每周更新</dd></div>
+      </dl>
+    </div>
+
+    <aside class="hero-side">
+      <div class="side-head">
+        <span class="side-label">本期更新</span>
+        <span class="side-rule"></span>
+      </div>
+      <!-- 本期更新：数据来自 updates.js，自动按日期倒序取最新 5 条 -->
+      <ol class="dispatch" id="dispatch"></ol>
+      <a href="topics.html" class="side-more">查看全部归档 ↗</a>
+    </aside>
+
+  </div>
+</header>
+
+<!-- ── Manifesto ── -->
+<section class="manifesto">
+  <p>
+    <em>授人以鱼不如授渔。</em>
+    本课程不预测价格，不提供信号，不构成投资建议——
+    只做一件事：<strong>把链上世界讲清楚</strong>，让你能独立识别风险，独立研究项目。
+  </p>
+</section>
+
+<!-- ── Path ── -->
 <section class="path">
   <div class="path-head">
-    <h2 class="section-h">Web3实操陪跑营<br>四阶段 · 完整学习路径</h2>
+    <h2 class="section-h">四阶段 · 完整学习路径</h2>
     <p class="section-p">从零基础到独立研究，层层递进。每一阶段对应一组系统课程与配套实操。</p>
   </div>
 
@@ -88,48 +139,80 @@
     <li class="path-row">
       <div class="path-num">Ⅰ</div>
       <div class="path-body">
-        <h3><a href="courses.html#l1" class="path-link">读懂 Web3</a></h3>
+        <h3>读懂 Web3</h3>
         <p>不是教你操作，是帮你建立完整认知。从互联网演变到链上生态全景，看懂底层逻辑。</p>
       </div>
+      <div class="path-meta">
+        <span class="pm-count">20 篇</span>
+        <span class="pm-tag pm-free">免费</span>
+      </div>
+      <a href="courses.html#l1" class="path-arrow" aria-label="进入 Level 1">→</a>
     </li>
 
     <li class="path-row">
       <div class="path-num">Ⅱ</div>
       <div class="path-body">
-        <h3><a href="courses.html#l2" class="path-link">链上基础实操</a></h3>
+        <h3>链上基础实操</h3>
         <p>交易所注册、法币出入金、钱包管理、第一笔链上转账。手把手完成全部基础操作。</p>
       </div>
+      <div class="path-meta">
+        <span class="pm-count">25 篇</span>
+        <span class="pm-tag pm-free">免费</span>
+      </div>
+      <a href="courses.html#l2" class="path-arrow" aria-label="进入 Level 2">→</a>
     </li>
 
     <li class="path-row">
       <div class="path-num">Ⅲ</div>
       <div class="path-body">
-        <h3><a href="courses.html#l3" class="path-link">DeFi 底层逻辑</a></h3>
+        <h3>DeFi 底层逻辑</h3>
         <p>DeFi 是什么、APY 从哪来、DEX 如何定价、三大核心风险。参与 DeFi 前必须理解的机制。</p>
       </div>
+      <div class="path-meta">
+        <span class="pm-count">12 篇</span>
+        <span class="pm-tag pm-vip">VIP</span>
+      </div>
+      <a href="courses.html#l3" class="path-arrow" aria-label="进入 Level 3">→</a>
     </li>
 
     <li class="path-row">
       <div class="path-num">Ⅳ</div>
       <div class="path-body">
-        <h3><a href="courses.html#l4" class="path-link">DeFi 协议实战</a></h3>
+        <h3>DeFi 协议实战</h3>
         <p>Uniswap、Aave、Lido、Pendle 等 13 个主流协议的完整实操指南，含协议背景与步骤。</p>
       </div>
+      <div class="path-meta">
+        <span class="pm-count">13 篇</span>
+        <span class="pm-tag pm-vip">VIP</span>
+      </div>
+      <a href="courses.html#l4" class="path-arrow" aria-label="进入 Level 4">→</a>
     </li>
 
   </ol>
 </section>
 
-<!-- ── 本期更新（暂置此处，位置待后续讨论） ── -->
-<section class="updates-section">
-  <div class="updates-inner">
-    <div class="side-head">
-      <span class="side-label">本期更新</span>
-      <span class="side-rule"></span>
+<!-- ── Editor's Note ── -->
+<section class="note">
+  <div class="note-inner">
+    <div class="note-side">
+      <span class="note-label">主理人 · 致学员</span>
+      <span class="note-sig">— DF</span>
     </div>
-    <!-- 本期更新：数据来自 updates.js，自动按日期倒序取最新 5 条 -->
-    <ol class="dispatch" id="dispatch"></ol>
-    <a href="topics.html" class="side-more">查看全部归档 ↗</a>
+    <div class="note-body">
+      <p class="note-quote">
+        "守住本金的前提下，<br>
+        和志同道合的人一起<br>
+        挖掘链上机会。"
+      </p>
+      <p class="note-text">
+        Web3 VIP 成长社群——一次加入，解锁全部课程内容、社群讨论与持续更新。
+        不卖焦虑，不喊单。只做一件事：把已经验证过的认知，沉淀给愿意学的人。
+      </p>
+      <div class="note-actions">
+        <a href="about.html#join" class="btn-ink">了解详情 →</a>
+        <a href="courses.html" class="btn-ghost">先看免费章节</a>
+      </div>
+    </div>
   </div>
 </section>
 
