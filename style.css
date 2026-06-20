@@ -55,8 +55,8 @@
 
   --font: var(--sans); /* legacy alias */
 
-  --maxw: 1200px;
-  --max-w: 1200px; /* legacy alias */
+  --maxw: min(95vw, 1680px); /* fluid: 内容宽度随窗口大小自适应缩放 */
+  --max-w: min(95vw, 1680px); /* legacy alias */
   --nav-h: 88px;
   --r: 0;
   --r-lg: 0;
@@ -110,6 +110,20 @@ em { font-style: italic; font-family: var(--serif-it); font-weight: 400; color: 
 strong { color: var(--ink); font-weight: 600; }
 img { max-width: 100%; display: block; }
 [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+/* 图片点击放大（灯箱） */
+.lightbox-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.85); padding: 24px;
+  cursor: zoom-out;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-overlay .lightbox-img {
+  max-width: 94vw; max-height: 92vh; width: auto; height: auto;
+  border-radius: 8px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 .container-sm { max-width: 800px; margin: 0 auto; padding: 0 32px; }
@@ -963,7 +977,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   margin-bottom: 0;
   overflow: hidden;
 }
-.module:hover { background: var(--paper-3) !important; }
+.module:hover { background: none !important; }
 .module-toggle { cursor: pointer; padding: 20px 0; }
 .module-title {
   font-family: var(--serif);

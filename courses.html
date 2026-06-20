@@ -61,6 +61,30 @@
     border-top: 1px solid var(--border);
     margin: 24px 0;
   }
+
+  /* 正文配图（多为手机截图，竖图居中显示） */
+  .article-img {
+    display: block;
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    margin: 18px auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+  }
+
+  /* ===== 字号统一规则（所有文章生效） ===== */
+  /* 文章标题：比正文（16.5px）大两号 + 加粗 */
+  .module-title {
+    font-size: 20.5px;
+    font-weight: 700;
+  }
+  /* 文章内容标题（h3）：比正文大一号 + 加粗 */
+  .article-body h3 {
+    font-size: 18.5px;
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
@@ -160,6 +184,7 @@
       <a href="#l2-11" class="sidebar-link">2-10 币安法币出金</a>
       <a href="#l2-12" class="sidebar-link">2-11 Backpack 出金</a>
       <a href="#l2-13" class="sidebar-link">2-12 Kraken 出金</a>
+      <a href="#l2-wechat-hk" class="sidebar-link">2-12 WeChat Pay HK（香港微信支付）开通 教程</a>
       <div class="sidebar-chapter">第三章 · 钱包管理</div>
       <a href="#l2-14" class="sidebar-link">2-14 钱包不是存钱的</a>
       <a href="#l2-15" class="sidebar-link">2-15 钱包怎么选</a>
@@ -778,7 +803,7 @@
       </div>
       <div class="article-body" id="art-l2-7"><p class="body-p">（内容即将开放，敬请期待）</p></div>
     </div>
-    <div class="chapter-title">第二章 · 法币出入金（6篇）</div>
+    <div class="chapter-title">第二章 · 法币出入金（7篇）</div>
     <div class="module" id="l2-8">
       <div class="module-toggle" onclick="toggleArticle('art-l2-8', this)">
         <div class="module-title">2-08 币安 C2C 入金教程（2026 最新）</div>
@@ -826,6 +851,68 @@
         <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
       </div>
       <div class="article-body" id="art-l2-13"><p class="body-p">（内容即将开放，敬请期待）</p></div>
+    </div>
+    <div class="module" id="l2-wechat-hk">
+      <div class="module-toggle" onclick="toggleArticle('art-l2-wechat-hk', this)">
+        <div class="module-title">2-12 WeChat Pay HK（香港微信支付）开通 教程</div>
+        <div class="module-desc">实测磨损最低（约 1%–1.4%）、合规低风险的出金与日常消费路径，手把手开通并切换到港版微信支付。</div>
+        <div class="read-more"><span class="read-more-line"></span>展开阅读 ↓<span class="read-more-line"></span></div>
+      </div>
+      <div class="article-body" id="art-l2-wechat-hk">
+<p class="body-abstract">港版微信支付（WeChat Pay HK）是实测磨损最低（约 1%–1.4%）、合规且低风险的出金与日常消费路径，明显优于综合损耗常达 3%–5% 的 U 卡，以及存在冻卡风险的 C2C。本文手把手讲解如何在国内开通并切换至 WeChat Pay HK，实现低磨损出金与消费。</p>
+<hr class="article-divider">
+<h3>为什么选港版微信：三种出金渠道的磨损对比</h3>
+<p class="body-p">你还在用 U 卡出金或消费？超过 200 就直接干你 3%。实测探索出一条磨损低到变态、而且完全合规、无风险的出金路径——港版微信支付。先把三种主流渠道的磨损摆出来对比：</p>
+<p class="body-p"><strong>1、C2C 出金。</strong>磨损最小，比 Wise 低 1.6% 左右。但缺点是风险极大，容易被冻卡甚至按头，高频、高额需谨慎。（如果要 C2C，只在币安，不要听任何 KOL 推荐在其他交易所 C2C。）</p>
+<p class="body-p"><strong>2、U 卡。</strong>最大冤种的一种出金/消费方式，99% 的概率是受到了营销软文的迷惑。动辄几十到几百 U 的开卡费不说，充值手续费 1–2%+、消费/取现费 1.5–3%、汇率差层层叠加，综合损耗常达 3%–5%。最要命的是它是预付卡，发卡方、卡组织随时可能限制提现甚至跑路，平台跑路风险很高。</p>
+<p class="body-p"><strong>3、港版微信。</strong>实测下来磨损最低，大概在 1%–1.4%。下面就带大家如何在国内，既不"被抓"，又能以最低磨损"出金"/消费。</p>
+<h3>第一步，准备工作</h3>
+<p class="body-p"><strong>1、把交易所的 U 提到你的港卡。</strong></p>
+<img class="article-img" src="images/wechat-pay-hk/12.png" alt="把交易所的 USDC 提到港卡">
+<p class="body-p">很多人推荐你从币安提现到港卡，但作为老司机告诉你：这是错的。币安要先把 USDT/USDC 兑换成 USD，磨损经常干到 0.1%–0.5%，更无法接受的是每笔合规提现要 20–60 美元不等的手续费。正确做法是从 Backpack 交易所提现，可以直接把 USDC 安全、合规、零磨损提到你的港卡，这里是绝对的零手续费、零磨损。</p>
+<p class="body-p">如果你还没有 Backpack 账号，参考《Backpack 注册教程》；如果你还没有港卡账号，参考《零门槛开户众安银行教程》。</p>
+<p class="body-p"><strong>避坑事项 ⚠️⚠️⚠️：</strong>一定要用众安卡，不要使用其他银行的港卡，说三遍！</p>
+<p class="body-p"><strong>2、兑换成港币。</strong>港卡收到的是美元，需要先兑换成港币。<strong>避坑事项 ⚠️：</strong>众安银行当前至少 1000 美元起兑换，少于 1000 美元无法兑换。</p>
+<h3>第二步，开通微信港版钱包（核心步骤）</h3>
+<p class="body-p"><strong>1、</strong>微信搜索框输入"WeChat Pay HK 好生活"，进入微信公众号。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620154435.png" alt="微信搜索 WeChat Pay HK 好生活公众号">
+<p class="body-p"><strong>2、开通钱包。</strong>点击右下角"便捷入口"，再点击"自助开通香港钱包"。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620155146.png" alt="自助开通香港钱包入口">
+<p class="body-p"><strong>3、绑定银行卡。</strong>根据你持有的银行卡选择绑定类型，然后输入相应信息。如果你是众安银行，选择"绑定香港发行的信用卡"；如果你是中银香港、中信国际、工行亚洲、招商永隆、打新银行这 5 家，选择"香港发行的银行卡"。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620155349.png" alt="选择银行卡绑定类型">
+<p class="body-p"><strong>提醒事项 ⚠️⚠️⚠️：</strong>选"香港发行的银行卡"还是"绑定信用卡"，要根据你持有的是哪家来定。下列 5 家可选"银行卡"，其余只能选择"绑定香港发行信用卡"。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620165620.png" alt="可选银行卡的 5 家银行">
+<p class="body-p"><strong>4、账户验证。</strong>它会发起一笔账号验证，你的银行 App 会通知你确认：</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620170306.png" alt="银行 App 收到验证通知">
+<p class="body-p">打开你的 App，点确认即可：</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620170347.png" alt="在银行 App 中确认验证">
+<p class="body-p"><strong>注意事项 ⚠️：</strong>你账户必须要有余额 0.1 港币（会退还给你），否则验证失败。如下图，说明验证成功了：</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620170903.png" alt="账户验证成功">
+<p class="body-p">稍等一会，提示你的 WeChat Pay HK 开通成功了：</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171038.png" alt="WeChat Pay HK 开通成功">
+<p class="body-p"><strong>这里有个巨坑提示 ⚠️⚠️⚠️：</strong>很多教程都告诉你往钱包充值需要 3%（现在 2.5%）手续费。但千万别做大冤种——你不要往里充钱，就像国内版一样，只要绑定了银行卡，它会自动从卡中扣款，无需充钱。钱包余额为零，只要卡上有钱就可消费。F 哥亲测下来，手续费不到千分之二。</p>
+<h3>第三步，切换钱包（最后一步）</h3>
+<p class="body-p"><strong>1、</strong>打开国内微信，右下角"我"—"服务"。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171219.png" alt="微信 我-服务">
+<p class="body-p"><strong>2、</strong>右上角三点，切换钱包地区。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171231.png" alt="切换钱包地区">
+<p class="body-p"><strong>3、</strong>选"中国香港"，同意并开始使用。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171243.png" alt="选择中国香港钱包">
+<p class="body-p"><strong>4、</strong>如下图，表示成功切换到 WeChat Pay HK。这时你就可以直接扫码支付，或出示付款码给商家扫了，当然也可以随时切换回国内的。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171542.png" alt="成功切换到 WeChat Pay HK">
+<p class="body-p"><strong>这里又有个巨坑提示 ⚠️⚠️⚠️：</strong>如下图，余额是零，90% 以上的新人都在这踩坑——别充值！一旦充值你就要负 2.5% 手续费。余额即便为零也照样可以付款，因为你刚才已经绑定过卡，它会直接从卡上扣，这样就省下了 2.5% 的充值手续费。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620171729.png" alt="钱包余额为零也可付款">
+<h3>第四步，支付测试</h3>
+<p class="body-p">绑定好之后，第一时间到小区门口的便利店，买了个 1 块钱的打火机测试，亲测丝滑成功支付。</p>
+<img class="article-img" src="images/wechat-pay-hk/Pasted%20image%2020260620172923.png" alt="便利店支付测试成功">
+<h3>磨损费到底有多少？怎么算？</h3>
+<p class="body-p">从上图显示的汇率来看，它是按 1:1.168 港币换算的，而当时实时查看 Wise 的汇率是 1:1.15，相当于总共有 1.8% 的汇率差。但真实磨损其实是 1.4%——Wise 虽然是 1.15，但每笔要收固定手续费 0.4%，1.168 − 1.15 − 0.004 = 0.014，即 1.4%。与 U 卡的 3%–5% 相比，1.4% 已是极低的费用，关键在于可以合规、安全地出金/消费，规避被冻卡的风险。</p>
+<h3>最后，总结一下</h3>
+<p class="body-p">1、这种方式最适合年度 15 万以内的日常消费；如果是大额出金，比如买车、买房，还是要走其他渠道。</p>
+<p class="body-p">2、从交易所出金到港卡，一定不要使用币安，会多花 20–60 刀。用 Backpack，已替你亲测过，每笔省下约 20 美元，而且 Backpack 是合规受监管的交易所。</p>
+<p class="body-p">3、WeChat Pay HK 在国内消费额度只有 10 万港币，再加上绑定港版支付宝每年 3.6 万额度，但对日常加油、买菜，大多数家庭已经够用。</p>
+<blockquote><p><strong>本篇小结：</strong>港版微信支付（WeChat Pay HK）是当前实测磨损最低（约 1%–1.4%）、合规且低风险的出金与消费方式。核心流程：用 Backpack 零磨损把 USDC 提到众安港卡 → 兑换港币 → 通过"WeChat Pay HK 好生活"公众号自助开通香港钱包并绑卡 → 在微信中切换钱包地区到中国香港即可消费。关键避坑点：绑卡后<strong>不要往钱包充值</strong>（会产生 2.5% 手续费），余额为零也能直接从卡扣款付款。</p></blockquote>
+</div>
     </div>
     <div class="chapter-title">第三章 · 钱包管理（7篇）</div>
     <div class="module" id="l2-14">

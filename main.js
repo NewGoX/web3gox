@@ -172,6 +172,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  /* Image lightbox: click any article image to enlarge (all chapters) */
+  (function() {
+    const imgs = document.querySelectorAll('.article-img');
+    if (!imgs.length) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<img class="lightbox-img" alt="">';
+    document.body.appendChild(overlay);
+    const lbImg = overlay.querySelector('.lightbox-img');
+    function openLb(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.removeAttribute('src');
+    }
+    imgs.forEach(function(img) {
+      img.addEventListener('click', function() { openLb(img.src, img.alt); });
+    });
+    overlay.addEventListener('click', closeLb);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeLb();
+    });
+  })();
+
   /* Active nav link based on current page */
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function(a) {
