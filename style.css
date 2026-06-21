@@ -192,7 +192,7 @@ img { max-width: 100%; display: block; }
   overflow: visible;
 }
 .hero::before {
-  content: '§';
+  content: none;
   position: absolute;
   font-family: var(--serif-it); font-style: italic;
   font-size: 520px;
@@ -626,7 +626,7 @@ a.d-title:hover { color: var(--vermillion); }
   display: inline-flex; align-items: baseline; gap: 10px;
 }
 .nav-logo::before {
-  content: '§';
+  content: none;
   font-family: var(--serif-it); font-style: italic;
   font-size: 28px; line-height: 1;
   color: var(--vermillion); transform: translateY(2px);
@@ -697,6 +697,19 @@ a.d-title:hover { color: var(--vermillion); }
   letter-spacing: 0;
 }
 .nav-dropdown-menu a:hover { color: var(--vermillion) !important; background: var(--paper-3) !important; }
+.nav-dropdown-menu .dropdown-soon {
+  display: block;
+  font-family: var(--serif);
+  font-size: 14px;
+  padding: 7px 10px;
+  color: var(--ink-3);
+  opacity: .55;
+  cursor: default;
+}
+
+/* 平滑滚动 + 锚点落点避开吸顶导航栏 */
+html { scroll-behavior: smooth; }
+.module, .content-section, .topic-series { scroll-margin-top: 90px; }
 
 .navbar .nav-right { display: flex; align-items: center; gap: 16px; margin-left: auto; }
 .theme-toggle {
@@ -809,7 +822,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   position: relative;
 }
 .page-hero::before {
-  content: '§';
+  content: none;
   position: absolute;
   font-family: var(--serif-it); font-style: italic;
   font-size: 360px;
@@ -1139,7 +1152,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   position: relative;
 }
 .article-divider::after {
-  content: '§';
+  content: none;
   position: absolute;
   top: -14px;
   left: 50%;
@@ -1641,7 +1654,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   overflow: hidden;
 }
 .join-card::before {
-  content: '§';
+  content: none;
   position: absolute;
   top: -60px; right: -20px;
   font-family: var(--serif-it); font-style: italic;
@@ -1722,7 +1735,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   display: inline-flex; align-items: baseline; gap: 10px;
 }
 .footer-brand .footer-logo::before {
-  content: '§';
+  content: none;
   font-family: var(--serif-it); font-style: italic;
   font-size: 26px; color: var(--vermillion); transform: translateY(2px);
 }
@@ -1798,7 +1811,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   text-align: left !important;
 }
 .community-cta::before {
-  content: '§' !important;
+  content: none !important;
   position: absolute !important;
   top: -40px !important; right: 20px !important;
   inset: auto !important;

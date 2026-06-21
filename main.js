@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     currentModuleId = null;
   }
 
+  let lastActiveId = null;
   document.querySelectorAll('.sidebar-link[href^="#"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -125,36 +126,53 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!target) return;
       document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
       this.classList.add('active');
+      lastActiveId = id;
+      /* 方案A：保持整页可见（不隐藏其它小节）；若点的是具体小节则展开其正文 */
+      showAllModules();
       if (target.classList.contains('module')) {
-        showOnlyModule(id);
-      } else {
-        showAllModules();
-        requestAnimationFrame(function() {
-          const rect = target.getBoundingClientRect();
-          const top = rect.top + window.pageYOffset - 80;
-          window.scrollTo({ top, behavior: 'smooth' });
-        });
+        const body = target.querySelector('.article-body');
+        const toggle = target.querySelector('.module-toggle');
+        if (body && !body.classList.contains('active')) {
+          body.classList.add('active');
+          if (toggle) toggle.classList.add('open');
+        }
       }
+      requestAnimationFrame(function() {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 90;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+      /* 点击时更新地址栏（replaceState：不触发跳转、不新增历史记录） */
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+      else location.hash = id;
     });
   });
 
-  /* Scroll-based sidebar highlight */
+  /* 滚动时高亮当前目录 + 同步地址栏（scroll-spy） */
   const sidebarItems = [];
   document.querySelectorAll('.sidebar-link[href^="#"]').forEach(function(link) {
-    const el = document.getElementById(link.getAttribute('href').slice(1));
-    if (el) sidebarItems.push({ el, link });
+    const id = link.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) sidebarItems.push({ el, link, id });
   });
-  window.addEventListener('scroll', function() {
-    if (currentModuleId) return;
-    const pos = window.pageYOffset + 100;
+  let spyTick = false;
+  function runSpy() {
+    spyTick = false;
+    const pos = window.pageYOffset + 110;
     let active = null;
     sidebarItems.forEach(function(item) {
       if (item.el.offsetTop <= pos) active = item;
     });
-    if (active) {
+    if (active && active.id !== lastActiveId) {
+      lastActiveId = active.id;
       document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
       active.link.classList.add('active');
+      if (history.replaceState) history.replaceState(null, '', '#' + active.id);
     }
+  }
+  window.addEventListener('scroll', function() {
+    if (spyTick) return;
+    spyTick = true;
+    requestAnimationFrame(runSpy);
   }, { passive: true });
 
   /* Research sidebar */
@@ -166,8 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.add('active');
       const target = document.getElementById(id);
       if (target) {
-        const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 90;
         window.scrollTo({ top, behavior: 'smooth' });
+        if (history.replaceState) history.replaceState(null, '', '#' + id);
       }
     });
   });
