@@ -55,8 +55,8 @@
 
   --font: var(--sans); /* legacy alias */
 
-  --maxw: min(94vw, 1280px); /* 黄金阅读宽度上限：大屏两侧自然形成大留白 */
-  --max-w: min(94vw, 1280px); /* legacy alias */
+  --maxw: min(95vw, 1680px); /* fluid: 内容宽度随窗口大小自适应缩放 */
+  --max-w: min(95vw, 1680px); /* legacy alias */
   --nav-h: 88px;
   --r: 0;
   --r-lg: 0;
@@ -378,39 +378,39 @@ a.d-title:hover { color: var(--vermillion); }
 }
 
 /* Path */
-.path { max-width: var(--maxw); margin: 0 auto; padding: 72px 32px 96px; }
-.path-head { margin-bottom: 60px; max-width: 760px; }
+.path { max-width: var(--maxw); margin: 0 auto; padding: 96px 32px; }
+.path-head { margin-bottom: 56px; max-width: 760px; }
 
-/* 站点品牌：小标签 kicker（让位给主标题） */
+/* 站点 Logo（突出） */
 .path-brand {
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: 12.5px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  display: flex; align-items: baseline; gap: 10px;
-  margin-bottom: 26px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(34px, 3.9vw, 54px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 18px;
 }
 .path-brand .brand-sym {
   font-family: var(--serif-it); font-style: italic;
+  font-size: 0.78em; line-height: 1;
   color: var(--vermillion);
 }
-/* 主标题：最高对比、收紧字距 */
+/* 副标题 */
 .path-title {
   font-family: var(--serif); font-style: normal;
-  font-weight: 600;
-  font-size: clamp(28px, 3.2vw, 40px);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  margin-bottom: 26px;
+  font-weight: 400;
+  font-size: clamp(18px, 2.1vw, 24px);
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--ink-2);
+  margin-bottom: 22px;
 }
-/* 介绍文案：轻字重、宽行高、低对比 */
+/* 介绍文案 */
 .path-intro {
   font-family: var(--sans);
-  font-size: 16px; line-height: 1.75;
-  font-weight: 400;
+  font-size: 16px; line-height: 1.8;
   color: var(--ink-3);
   max-width: 680px;
 }
@@ -423,29 +423,15 @@ a.d-title:hover { color: var(--vermillion); }
   font-family: var(--sans); font-size: 16px;
   line-height: 1.65; color: var(--ink-3);
 }
-.path-list { list-style: none; border-top: 1px solid var(--rule); }
+.path-list { list-style: none; border-top: 1px solid var(--ink-4); }
 .path-row {
   display: block;
-  padding: 38px 0;
+  padding: 32px 0;
   border-bottom: 1px solid var(--rule);
   position: relative;
   transition: background var(--tr);
 }
-/* 阶段索引锚点 L1–L5 */
-.path-lv {
-  display: inline-block;
-  font-family: var(--mono);
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.03em;
-  color: var(--vermillion);
-  background: var(--paper-3);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 3px 9px;
-  margin-right: 8px;
-  vertical-align: 10%;
-}
+.path-lv { color: var(--vermillion); }
 .path-row:hover { background: linear-gradient(90deg, var(--paper-3) 0%, transparent 80%); }
 .path-num {
   font-family: var(--serif); font-style: normal;
@@ -455,7 +441,7 @@ a.d-title:hover { color: var(--vermillion); }
 .path-body h3 {
   font-family: var(--serif); font-weight: 600;
   font-size: 21px; line-height: 1.25; color: var(--ink);
-  margin-bottom: 6px; letter-spacing: -0.01em;
+  margin-bottom: 8px; letter-spacing: -0.01em;
 }
 .path-link {
   color: inherit; text-decoration: none !important;
@@ -487,26 +473,18 @@ a.d-title:hover { color: var(--vermillion); }
 /* 路径区：左主栏 + 右侧「本期更新」 */
 .path-grid {
   display: flex;
-  align-items: stretch;
-  gap: 0;
+  align-items: flex-start;
+  gap: 64px;
 }
-/* 左右之间的全高竖向分割线 */
-.path-main { flex: 1 1 auto; min-width: 0; padding-right: 64px; border-right: 1px solid var(--rule); }
-.path-aside { flex: 0 0 360px; padding-left: 64px; }
-/* 本期更新卡片 */
-.updates-panel {
+.path-main { flex: 1 1 auto; min-width: 0; }
+.path-aside {
+  flex: 0 0 320px;
   position: sticky; top: 104px;
-  background: var(--paper-2);
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  padding: 24px 22px 20px;
+  padding-left: 48px;
+  border-left: 1px solid var(--rule);
 }
-.path-aside .side-head { margin-bottom: 20px; }
-.path-aside .side-label { font-size: 13px; }
-/* 侧栏：克制间距 + 极淡分隔线 + 指标化日期 */
-.path-aside .dispatch li { padding: 15px 0; gap: 16px; border-bottom: 1px solid var(--rule); }
-.path-aside .dispatch li:last-child { border-bottom: none; }
-.path-aside .d-date { color: var(--ink-4); letter-spacing: 0.06em; }
+.path-aside .side-head { margin-bottom: 22px; }
+.path-aside .dispatch li { padding: 16px 0; }
 .path-aside .d-title { font-size: 16px; }
 
 /* Editor's Note */
@@ -1890,13 +1868,13 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   .note-inner { grid-template-columns: 1fr; gap: 32px; }
   .note-side { min-height: auto; flex-direction: row; justify-content: space-between; align-items: center; }
   .path { padding: 64px 24px; }
-  .path-grid { flex-direction: column; gap: 40px; }
-  .path-main { border-right: none; padding-right: 0; }
+  .path-grid { flex-direction: column; gap: 48px; }
   .path-aside {
     flex-basis: auto; align-self: stretch;
-    padding-left: 0;
+    position: static; padding-left: 0;
+    border-left: none; border-top: 1px solid var(--rule);
+    padding-top: 36px;
   }
-  .updates-panel { position: static; }
   .path-row { grid-template-columns: 60px 1fr; }
   .path-num { font-size: 21px; }
 }
