@@ -2,85 +2,114 @@
 <html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>关于 & 加入社群 — Web3实操学习营</title>
+<title>关于 — Web3实操学习营</title>
 <link rel="stylesheet" href="style.css">
 <script>(function () { const t = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', t); })();</script>
 </head>
 <body>
+
+<!-- ── Masthead Bar ── -->
+<div class="masthead-bar">
+  <div class="mb-inner">
+    <span class="mb-date" id="mbDate">2026年5月27日 星期三</span>
+    <span class="mb-spacer"></span>
+    <span class="mb-meta">52 节 课程 · 持续更新</span>
+  </div>
+</div>
+<script>
+  (function(){
+    var el = document.getElementById('mbDate');
+    if (!el) return;
+    var now = new Date();
+    var utc8 = new Date(now.getTime() + (now.getTimezoneOffset() + 480) * 60000);
+    var weekdays = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    var y = utc8.getFullYear();
+    var m = utc8.getMonth() + 1;
+    var d = utc8.getDate();
+    var w = weekdays[utc8.getDay()];
+    el.textContent = y + '年' + m + '月' + d + '日 ' + w;
+  })();
+</script>
+
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><span class="logo-mark">Web3实操学习营</span></a>
     <div class="nav-links">
       <div class="nav-dropdown">
-        <a href="courses.html" class="nav-dropdown-toggle">课程体系 <span class="dropdown-arrow">▾</span></a>
+        <a href="courses.html" class="nav-dropdown-toggle">系统课程 <span class="dropdown-arrow">▾</span></a>
         <div class="nav-dropdown-menu">
-          <a href="courses.html#l1">读懂 Web3</a><a href="courses.html#l2">链上基础实操</a>
-          <a href="courses.html#l3">DeFi 底层逻辑</a><a href="courses.html#l4">DeFi 协议实战</a>
+          <a href="courses.html#l1">L1  ·  读懂Web3</a>
+          <a href="courses.html#l2">L2  ·  Web3实操准备</a>
+          <a href="courses.html#l3">L3  ·  Web3实操进阶</a>
+          <a href="courses.html#l4">L4  ·  DeFi 协议实战</a>
+          <a href="courses.html#l5">L5  ·  Web3项目研究</a>
         </div>
       </div>
-      <a href="research.html">项目研究</a>
-      <a href="tools.html">Web3 工具</a>
-      <a href="topics.html">专题系列</a>
-      <a href="about.html" class="active">关于</a>
+      <div class="nav-dropdown">
+        <a href="topics.html" class="nav-dropdown-toggle">专题系列 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="tools.html">Web3 工具</a>
+          <a href="research.html">项目研究</a>
+          <a href="topics.html">国内加密政策</a>
+          <a href="topics.html#series-io">出入金涉及政策风险与防控</a>
+          <a href="topics.html#series-security">Web3 资产安全 · 全景防御</a>
+          <span class="dropdown-soon">其他待更新</span>
+        </div>
+      </div>
+      <a href="about.html" class="active">关 于</a>
     </div>
     <div class="nav-right">
       <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
-      <a href="#join" class="btn btn-primary btn-sm">加入社群</a>
+      <a href="community.html" class="btn btn-primary btn-sm">加入社群</a>
     </div>
     <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
-    <div class="mobile-section-title">课程体系</div>
+    <div class="mobile-section-title">系统课程</div>
     <a href="courses.html#l1" class="mobile-sub">读懂 Web3</a>
     <a href="courses.html#l2" class="mobile-sub">链上基础实操</a>
     <a href="courses.html#l3" class="mobile-sub">DeFi 底层逻辑</a>
     <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
     <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
-    <a href="research.html">项目研究</a>
-    <a href="tools.html">Web3 工具</a>
-    <a href="topics.html">专题系列</a>
-    <a href="about.html">关于</a>
-    <a href="#join" class="mobile-cta">加入社群 →</a>
+    <div class="mobile-section-title">专题系列</div>
+    <a href="tools.html" class="mobile-sub">Web3 工具</a>
+    <a href="research.html" class="mobile-sub">项目研究</a>
+    <a href="topics.html" class="mobile-sub">国内加密政策</a>
+    <a href="topics.html#series-io" class="mobile-sub">出入金涉及政策风险与防控</a>
+    <a href="topics.html#series-security" class="mobile-sub">Web3 资产安全 · 全景防御</a>
+    <a href="about.html">关 于</a>
+    <a href="community.html" class="mobile-cta">加入社群 →</a>
   </div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero page-hero--compact">
   <div class="container">
-    <h1>关于 Web3实操学习营</h1>
-    <p>这个网站是做什么的，以及背后是谁在写</p>
+    <h1>一个硬核 Web3 老手的真心话</h1>
   </div>
 </div>
 
-<div class="about-layout">
+<div class="about-layout community-wide">
 
   <div class="about-section">
-    <h2>这个网站是做什么的</h2>
-    <p>Web3实操学习营 是一个面向中文用户的 Web3 系统知识库。它只做一件事：帮你<strong>安全进入 Web3 世界前提下，寻找财富机会</strong>。</p>
-    <p>不是教你炒币，是帮你建立系统认知。从零基础入门到 DeFi实操，再从链上操作到独立项目研究，一套完整的学习路径。</p>
-    <p>市面上的 Web3 内容要么公然喊单，要么只宣扬财富故事，却从不告诉你隐藏的巨大风险，甚至植入"软文"诈骗项目的 KOL 内容。Web3 实操学习营试图<strong>带你少走弯路，建立安全防护墙，识别风险与机会，给你一套系统学习路径。</strong></p>
-    <p>这里所有内容的前提只有一个：守住本金，在此基础上挖掘链上机会。</p>
+    <p>很多人进 Web3，都是被"百倍暴富"的口号吸引进来的。但真相是残酷的：<strong>99% 的新人，还没见到收益，就先倒在了交易所假 App、钱包恶意授权、钓鱼链接、或者动辄"断头斩"的土狗盘里。</strong></p>
+    <p>在代码即法律的链上丛林里，踩中一次坑，本金就可能直接归零。</p>
   </div>
 
-  <div id="join" class="about-section">
+  <div class="about-section">
+    <blockquote class="df-quote">"Web3 的学费很贵，但如果你有人陪跑，原本需要交几万的教训，可能只需要几顿饭钱。"</blockquote>
+  </div>
+
+  <div class="about-section">
     <div class="join-card">
-      <h2>加入 DF 的 Web3 VIP 成长社群</h2>
-      <p>一次加入，解锁全部内容 + 社群交流。<br>和志同道合的人一起，系统学习、共同成长。</p>
-      <div class="includes">
-        <div class="include-item"><span class="include-check">✅</span><span>Level 1-5 全部 80+ 篇课程内容</span></div>
-        <div class="include-item"><span class="include-check">✅</span><span>15 篇项目研究完整版报告</span></div>
-        <div class="include-item"><span class="include-check">✅</span><span>专题系列全部深度文章</span></div>
-        <div class="include-item"><span class="include-check">✅</span><span>VIP 社群实时讨论与答疑</span></div>
-        <div class="include-item"><span class="include-check">✅</span><span>课程内容 4 年持续更新</span></div>
-        <div class="include-item"><span class="include-check">✅</span><span>低成本空投、打新机会分享</span></div>
+      <h2>准备好上牌桌了吗？</h2>
+      <div class="join-cta-wrap">
+        <a href="community.html" class="btn btn-primary btn-lg">点击进入「加入社群」页面 →</a>
+        <p class="join-cta-hint">了解社群能带给你什么、如何加入</p>
       </div>
-      <div style="display:inline-flex;align-items:baseline;gap:14px;padding:14px 22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:#f0e6c8;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;position:relative;">
-        <span style="color:#E07A66;">微信</span>
-        <span style="color:#f0e6c8;">Web3_DF</span>
-        <span style="color:rgba(240,230,200,.5);font-size:11px;">— 欢迎咨询了解详情</span>
-      </div>
-      <p class="join-price">进群价格与名额以最新公告为准 · 加入后终身有效</p>
     </div>
   </div>
+
+  <hr class="about-divider">
 
   <div class="about-section">
     <h2>免责声明</h2>
@@ -97,14 +126,14 @@
         <p>面向中文用户的 Web3 系统知识库，帮你安全、系统地建立链上认知与操作能力。</p>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">课程体系</div>
+        <div class="footer-col-title">系统课程</div>
         <a href="courses.html#l1">读懂 Web3</a><a href="courses.html#l2">链上基础实操</a>
         <a href="courses.html#l3">DeFi 底层逻辑</a><a href="courses.html#l4">DeFi 协议实战</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">更多内容</div>
         <a href="research.html">项目研究</a><a href="tools.html">Web3 工具</a>
-        <a href="topics.html">专题系列</a><a href="#join">加入社群</a>
+        <a href="topics.html">专题系列</a><a href="community.html">加入社群</a>
       </div>
     </div>
     <div class="footer-bottom"><span>© 2026 Web3实操学习营 · 内容仅供教育目的，不构成投资建议</span></div>
