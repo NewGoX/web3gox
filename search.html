@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>站内搜索 — Web3实操学习营</title>
+<meta name="description" content="在 Web3 实操学习营全站课程、研究与专题中快速检索。">
+<link rel="stylesheet" href="style.css">
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+  /* ====== 搜索页专属样式（沿用全站三色系与变量） ====== */
+  .search-wrap { max-width: 860px; margin: 0 auto; padding: 0 32px 96px; }
+
+  /* 搜索输入框：编辑部风格，墨色粗底线 */
+  .search-field {
+    position: relative;
+    display: flex; align-items: center;
+    border: 1px solid var(--rule);
+    background: var(--paper-3);
+    padding: 4px 18px;
+    transition: border-color var(--tr);
+  }
+  .search-field:focus-within { border-color: var(--ink); }
+  .search-field .s-ico { font-size: 18px; color: var(--ink-3); margin-right: 12px; }
+  #q {
+    flex: 1; border: none; background: transparent; outline: none;
+    font-family: var(--serif); font-size: 22px; color: var(--ink);
+    padding: 16px 0; line-height: 1.3;
+  }
+  #q::placeholder { color: var(--ink-4); font-style: italic; }
+  .s-clear {
+    border: none; background: none; cursor: pointer;
+    font-size: 20px; color: var(--ink-4); padding: 4px 8px; line-height: 1;
+    display: none;
+  }
+  .s-clear:hover { color: var(--vermillion); }
+  .search-field.has-text .s-clear { display: block; }
+  .s-kbd {
+    font-family: var(--mono); font-size: 11px; color: var(--ink-4);
+    border: 1px solid var(--rule); padding: 2px 6px; border-radius: 4px;
+    margin-left: 8px; white-space: nowrap;
+  }
+
+  /* 过滤标签 */
+  .search-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+  .filter-chip {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .03em;
+    padding: 6px 14px; border: 1px solid var(--rule); background: transparent;
+    color: var(--ink-3); cursor: pointer; border-radius: 999px;
+    transition: all var(--tr);
+  }
+  .filter-chip:hover { border-color: var(--ink-3); color: var(--ink); }
+  .filter-chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* 结果统计 */
+  .search-meta {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--ink-4);
+    padding: 18px 0 10px; border-bottom: 1px solid var(--rule);
+  }
+
+  /* 结果列表 */
+  .result-list { list-style: none; }
+  .result-item { border-bottom: 1px solid var(--rule); }
+  .result-item a {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 18px 6px; text-decoration: none; color: var(--ink);
+    transition: background var(--tr), padding var(--tr);
+  }
+  .result-item a:hover { background: var(--paper-2); padding-left: 14px; text-decoration: none; }
+  .r-badge {
+    flex-shrink: 0; font-family: var(--mono); font-size: 11px; font-weight: 500;
+    letter-spacing: .04em; padding: 3px 8px; border-radius: 4px;
+    color: var(--paper-3); background: var(--ink-2); min-width: 38px; text-align: center;
+  }
+  .r-badge.b-research { background: var(--vermillion); }
+  .r-badge.b-topic    { background: var(--ink-3); }
+  .r-badge.b-tool     { background: var(--ink-4); }
+  .r-badge.b-page     { background: transparent; color: var(--ink-3); border: 1px solid var(--rule); }
+  .r-main { flex: 1; min-width: 0; }
+  .r-title { font-size: 16.5px; font-weight: 500; line-height: 1.45; color: var(--ink); }
+  .r-title mark { background: var(--vermillion-lt); color: var(--vermillion-2); padding: 0 2px; border-radius: 2px; }
+  .r-path {
+    font-family: var(--mono); font-size: 11.5px; color: var(--ink-4);
+    margin-top: 5px; letter-spacing: .02em;
+  }
+  .r-arrow { flex-shrink: 0; color: var(--ink-4); font-size: 15px; align-self: center; }
+  .result-item a:hover .r-arrow { color: var(--vermillion); }
+
+  /* 空状态 / 初始提示 */
+  .search-empty {
+    text-align: center; padding: 64px 20px; color: var(--ink-3);
+  }
+  .search-empty .se-ico { font-size: 40px; opacity: .35; margin-bottom: 14px; }
+  .search-empty p { font-family: var(--serif); font-size: 18px; color: var(--ink-3); }
+  .search-empty .se-hint { font-family: var(--sans); font-size: 14px; color: var(--ink-4); margin-top: 8px; }
+  .se-suggest { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; }
+  .se-suggest button {
+    font-family: var(--sans); font-size: 13px; padding: 6px 14px;
+    border: 1px solid var(--rule); background: var(--paper-3); color: var(--ink-2);
+    cursor: pointer; border-radius: 999px; transition: all var(--tr);
+  }
+  .se-suggest button:hover { border-color: var(--ink); color: var(--ink); }
+
+  @media (max-width: 640px) {
+    .search-wrap { padding: 0 18px 72px; }
+    #q { font-size: 18px; }
+    .s-kbd { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Masthead Bar ── -->
+<div class="masthead-bar">
+  <div class="mb-inner">
+    <span class="mb-date" id="mbDate">2026年5月27日 星期三</span>
+    <span class="mb-spacer"></span>
+    <span class="mb-meta">52 节 课程 · 持续更新</span>
+  </div>
+</div>
+<script>
+  (function(){
+    var el = document.getElementById('mbDate');
+    if (!el) return;
+    var now = new Date();
+    var utc8 = new Date(now.getTime() + (now.getTimezoneOffset() + 480) * 60000);
+    var weekdays = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    el.textContent = utc8.getFullYear() + '年' + (utc8.getMonth()+1) + '月' + utc8.getDate() + '日 ' + weekdays[utc8.getDay()];
+  })();
+</script>
+
+<!-- ── Nav ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-mark">Web3实操学习营</span></a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="courses.html" class="nav-dropdown-toggle">系统课程 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="courses.html#l1">L1  ·  读懂Web3</a>
+          <a href="courses.html#l2">L2  ·  Web3实操准备</a>
+          <a href="courses.html#l3">L3  ·  Web3实操进阶</a>
+          <a href="courses.html#l4">L4  ·  DeFi 协议实战</a>
+          <a href="courses.html#l5">L5  ·  Web3项目研究</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="topics.html" class="nav-dropdown-toggle">专题系列 <span class="dropdown-arrow">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="tools.html">Web3 工具</a>
+          <a href="research.html">项目研究</a>
+          <a href="policy.html">国内加密政策一览表</a>
+          <a href="topics.html#series-io">出入金涉及政策风险与防控</a>
+          <span class="dropdown-soon">其他待更新</span>
+        </div>
+      </div>
+      <a href="about.html">关 于</a>
+    </div>
+    <div class="nav-right">
+      <a href="search.html" class="theme-toggle nav-search active" id="navSearch" aria-label="站内搜索" title="站内搜索" style="text-decoration:none;">🔍</a>
+      <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+      <a href="community.html" class="btn btn-primary btn-sm">加入社群</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="search.html" class="mobile-sub">🔍 站内搜索</a>
+    <div class="mobile-section-title">系统课程</div>
+    <a href="courses.html#l1" class="mobile-sub">读懂 Web3</a>
+    <a href="courses.html#l2" class="mobile-sub">Web3实操准备</a>
+    <a href="courses.html#l3" class="mobile-sub">Web3实操进阶</a>
+    <a href="courses.html#l4" class="mobile-sub">DeFi 协议实战</a>
+    <a href="courses.html#l5" class="mobile-sub">Web3项目研究</a>
+    <div class="mobile-section-title">专题系列</div>
+    <a href="tools.html" class="mobile-sub">Web3 工具</a>
+    <a href="research.html" class="mobile-sub">项目研究</a>
+    <a href="policy.html" class="mobile-sub">国内加密政策一览表</a>
+    <a href="topics.html#series-io" class="mobile-sub">出入金涉及政策风险与防控</a>
+    <a href="about.html">关 于</a>
+    <a href="community.html" class="mobile-cta">加入社群 →</a>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<div class="page-hero page-hero--sm">
+  <div class="container">
+    <div class="eyebrow">站内检索</div>
+    <h1>搜索全站内容</h1>
+    <p>在系统课程、项目研究与专题中，按关键词快速定位你要找的内容。</p>
+  </div>
+</div>
+
+<!-- ── Search ── -->
+<section class="search-wrap" style="margin-top:36px;">
+  <div class="search-field" id="searchField">
+    <span class="s-ico">🔍</span>
+    <input id="q" type="text" autocomplete="off" spellcheck="false"
+           placeholder="试试「币安入金」「MetaMask」「无常损失」…" aria-label="搜索关键词">
+    <button class="s-clear" id="clearBtn" aria-label="清空">✕</button>
+    <span class="s-kbd" id="kbdHint">/ 聚焦</span>
+  </div>
+
+  <div class="search-filters" id="filters"></div>
+
+  <div class="search-meta" id="meta" style="display:none;"></div>
+
+  <ul class="result-list" id="results"></ul>
+
+  <div class="search-empty" id="emptyState">
+    <div class="se-ico">📚</div>
+    <p>输入关键词开始检索</p>
+    <div class="se-hint">支持课程、研究、专题、工具；可输入中文或英文（如 Uniswap、Pendle）</div>
+    <div class="se-suggest">
+      <button data-q="入金">入金</button>
+      <button data-q="钱包">钱包</button>
+      <button data-q="稳定币">稳定币</button>
+      <button data-q="无常损失">无常损失</button>
+      <button data-q="Pendle">Pendle</button>
+      <button data-q="空投">空投</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="foot">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name">Web3 实操学习营</span></a>
+      <p>面向中文用户的 web3 系列课程。守住本金，系统认知，安全参与。</p>
+    </div>
+    <div class="foot-col">
+      <h4>课程</h4>
+      <a href="courses.html#l1">Ⅰ · 读懂 Web3</a>
+      <a href="courses.html#l2">Ⅱ · 实操入门</a>
+      <a href="courses.html#l3">Ⅲ · 实操进阶</a>
+      <a href="courses.html#l4">Ⅳ · DeFi 协议实战</a>
+      <a href="courses.html#l5">Ⅴ · 项目研究</a>
+    </div>
+    <div class="foot-col">
+      <h4>内容</h4>
+      <a href="research.html">项目研究</a>
+      <a href="tools.html">Web3 工具</a>
+      <a href="topics.html">专题系列</a>
+      <a href="about.html">关 于</a>
+      <a href="community.html">加入社群</a>
+    </div>
+    <div class="foot-col">
+      <h4>声明</h4>
+      <p class="foot-fine">© 2026 Web3 实操学习营<br>内容仅供教育目的，不构成投资建议。<br>守住本金，系统认知，安全参与。</p>
+    </div>
+  </div>
+  <div class="foot-rule"></div>
+  <div class="foot-bottom">
+    <span>字体 · 正文 IBM Plex Sans / Noto Serif SC · 标题 Fraunces / Instrument Serif</span>
+    <span>made for serious learners</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+<!-- 搜索索引数据：维护方式同 updates.js，发新文章时在 search-index.js 加一条 -->
+<script src="search-index.js"></script>
+
+<!-- ====== 搜索逻辑 ====== -->
+<script>
+(function () {
+  var input   = document.getElementById('q');
+  var field   = document.getElementById('searchField');
+  var clearBtn= document.getElementById('clearBtn');
+  var resultsEl = document.getElementById('results');
+  var metaEl  = document.getElementById('meta');
+  var emptyEl = document.getElementById('emptyState');
+  var filtersEl = document.getElementById('filters');
+
+  if (typeof SEARCH_INDEX === 'undefined') {
+    metaEl.style.display = '';
+    metaEl.textContent = '搜索索引未加载（请确认 search-index.js 存在）';
+    return;
+  }
+
+  var activeCat = '全部';
+
+  // 为每条记录预先生成小写检索串
+  SEARCH_INDEX.forEach(function (it) {
+    it._hay = (it.t + ' ' + (it.kw || '') + ' ' + it.badge + ' ' + it.cat).toLowerCase();
+  });
+
+  // 动态生成过滤标签（按数据里出现的分类）
+  var cats = ['全部'];
+  SEARCH_INDEX.forEach(function (it) { if (cats.indexOf(it.cat) < 0) cats.push(it.cat); });
+  filtersEl.innerHTML = cats.map(function (c) {
+    return '<button class="filter-chip' + (c === '全部' ? ' active' : '') + '" data-cat="' + c + '">' + c + '</button>';
+  }).join('');
+  filtersEl.querySelectorAll('.filter-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      activeCat = chip.getAttribute('data-cat');
+      filtersEl.querySelectorAll('.filter-chip').forEach(function (c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      run();
+    });
+  });
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  // 在标题中高亮命中的关键词
+  function highlight(title, terms) {
+    var safe = esc(title);
+    terms.forEach(function (term) {
+      if (!term) return;
+      var re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      safe = safe.replace(re, '<mark>$1</mark>');
+    });
+    return safe;
+  }
+
+  function badgeClass(cat) {
+    return cat === '研究' ? 'b-research'
+         : cat === '专题' ? 'b-topic'
+         : cat === '工具' ? 'b-tool'
+         : cat === '页面' ? 'b-page' : '';
+  }
+
+  function run() {
+    var raw = input.value.trim();
+    field.classList.toggle('has-text', raw.length > 0);
+
+    // 无输入：展示初始提示（若选了分类则展示该分类全部）
+    if (!raw && activeCat === '全部') {
+      resultsEl.innerHTML = '';
+      metaEl.style.display = 'none';
+      emptyEl.style.display = '';
+      return;
+    }
+    emptyEl.style.display = 'none';
+
+    var terms = raw.toLowerCase().split(/\s+/).filter(Boolean);
+
+    var hits = SEARCH_INDEX.filter(function (it) {
+      if (activeCat !== '全部' && it.cat !== activeCat) return false;
+      return terms.every(function (term) { return it._hay.indexOf(term) >= 0; });
+    });
+
+    // 排序：标题命中优先，其次按标题长度（短的更相关）
+    hits.sort(function (a, b) {
+      var at = terms.some(function (t) { return a.t.toLowerCase().indexOf(t) >= 0; }) ? 0 : 1;
+      var bt = terms.some(function (t) { return b.t.toLowerCase().indexOf(t) >= 0; }) ? 0 : 1;
+      if (at !== bt) return at - bt;
+      return a.t.length - b.t.length;
+    });
+
+    metaEl.style.display = '';
+    metaEl.textContent = raw
+      ? ('找到 ' + hits.length + ' 条结果 · 关键词「' + raw + '」')
+      : ('共 ' + hits.length + ' 条 · 分类「' + activeCat + '」');
+
+    if (!hits.length) {
+      resultsEl.innerHTML =
+        '<li class="search-empty" style="border:none;"><div class="se-ico">🔍</div>' +
+        '<p>没有找到「' + esc(raw) + '」相关内容</p>' +
+        '<div class="se-hint">换个关键词，或在「加入社群」里直接问我们。</div></li>';
+      return;
+    }
+
+    resultsEl.innerHTML = hits.map(function (it) {
+      return '<li class="result-item"><a href="' + esc(it.u) + '">' +
+        '<span class="r-badge ' + badgeClass(it.cat) + '">' + esc(it.badge) + '</span>' +
+        '<span class="r-main"><span class="r-title">' + highlight(it.t, terms) + '</span>' +
+        '<span class="r-path">' + esc(it.path) + '</span></span>' +
+        '<span class="r-arrow">↗</span></a></li>';
+    }).join('');
+  }
+
+  input.addEventListener('input', run);
+
+  clearBtn.addEventListener('click', function () {
+    input.value = '';
+    input.focus();
+    run();
+  });
+
+  // 建议词
+  document.querySelectorAll('.se-suggest button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      input.value = b.getAttribute('data-q');
+      input.focus();
+      run();
+    });
+  });
+
+  // 快捷键： "/" 聚焦， Esc 清空
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== input) {
+      e.preventDefault();
+      input.focus();
+    } else if (e.key === 'Escape' && document.activeElement === input) {
+      input.value = '';
+      run();
+      input.blur();
+    }
+  });
+
+  // 支持从地址栏带入查询： search.html?q=关键词
+  var params = new URLSearchParams(location.search);
+  if (params.get('q')) {
+    input.value = params.get('q');
+    run();
+  }
+  input.focus();
+})();
+</script>
+</body>
+</html>
