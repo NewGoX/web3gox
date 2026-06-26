@@ -145,6 +145,6 @@ const SEARCH_INDEX = [
   { t:"专题系列总览", u:"topics.html", cat:"专题", badge:"专题", path:"专题系列", kw:"专题 系列 深度" },
   { t:"国内加密政策一览表", u:"policy.html", cat:"专题", badge:"专题", path:"专题系列 › 政策", kw:"政策 加密 国内 监管 合规 法律" },
   { t:"常用工具导航", u:"tools.html", cat:"工具", badge:"工具", path:"Web3 工具", kw:"工具 导航 钱包 数据 安全 metamask dune defillama" },
-  { t:"关于 DF的加密笔记", u:"about.html", cat:"页面", badge:"页面", path:"站点", kw:"关于 about 介绍" },
+  { t:"关于 Web3 实操学习营", u:"about.html", cat:"页面", badge:"页面", path:"站点", kw:"关于 about 介绍" },
   { t:"加入社群", u:"community.html", cat:"页面", badge:"页面", path:"站点", kw:"社群 community 加入 群" }
 ];

@@ -1,5 +1,5 @@
 /* ========================================================
-   Web3 实操学习营 — editorial / research publication
+   DF的加密笔记 — editorial / research publication
    Direction: 中文研究课程气质，纸质感，3 色系
    3 colors: ink / paper / vermillion
    Fonts: Fraunces + Instrument Serif + IBM Plex Sans/Mono + Noto Serif SC
@@ -57,7 +57,7 @@
 
   --maxw: min(94vw, 1280px); /* 黄金阅读宽度上限：大屏两侧自然形成大留白 */
   --max-w: min(94vw, 1280px); /* legacy alias */
-  --nav-h: 88px;
+  --nav-h: 72px;  /* 与导航真实渲染高度(18+18 padding+内容)一致，修正锚点跳转偏移 */
   --r: 0;
   --r-lg: 0;
   --tr: 0.4s cubic-bezier(.2,.7,.2,1);
@@ -426,8 +426,10 @@ a.d-title:hover { color: var(--vermillion); }
 .path-list { list-style: none; border-top: 1px solid var(--rule); }
 .path-row {
   display: block;
-  padding: 38px 0;
+  padding: 38px 18px;
+  margin: 0 -18px;
   border-bottom: 1px solid var(--rule);
+  border-radius: 10px;
   position: relative;
   transition: background var(--tr);
 }
@@ -977,6 +979,7 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
 /* Course content */
 .course-content, .research-content {
   padding: 56px 0 80px 56px;
+  max-width: 780px;          /* 文本净宽 ≈ 724px ≈ 40 中文字/行，与 .article-img 720px 同轴 */
   min-width: 0;
 }
 
@@ -1141,10 +1144,10 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   line-height: 1.85;
   color: var(--ink-2);
   margin-bottom: 18px;
-  text-align: justify;
-  text-indent: 2em;
+  text-align: left;
+  text-indent: 0;
 }
-.body-p { text-indent: 2em !important; }
+.body-p { text-indent: 0 !important; }
 .body-abstract {
   font-family: var(--serif) !important;
   font-style: italic;
