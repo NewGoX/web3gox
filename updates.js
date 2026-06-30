@@ -9,6 +9,7 @@
  * 首页只展示最新 5 条，旧的保留在此即可（作为归档数据）。
  */
 const UPDATES = [
+  { date: "2026-06-30", title: "ZA Bank（众安银行）开户教程，2026 最新", tag: "课程", url: "courses.html#l2-za-bank" },
   { date: "2026-06-20", title: "WeChat Pay HK（香港微信支付）开通教程", tag: "课程", url: "courses.html#l2-wechat-hk" },
   { date: "2026-05-24", title: "Ethena USDe 合成美元协议深度解读", tag: "研究", url: "" },
   { date: "2026-05-20", title: "Pendle 收益代币化实操指南", tag: "课程", url: "" },

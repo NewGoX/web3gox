@@ -635,13 +635,20 @@ a.d-title:hover { color: var(--vermillion); }
 }
 .nav-logo .logo-mark {
   background: none !important;
-  color: var(--ink) !important;
   padding: 0 !important;
   font-family: var(--serif);
-  font-weight: 600;
   font-size: 19px;
   letter-spacing: -0.01em;
   border-radius: 0;
+}
+/* 品牌分层：DF 为品牌锚点，「的加密笔记」为描述语 */
+.nav-logo .brand-mark {
+  font-weight: 700;          /* Fraunces 真 Bold；DF 为拉丁字母，非合成加粗 */
+  color: var(--vermillion);  /* 复用站点强调色，避免色板碎片化 */
+}
+.nav-logo .brand-desc {
+  font-weight: 400;          /* 常规字重，退为描述语 */
+  color: var(--ink-2);       /* 比主色略暗 */
 }
 .navbar .nav-links {
   display: flex; align-items: baseline; gap: 22px;

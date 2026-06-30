@@ -48,6 +48,7 @@ const SEARCH_INDEX = [
   { t:"Backpack 出金教程", u:"courses.html#l2-12", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"backpack 出金 提现" },
   { t:"Kraken 出金教程", u:"courses.html#l2-13", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"kraken 出金 提现" },
   { t:"WeChat Pay HK（香港微信支付）开通教程", u:"courses.html#l2-wechat-hk", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"微信支付 香港 wechat pay hk 出入金" },
+  { t:"ZA Bank（众安银行）开户教程，2026 最新", u:"courses.html#l2-za-bank", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"za bank 众安银行 香港 开户 港卡 银行卡 出金 入金" },
   { t:"钱包不是存钱的：彻底理解钱包的本质", u:"courses.html#l2-14", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"钱包 本质 wallet" },
   { t:"钱包怎么选：热钱包、冷钱包、硬件钱包对比", u:"courses.html#l2-15", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"热钱包 冷钱包 硬件钱包 ledger hardware wallet" },
   { t:"助记词是什么：BIP-39 标准与 12/24 词的区别", u:"courses.html#l2-16", cat:"课程", badge:"L2", path:"系统课程 › L2 实操准备", kw:"助记词 bip39 seed phrase mnemonic" },
