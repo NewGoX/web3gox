@@ -19,11 +19,11 @@
     '<div class="nav-links">'+
       '<div class="nav-dropdown"><a href="'+R+'courses.html" class="nav-dropdown-toggle">系统课程 <span class="dropdown-arrow">▾</span></a>'+
       '<div class="nav-dropdown-menu">'+
-        '<a href="'+R+'courses.html#l1">L1  ·  读懂Web3</a>'+
-        '<a href="'+R+'courses.html#l2">L2  ·  Web3实操准备</a>'+
-        '<a href="'+R+'courses.html#l3">L3  ·  Web3实操进阶</a>'+
+        '<a href="'+R+'courses.html#l1">L1  ·  注册与开户</a>'+
+        '<a href="'+R+'courses.html#l2">L2  ·  入金与出金</a>'+
+        '<a href="'+R+'courses.html#l3">L3  ·  Web3链上实操</a>'+
         '<a href="'+R+'courses.html#l4">L4  ·  DeFi 协议实战</a>'+
-        '<a href="'+R+'courses.html#l5">L5  ·  Web3项目研究</a>'+
+        '<a href="'+R+'courses.html#l5">L5  ·  Web3 项目研究</a>'+
       '</div></div>'+
       '<div class="nav-dropdown"><a href="'+R+'topics.html" class="nav-dropdown-toggle">专题系列 <span class="dropdown-arrow">▾</span></a>'+
       '<div class="nav-dropdown-menu">'+
@@ -45,11 +45,11 @@
     '<div class="nav-mobile" id="navMobile">'+
       '<a href="'+R+'search.html" class="mobile-sub">🔍 站内搜索</a>'+
       '<div class="mobile-section-title">系统课程</div>'+
-      '<a href="'+R+'courses.html#l1" class="mobile-sub">读懂 Web3</a>'+
-      '<a href="'+R+'courses.html#l2" class="mobile-sub">Web3实操准备</a>'+
-      '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3实操进阶</a>'+
+      '<a href="'+R+'courses.html#l1" class="mobile-sub">注册与开户</a>'+
+      '<a href="'+R+'courses.html#l2" class="mobile-sub">入金与出金</a>'+
+      '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3链上实操</a>'+
       '<a href="'+R+'courses.html#l4" class="mobile-sub">DeFi 协议实战</a>'+
-      '<a href="'+R+'courses.html#l5" class="mobile-sub">Web3项目研究</a>'+
+      '<a href="'+R+'courses.html#l5" class="mobile-sub">Web3 项目研究</a>'+
       '<div class="mobile-section-title">专题系列</div>'+
       '<a href="'+R+'tools.html" class="mobile-sub">Web3 工具</a>'+
       '<a href="'+R+'research.html" class="mobile-sub">项目研究</a>'+
@@ -64,9 +64,9 @@
     '<div class="foot-brand"><a href="'+R+'index.html" class="brand"><span class="brand-mark"></span><span class="brand-name">DF的加密笔记</span></a>'+
     '<p>面向中文用户的 web3 系列课程。守住本金，系统认知，安全参与。</p></div>'+
     '<div class="foot-col"><h4>课程</h4>'+
-      '<a href="'+R+'courses.html#l1">Ⅰ · 读懂 Web3</a><a href="'+R+'courses.html#l2">Ⅱ · 实操入门</a>'+
-      '<a href="'+R+'courses.html#l3">Ⅲ · 实操进阶</a><a href="'+R+'courses.html#l4">Ⅳ · DeFi 协议实战</a>'+
-      '<a href="'+R+'courses.html#l5">Ⅴ · 项目研究</a></div>'+
+      '<a href="'+R+'courses.html#l1">Ⅰ · 注册与开户</a><a href="'+R+'courses.html#l2">Ⅱ · 入金与出金</a>'+
+      '<a href="'+R+'courses.html#l3">Ⅲ · Web3链上实操</a><a href="'+R+'courses.html#l4">Ⅳ · DeFi 协议实战</a>'+
+      '<a href="'+R+'courses.html#l5">Ⅴ · Web3 项目研究</a></div>'+
     '<div class="foot-col"><h4>内容</h4>'+
       '<a href="'+R+'research.html">项目研究</a><a href="'+R+'tools.html">Web3 工具</a>'+
       '<a href="'+R+'topics.html">专题系列</a><a href="'+R+'about.html">关 于</a>'+

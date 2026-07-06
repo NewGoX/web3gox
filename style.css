@@ -556,9 +556,42 @@ a.d-title:hover { color: var(--vermillion); }
   letter-spacing: .04em; color: var(--ink-3); flex: 0 0 auto; padding-top: 2px;
 }
 .ba-t { font-family: var(--sans); font-size: 14.5px; line-height: 1.5; }
+/* 文章页左侧：完整层级目录树（当前级所有子目录 + 当前页文章） */
+.ba-nav { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--rule); padding-top: 14px; }
+.ba-cat {
+  font-family: var(--mono); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3);
+  margin: 0 0 10px;
+}
+.ba-cat a { color: var(--ink-3); text-decoration: none; }
+.ba-cat a:hover { color: var(--vermillion); }
+.ba-dir {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 10px 12px; margin: 0 -12px; border-radius: 8px;
+  text-decoration: none !important; color: var(--ink-2);
+  transition: background var(--tr), color var(--tr);
+}
+.ba-dir:hover { background: var(--paper-3); color: var(--vermillion); }
+.ba-dir.current { color: var(--ink); font-weight: 600; background: transparent; cursor: default; }
+.ba-dir.current .ba-idx { color: var(--vermillion); }
+.ba-arts {
+  display: flex; flex-direction: column; gap: 2px;
+  margin: 2px 0 6px; padding-left: 14px;
+  border-left: 1px solid var(--rule);
+}
+.ba-arts .ba-item { padding: 8px 12px; }
+.ba-arts .ba-t { font-size: 13.5px; }
 .ba-read { min-width: 0; }
 .ba-article { display: none; max-width: 760px; }
 .ba-article.active { display: block; }
+.ba-article p {
+  font-family: var(--serif);
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+  margin-bottom: 24px;
+  text-align: left;
+}
 .ba-title {
   font-family: var(--serif); font-weight: 600;
   font-size: clamp(26px, 3vw, 34px); line-height: 1.2;
