@@ -70,12 +70,12 @@ html[data-theme='dark'] {
   --ink-2:      #D8D1BE;
   --ink-3:      #9C9388;
   --ink-4:      #6B6358;
-  --rule:       #2A2620;
-  --rule-2:     #1F1C17;
+  --rule:       #38322A;
+  --rule-2:     #262019;
 
   --paper:      #14110D;
-  --paper-2:    #1B1813;
-  --paper-3:    #221E18;
+  --paper-2:    #1D1912;
+  --paper-3:    #262019;
 
   --vermillion: #E07A66;
   --vermillion-2:#F09180;
@@ -593,7 +593,7 @@ a.d-title:hover { color: var(--vermillion); }
   position: sticky; top: 104px;
   background: var(--paper-2);
   border: 1px solid var(--rule);
-  border-radius: 14px;
+  border-radius: 10px;
   padding: 24px 22px 20px;
 }
 .path-aside .side-head { margin-bottom: 20px; }
@@ -924,6 +924,15 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
   text-align: left;
   position: relative;
 }
+/* 夜间：masthead / 导航 / Hero 统一为轻微抬升的暖色块，自上而下融入正文，消除硬色缝 */
+html[data-theme='dark'] .masthead-bar,
+html[data-theme='dark'] .navbar {
+  background: var(--paper-2);
+}
+html[data-theme='dark'] .page-hero {
+  background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%);
+}
+html[data-theme='dark'] .page-hero::after { opacity: 0; }
 /* 分割线与导航容器对齐：左对齐 logo，右对齐按钮，不再通栏 */
 .page-hero::after {
   content: '';
@@ -1596,9 +1605,9 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
 .tools-category-title::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
 .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .tool-card {
-  background: var(--paper-2) !important;
+  background: var(--paper-3) !important;
   border: 1px solid var(--border) !important;
-  border-radius: 14px !important;
+  border-radius: 10px !important;
   box-shadow: none !important;
   padding: 18px 20px !important;
   transform: none;
@@ -2049,9 +2058,9 @@ html:not([data-theme='dark']) .theme-toggle .icon-moon { display: none; }
 .why-card {
   display: flex;
   flex-direction: column;
-  background: var(--paper-2);
+  background: var(--paper-3);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 10px;
   padding: 18px 22px;
   transition: box-shadow .25s ease, transform .25s ease;
 }

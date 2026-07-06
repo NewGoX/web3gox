@@ -17,16 +17,21 @@
     margin-bottom: 0 !important;
     padding: 26px 28px 10px !important;
     border-bottom: none !important;
-    background: var(--paper-2);
+    background: var(--paper-3);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 10px;
     display: flex; flex-direction: column;
     text-decoration: none; color: inherit;
-    transition: box-shadow .25s ease, transform .25s ease;
+    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
   }
   a.topic-series:hover {
     box-shadow: 0 18px 40px rgba(20,17,13,.10);
     transform: translateY(-3px);
+    border-color: var(--border2);
+  }
+  html[data-theme='dark'] a.topic-series:hover {
+    box-shadow: 0 18px 44px rgba(0,0,0,.5);
+    border-color: var(--vermillion);
   }
   a.topic-series:hover .topic-article-title { color: var(--vermillion) !important; }
   .topic-series-header { grid-template-columns: 1fr !important; gap: 0 !important; padding: 0 0 18px !important; margin-bottom: 0 !important; }
@@ -204,7 +209,7 @@
 
   </div>
 
-  <div style="background:var(--accent-lt);border:1px solid rgba(37,99,235,.15);border-radius:var(--r-lg);padding:28px 32px;text-align:center;">
+  <div style="background:var(--accent-lt);border:1px solid var(--border);border-radius:10px;padding:28px 32px;text-align:center;">
     <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">📬 想第一时间收到专题更新？</h3>
     <p style="font-size:14px;color:var(--text2);margin-bottom:20px;line-height:1.7;">加入 DF 的 Web3 VIP 成长社群，每次专题更新第一时间通知，并在社群内深度讨论每篇内容。</p>
     <a href="community.html" class="btn btn-primary">加入社群 →</a>
