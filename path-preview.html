@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>范本预览 · 三级学习路径</title>
+<link rel="stylesheet" href="style.css">
+<script>(function(){const t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+<style>
+/* ===== 范本新增：整行可折叠（点主目录展开子目录），仅用于预览 ===== */
+.path-fold{ }
+.path-fold > summary{
+  list-style:none; cursor:pointer; display:block;
+  position:relative; padding-right:44px;
+  user-select:none;
+}
+.path-fold > summary::-webkit-details-marker{ display:none; }
+/* 右侧展开箭头 */
+.fold-chev{
+  position:absolute; right:8px; top:6px;
+  width:20px; height:20px; color:var(--ink-3);
+  transition:transform var(--tr), color var(--tr);
+}
+.path-fold[open] > summary .fold-chev{ transform:rotate(90deg); color:var(--vermillion); }
+.path-row:hover .fold-chev{ color:var(--vermillion); }
+/* 子目录链接列表（每个子目录 = 独立网页） */
+.sub-links{
+  list-style:none; margin-top:18px; padding-top:8px;
+  border-top:1px dashed var(--rule);
+  display:grid; grid-template-columns:1fr 1fr; gap:2px 32px;
+}
+.sub-links a{
+  display:flex; align-items:baseline; gap:11px;
+  padding:11px 12px; margin:0 -12px;
+  border-radius:8px; text-decoration:none !important;
+  color:var(--ink-2);
+  transition:background var(--tr), color var(--tr);
+}
+.sub-links a:hover{ background:var(--paper-3); color:var(--vermillion); }
+.sub-links .sub-idx{
+  font-family:var(--mono); font-size:11.5px; font-weight:600;
+  letter-spacing:.04em; color:var(--vermillion); flex:0 0 auto; padding-top:1px;
+}
+.sub-links .sub-txt{ font-family:var(--sans); font-size:14.5px; line-height:1.5; flex:1 1 auto; }
+.sub-links .sub-tag{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+  color:var(--ink-3); border:1px solid var(--rule); border-radius:5px;
+  padding:2px 6px; flex:0 0 auto; align-self:center;
+}
+.sub-links .sub-tag.exist{ color:var(--vermillion); border-color:var(--vermillion); }
+@media (max-width:640px){ .sub-links{ grid-template-columns:1fr; } }
+/* 预览页顶部提示条 */
+.pv-note{
+  max-width:1120px; margin:32px auto 0; padding:14px 22px;
+  border:1px solid var(--rule); border-left:3px solid var(--vermillion);
+  border-radius:8px; background:var(--paper-3);
+  font-family:var(--sans); font-size:14px; line-height:1.7; color:var(--ink-2);
+}
+.pv-note b{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<div class="pv-note">
+  <b>范本预览 v3</b>　默认<b>全部折叠</b>，只显示 L1–L5 主目录；点任意一行展开其子目录。每个子目录都是<b>独立网页</b>：<span class="sub-tag" style="display:inline-block">待建</span> = 需新建占位页，<span class="sub-tag exist" style="display:inline-block">已有</span> = 直接链到现有页面（如 L5 项目研究 → research.html）。子目录名与页面内容目前为占位。
+</div>
+
+<!-- ── Path（改版后的第一屏） ── -->
+<section class="path">
+ <div class="path-grid">
+  <div class="path-main">
+  <div class="path-head">
+    <h2 class="path-title">完整学习路径</h2>
+    <p class="path-intro">从注册开户、入金出金，到 Web3 链上实操；再到 DeFi 协议实战与独立项目研究。层层递进，每一阶段对应一组系统课程与配套实操，全程手把手指导。</p>
+  </div>
+
+  <ol class="path-list">
+
+    <!-- L1 -->
+    <li class="path-row">
+      <details class="path-fold">
+        <summary>
+          <svg class="fold-chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="path-body">
+            <h3><span class="path-lv">L1</span> · 注册与开户</h3>
+            <p>从零完成交易所、银行、支付与券商账户的注册开户，打通进入 Web3 的第一道门。</p>
+          </div>
+        </summary>
+        <ul class="sub-links">
+          <li><a href="l1-1-crypto-exchange.html"><span class="sub-idx">1-1</span><span class="sub-txt">加密交易所开户</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l1-2-bank.html"><span class="sub-idx">1-2</span><span class="sub-txt">银行开户</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l1-3-overseas-pay.html"><span class="sub-idx">1-3</span><span class="sub-txt">境外支付</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l1-4-us-broker.html"><span class="sub-idx">1-4</span><span class="sub-txt">美股券商开户</span><span class="sub-tag">待建</span></a></li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- L2 -->
+    <li class="path-row">
+      <details class="path-fold">
+        <summary>
+          <svg class="fold-chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="path-body">
+            <h3><span class="path-lv">L2</span> · 入金与出金</h3>
+            <p>法币与加密资产的双向出入金全流程，手把手完成第一笔资金进出。</p>
+          </div>
+        </summary>
+        <ul class="sub-links">
+          <li><a href="l2-1-deposit.html"><span class="sub-idx">2-1</span><span class="sub-txt">入金</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l2-2-withdraw.html"><span class="sub-idx">2-2</span><span class="sub-txt">出金</span><span class="sub-tag">待建</span></a></li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- L3 -->
+    <li class="path-row">
+      <details class="path-fold">
+        <summary>
+          <svg class="fold-chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="path-body">
+            <h3><span class="path-lv">L3</span> · Web3链上实操</h3>
+            <p>钱包管理、链上转账、代币交互，掌握在链上独立操作的全部基础能力。</p>
+          </div>
+        </summary>
+        <ul class="sub-links">
+          <li><a href="l3-1.html"><span class="sub-idx">3-1</span><span class="sub-txt">子目录占位 · 一</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l3-2.html"><span class="sub-idx">3-2</span><span class="sub-txt">子目录占位 · 二</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l3-3.html"><span class="sub-idx">3-3</span><span class="sub-txt">子目录占位 · 三</span><span class="sub-tag">待建</span></a></li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- L4（主目录保留原样，加 3 个占位子目录） -->
+    <li class="path-row">
+      <details class="path-fold">
+        <summary>
+          <svg class="fold-chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="path-body">
+            <h3><span class="path-lv">L4</span> · DeFi 协议实战</h3>
+            <p>Uniswap、Aave、Lido、Pendle 等 13 个主流协议的完整实操指南，含协议背景与步骤。</p>
+          </div>
+        </summary>
+        <ul class="sub-links">
+          <li><a href="l4-hyperliquid.html"><span class="sub-idx">4-1</span><span class="sub-txt">Hyperliquid</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l4-sky.html"><span class="sub-idx">4-2</span><span class="sub-txt">Sky</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l4-aave.html"><span class="sub-idx">4-3</span><span class="sub-txt">Aave</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l4-uniswap.html"><span class="sub-idx">4-4</span><span class="sub-txt">Uniswap</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l4-jupiter.html"><span class="sub-idx">4-5</span><span class="sub-txt">Jupiter</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l4-circle.html"><span class="sub-idx">4-6</span><span class="sub-txt">Circle</span><span class="sub-tag">待建</span></a></li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- L5（主目录保留原样，加 3 个占位子目录；已有页面直接链接） -->
+    <li class="path-row">
+      <details class="path-fold">
+        <summary>
+          <svg class="fold-chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="path-body">
+            <h3><span class="path-lv">L5</span> · Web3 项目研究</h3>
+            <p>建立独立的项目研究框架，从赛道、机制、代币经济到风险信号，独自挖掘并验证潜在 N 倍项目。</p>
+          </div>
+        </summary>
+        <ul class="sub-links">
+          <li><a href="l5-chainlink.html"><span class="sub-idx">5-1</span><span class="sub-txt">Chainlink</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l5-ethereum.html"><span class="sub-idx">5-2</span><span class="sub-txt">Ethereum</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l5-bnb.html"><span class="sub-idx">5-3</span><span class="sub-txt">BNB</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l5-pumpfun.html"><span class="sub-idx">5-4</span><span class="sub-txt">Pumpfun</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l5-pendle.html"><span class="sub-idx">5-5</span><span class="sub-txt">Pendle</span><span class="sub-tag">待建</span></a></li>
+          <li><a href="l5-ethena.html"><span class="sub-idx">5-6</span><span class="sub-txt">Ethena</span><span class="sub-tag">待建</span></a></li>
+        </ul>
+      </details>
+    </li>
+
+  </ol>
+  </div><!-- /path-main -->
+
+  <aside class="path-aside">
+    <div class="updates-panel">
+      <div class="side-head">
+        <span class="side-label">本期更新</span>
+        <span class="side-rule"></span>
+      </div>
+      <ol class="dispatch">
+        <li style="padding:14px 0;border-bottom:1px solid var(--rule);font-family:var(--sans);font-size:14px;color:var(--ink-3);">（右侧本期更新区块保持不变）</li>
+      </ol>
+      <a href="topics.html" class="side-more">查看全部归档 ↗</a>
+    </div>
+  </aside>
+ </div><!-- /path-grid -->
+</section>
+
+</body>
+</html>

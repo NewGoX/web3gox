@@ -486,6 +486,99 @@ a.d-title:hover { color: var(--vermillion); }
 }
 .path-row:hover .path-arrow { color: var(--vermillion); transform: translateX(8px); }
 
+/* ── 可折叠子目录（点主目录展开子目录） ── */
+.path-fold > summary {
+  list-style: none; cursor: pointer; display: block;
+  position: relative; padding-right: 44px; user-select: none;
+}
+.path-fold > summary::-webkit-details-marker { display: none; }
+.fold-chev {
+  position: absolute; right: 8px; top: 6px;
+  width: 20px; height: 20px; color: var(--ink-3);
+  transition: transform var(--tr), color var(--tr);
+}
+.path-fold[open] > summary .fold-chev { transform: rotate(90deg); color: var(--vermillion); }
+.path-row:hover .fold-chev { color: var(--vermillion); }
+.sub-links {
+  list-style: none; margin-top: 18px; padding-top: 8px;
+  border-top: 1px dashed var(--rule);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px 32px;
+}
+.sub-links a {
+  display: flex; align-items: baseline; gap: 11px;
+  padding: 11px 12px; margin: 0 -12px;
+  border-radius: 8px; text-decoration: none !important;
+  color: var(--ink-2);
+  transition: background var(--tr), color var(--tr);
+}
+.sub-links a:hover { background: var(--paper-3); color: var(--vermillion); }
+.sub-links .sub-idx {
+  font-family: var(--mono); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .04em; color: var(--vermillion); flex: 0 0 auto; padding-top: 1px;
+}
+.sub-links .sub-txt { font-family: var(--sans); font-size: 14.5px; line-height: 1.5; flex: 1 1 auto; }
+.sub-links .sub-tag {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
+  color: var(--ink-3); border: 1px solid var(--rule); border-radius: 5px;
+  padding: 2px 6px; flex: 0 0 auto; align-self: center;
+}
+.sub-links .sub-tag.exist { color: var(--vermillion); border-color: var(--vermillion); }
+@media (max-width: 640px) { .sub-links { grid-template-columns: 1fr; } }
+
+/* ── 子目录页：左侧目录 + 右侧单篇阅读区（做法A） ── */
+.ba-wrap {
+  max-width: 1180px; margin: 0 auto; padding: 44px 32px 80px;
+  display: grid; grid-template-columns: 288px 1fr; gap: 52px; align-items: start;
+}
+.ba-side { position: sticky; top: 92px; }
+.ba-crumb {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px;
+}
+.ba-crumb a { color: var(--vermillion); text-decoration: none; }
+.ba-side h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 24px;
+  color: var(--ink); letter-spacing: -.01em; margin-bottom: 22px;
+}
+.ba-list { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.ba-item {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 11px 12px; margin: 0 -12px; border-radius: 8px;
+  text-decoration: none !important; cursor: pointer;
+  color: var(--ink-2); transition: background var(--tr), color var(--tr);
+}
+.ba-item:hover { background: var(--paper-3); color: var(--vermillion); }
+.ba-item.active { background: var(--paper-3); color: var(--vermillion); }
+.ba-item.active .ba-idx { color: var(--vermillion); }
+.ba-item.disabled { cursor: default; color: var(--ink-4); pointer-events: none; }
+.ba-idx {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .04em; color: var(--ink-3); flex: 0 0 auto; padding-top: 2px;
+}
+.ba-t { font-family: var(--sans); font-size: 14.5px; line-height: 1.5; }
+.ba-read { min-width: 0; }
+.ba-article { display: none; max-width: 760px; }
+.ba-article.active { display: block; }
+.ba-title {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(26px, 3vw, 34px); line-height: 1.2;
+  letter-spacing: -.02em; color: var(--ink); margin-bottom: 26px;
+}
+@media (max-width: 860px) {
+  .ba-wrap { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px 64px; }
+  .ba-side { position: static; }
+}
+/* 子目录空状态 */
+.ba-empty {
+  border: 1px dashed var(--rule); border-radius: 12px;
+  padding: 60px 32px; text-align: center; max-width: 760px;
+  font-family: var(--sans); font-size: 14.5px; line-height: 1.7; color: var(--ink-3);
+}
+.ba-empty .ba-empty-t {
+  font-family: var(--serif); font-weight: 600; font-size: 21px;
+  color: var(--ink-2); margin-bottom: 10px;
+}
+
 /* 路径区：左主栏 + 右侧「本期更新」 */
 .path-grid {
   display: flex;
