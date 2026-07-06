@@ -9,6 +9,7 @@
  * 首页只展示最新 5 条，旧的保留在此即可（作为归档数据）。
  */
 const UPDATES = [
+  { date: "2026-07-06", title: "Backpack手把手图文开户教程，2026最新", tag: "课程", url: "learn/l1/crypto-exchange.html#backpack" },
   { date: "2026-06-30", title: "ZA Bank（众安银行）开户教程，2026 最新", tag: "课程", url: "learn/l1/bank.html#za-bank" },
   { date: "2026-06-20", title: "WeChat Pay HK（香港微信支付）开通教程", tag: "课程", url: "learn/l1/bank.html#wechat-hk" },
 ];

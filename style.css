@@ -592,6 +592,20 @@ a.d-title:hover { color: var(--vermillion); }
   margin-bottom: 24px;
   text-align: left;
 }
+/* 文章配图：固定 720px 并与前后段落/图片明确留白 */
+.ba-article .article-img,
+.article-img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 36px 0;
+  border-radius: 8px;
+}
+.ba-article h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 .ba-title {
   font-family: var(--serif); font-weight: 600;
   font-size: clamp(26px, 3vw, 34px); line-height: 1.2;
