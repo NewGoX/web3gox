@@ -8,12 +8,14 @@
   var utc8 = new Date(now.getTime() + (now.getTimezoneOffset() + 480) * 60000);
   var dateStr = utc8.getFullYear()+'年'+(utc8.getMonth()+1)+'月'+utc8.getDate()+'日 '+weekdays[utc8.getDay()];
 
-  var top =
+  var mastHead =
     '<div class="masthead-bar"><div class="mb-inner">'+
     '<span class="mb-date">'+dateStr+'</span>'+
     '<span class="mb-spacer"></span>'+
     '<span class="mb-meta">52 节 课程 · 持续更新</span>'+
-    '</div></div>'+
+    '</div></div>';
+
+  var top =
     '<nav class="navbar" id="navbar"><div class="nav-inner">'+
     '<a href="'+R+'index.html" class="nav-logo"><span class="logo-mark">DF的加密笔记</span></a>'+
     '<div class="nav-links">'+
@@ -79,6 +81,9 @@
 
   var topSlot = document.getElementById('site-top');
   var footSlot = document.getElementById('site-foot');
-  if (topSlot) topSlot.innerHTML = top;
+  if (topSlot) {
+    topSlot.innerHTML = mastHead;
+    topSlot.insertAdjacentHTML('afterend', top);
+  }
   if (footSlot) footSlot.innerHTML = foot;
 })();
