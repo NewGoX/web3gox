@@ -22,6 +22,8 @@ const SEARCH_INDEX = [
 
   /* —— L2 · 入金与出金 —— */
   { t:"入金", u:"learn/l2/deposit.html", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金", kw:"入金 充值 法币 c2c onramp 买币" },
+  { t:"2026 Backpack 合规入金教程", u:"learn/l2/deposit.html#backpack-deposit", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 入金", kw:"backpack bp 入金 充值 法币 电汇 swift 众安 za bank 港卡 美元 到账 c2c onramp 安全 不被抓" },
+  { t:"2026 币安 合规入金教程", u:"learn/l2/deposit.html#binance-deposit", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 入金", kw:"binance 币安 入金 充值 法币 swift 银行转账 众安 za bank 港卡 美元 巴林 到账" },
   { t:"出金", u:"learn/l2/withdraw.html", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金", kw:"出金 提现 法币 c2c withdraw 卖币" },
 
   /* —— L3 · Web3链上实操 —— */

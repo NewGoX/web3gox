@@ -23,6 +23,8 @@
       '<div class="nav-dropdown-menu">'+
         '<a href="'+R+'courses.html#l1">L1  ·  注册与开户</a>'+
         '<a href="'+R+'courses.html#l2">L2  ·  入金与出金</a>'+
+        '<a href="'+R+'learn/l2/deposit.html#backpack-deposit" class="nav-dropdown-sub">— 2026 Backpack 合规入金教程</a>'+
+        '<a href="'+R+'learn/l2/deposit.html#binance-deposit" class="nav-dropdown-sub">— 2026 币安 合规入金教程</a>'+
         '<a href="'+R+'courses.html#l3">L3  ·  Web3链上实操</a>'+
         '<a href="'+R+'courses.html#l4">L4  ·  DeFi 协议实战</a>'+
         '<a href="'+R+'courses.html#l5">L5  ·  Web3 项目研究</a>'+
@@ -49,6 +51,8 @@
       '<div class="mobile-section-title">系统课程</div>'+
       '<a href="'+R+'courses.html#l1" class="mobile-sub">注册与开户</a>'+
       '<a href="'+R+'courses.html#l2" class="mobile-sub">入金与出金</a>'+
+      '<a href="'+R+'learn/l2/deposit.html#backpack-deposit" class="mobile-sub" style="padding-left:32px;opacity:.85;">— 2026 Backpack 合规入金教程</a>'+
+      '<a href="'+R+'learn/l2/deposit.html#binance-deposit" class="mobile-sub" style="padding-left:32px;opacity:.85;">— 2026 币安 合规入金教程</a>'+
       '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3链上实操</a>'+
       '<a href="'+R+'courses.html#l4" class="mobile-sub">DeFi 协议实战</a>'+
       '<a href="'+R+'courses.html#l5" class="mobile-sub">Web3 项目研究</a>'+
