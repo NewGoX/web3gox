@@ -25,6 +25,8 @@ const SEARCH_INDEX = [
   { t:"2026 Backpack 合规入金教程", u:"learn/l2/deposit.html#backpack-deposit", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 入金", kw:"backpack bp 入金 充值 法币 电汇 swift 众安 za bank 港卡 美元 到账 c2c onramp 安全 不被抓" },
   { t:"2026 币安 合规入金教程", u:"learn/l2/deposit.html#binance-deposit", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 入金", kw:"binance 币安 入金 充值 法币 swift 银行转账 众安 za bank 港卡 美元 巴林 到账" },
   { t:"出金", u:"learn/l2/withdraw.html", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金", kw:"出金 提现 法币 c2c withdraw 卖币" },
+  { t:"2026最新 Backpack 合规出金教程", u:"learn/l2/withdraw.html#backpack-withdraw", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 出金", kw:"backpack bp 出金 提现 withdraw 法币 电汇 swift 众安 za bank 港卡 美元 到账 零手续费 中间行 收款人 合规 安全" },
+  { t:"WeChat Pay HK（港版微信支付）开通教程", u:"learn/l2/withdraw.html#wechat-pay-hk", cat:"课程", badge:"L2", path:"系统课程 › L2 入金与出金 › 出金", kw:"wechat pay hk 微信支付 港版 香港 出金 消费 磨损 众安 za bank u卡 c2c 绑卡 切换钱包 backpack usdc" },
 
   /* —— L3 · Web3链上实操 —— */
   { t:"钱包管理与链上转账（一）", u:"learn/l3/sub-1.html", cat:"课程", badge:"L3", path:"系统课程 › L3 Web3链上实操", kw:"钱包 链上 转账 metamask 代币交互" },

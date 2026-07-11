@@ -9,6 +9,8 @@
  * 首页只展示最新 5 条，旧的保留在此即可（作为归档数据）。
  */
 const UPDATES = [
+  { date: "2026-07-11", title: "2026最新 Backpack 合规出金教程", tag: "课程", url: "learn/l2/withdraw.html#backpack-withdraw" },
+  { date: "2026-07-11", title: "WeChat Pay HK（港版微信支付）开通教程", tag: "课程", url: "learn/l2/withdraw.html#wechat-pay-hk" },
   { date: "2026-07-11", title: "2026 Backpack 合规入金教程", tag: "课程", url: "learn/l2/deposit.html#backpack-deposit" },
   { date: "2026-07-11", title: "2026 币安 合规入金教程", tag: "课程", url: "learn/l2/deposit.html#binance-deposit" },
   { date: "2026-07-10", title: "币安交易所手把手开户教程，2026最新", tag: "课程", url: "learn/l1/crypto-exchange.html#binance" },
