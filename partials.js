@@ -17,17 +17,16 @@
 
   var top =
     '<nav class="navbar" id="navbar"><div class="nav-inner">'+
-    '<a href="'+R+'index.html" class="nav-logo"><span class="logo-mark">DF的加密笔记</span></a>'+
+    '<a href="'+R+'index.html" class="nav-logo"><span class="logo-mark">DF 实战营</span></a>'+
     '<div class="nav-links">'+
       '<div class="nav-dropdown"><a href="'+R+'courses.html" class="nav-dropdown-toggle">系统课程 <span class="dropdown-arrow">▾</span></a>'+
       '<div class="nav-dropdown-menu">'+
-        '<a href="'+R+'courses.html#l1">L1  ·  注册与开户</a>'+
-        '<a href="'+R+'courses.html#l2">L2  ·  入金与出金</a>'+
+        '<a href="'+R+'courses.html#l1">L1  ·  Web3 实操基础</a>'+
         '<a href="'+R+'learn/l2/deposit.html#backpack-deposit" class="nav-dropdown-sub">— 2026 Backpack 合规入金教程</a>'+
         '<a href="'+R+'learn/l2/deposit.html#binance-deposit" class="nav-dropdown-sub">— 2026 币安 合规入金教程</a>'+
-        '<a href="'+R+'courses.html#l3">L3  ·  Web3链上实操</a>'+
-        '<a href="'+R+'courses.html#l4">L4  ·  DeFi 协议实战</a>'+
-        '<a href="'+R+'courses.html#l5">L5  ·  Web3 项目研究</a>'+
+        '<a href="'+R+'courses.html#l3">L2  ·  Web3 实操进阶</a>'+
+        '<a href="'+R+'courses.html#l4">L3  ·  DeFi 协议实战</a>'+
+        '<a href="'+R+'courses.html#l5">L4  ·  10倍项目研报</a>'+
       '</div></div>'+
       '<div class="nav-dropdown"><a href="'+R+'topics.html" class="nav-dropdown-toggle">专题系列 <span class="dropdown-arrow">▾</span></a>'+
       '<div class="nav-dropdown-menu">'+
@@ -49,13 +48,12 @@
     '<div class="nav-mobile" id="navMobile">'+
       '<a href="'+R+'search.html" class="mobile-sub">🔍 站内搜索</a>'+
       '<div class="mobile-section-title">系统课程</div>'+
-      '<a href="'+R+'courses.html#l1" class="mobile-sub">注册与开户</a>'+
-      '<a href="'+R+'courses.html#l2" class="mobile-sub">入金与出金</a>'+
+      '<a href="'+R+'courses.html#l1" class="mobile-sub">Web3 实操基础</a>'+
       '<a href="'+R+'learn/l2/deposit.html#backpack-deposit" class="mobile-sub" style="padding-left:32px;opacity:.85;">— 2026 Backpack 合规入金教程</a>'+
       '<a href="'+R+'learn/l2/deposit.html#binance-deposit" class="mobile-sub" style="padding-left:32px;opacity:.85;">— 2026 币安 合规入金教程</a>'+
-      '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3链上实操</a>'+
+      '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3 实操进阶</a>'+
       '<a href="'+R+'courses.html#l4" class="mobile-sub">DeFi 协议实战</a>'+
-      '<a href="'+R+'courses.html#l5" class="mobile-sub">Web3 项目研究</a>'+
+      '<a href="'+R+'courses.html#l5" class="mobile-sub">10倍项目研报</a>'+
       '<div class="mobile-section-title">专题系列</div>'+
       '<a href="'+R+'tools.html" class="mobile-sub">Web3 工具</a>'+
       '<a href="'+R+'research.html" class="mobile-sub">项目研究</a>'+
@@ -67,18 +65,17 @@
 
   var foot =
     '<footer class="foot"><div class="foot-grid">'+
-    '<div class="foot-brand"><a href="'+R+'index.html" class="brand"><span class="brand-mark"></span><span class="brand-name">DF的加密笔记</span></a>'+
+    '<div class="foot-brand"><a href="'+R+'index.html" class="brand"><span class="brand-mark"></span><span class="brand-name">DF 实战营</span></a>'+
     '<p>面向中文用户的 web3 系列课程。守住本金，系统认知，安全参与。</p></div>'+
     '<div class="foot-col"><h4>课程</h4>'+
-      '<a href="'+R+'courses.html#l1">Ⅰ · 注册与开户</a><a href="'+R+'courses.html#l2">Ⅱ · 入金与出金</a>'+
-      '<a href="'+R+'courses.html#l3">Ⅲ · Web3链上实操</a><a href="'+R+'courses.html#l4">Ⅳ · DeFi 协议实战</a>'+
-      '<a href="'+R+'courses.html#l5">Ⅴ · Web3 项目研究</a></div>'+
+      '<a href="'+R+'courses.html#l1">Ⅰ · Web3 实操基础</a><a href="'+R+'courses.html#l3">Ⅱ · Web3 实操进阶</a>'+
+      '<a href="'+R+'courses.html#l4">Ⅲ · DeFi 协议实战</a><a href="'+R+'courses.html#l5">Ⅳ · 10倍项目研报</a></div>'+
     '<div class="foot-col"><h4>内容</h4>'+
       '<a href="'+R+'research.html">项目研究</a><a href="'+R+'tools.html">Web3 工具</a>'+
       '<a href="'+R+'topics.html">专题系列</a><a href="'+R+'about.html">关 于</a>'+
       '<a href="'+R+'community.html">加入社群</a></div>'+
     '<div class="foot-col"><h4>声明</h4>'+
-      '<p class="foot-fine">© 2026 DF的加密笔记<br>内容仅供教育目的，不构成投资建议。<br>守住本金，系统认知，安全参与。</p></div>'+
+      '<p class="foot-fine">© 2026 DF 实战营<br>内容仅供教育目的，不构成投资建议。<br>守住本金，系统认知，安全参与。</p></div>'+
     '</div><div class="foot-rule"></div><div class="foot-bottom">'+
       '<span>字体 · 正文 IBM Plex Sans / Noto Serif SC · 标题 Fraunces / Instrument Serif</span>'+
       '<span>made for serious learners</span></div></footer>';
