@@ -19,6 +19,7 @@ const SEARCH_INDEX = [
   { t:"WeChat Pay HK（香港微信支付）开通教程", u:"learn/l1/bank.html#wechat-hk", cat:"课程", badge:"L1", path:"系统课程 › L1 Web3 实操基础 › 银行开户", kw:"微信支付 香港 wechat pay hk 出金 消费" },
   { t:"境外支付", u:"learn/l1/overseas-pay.html", cat:"课程", badge:"L1", path:"系统课程 › L1 Web3 实操基础", kw:"境外支付 支付 visa 信用卡 payment" },
   { t:"美股券商开户", u:"learn/l1/us-broker.html", cat:"课程", badge:"L1", path:"系统课程 › L1 Web3 实操基础", kw:"美股 券商 开户 老虎 富途 ibkr broker" },
+  { t:"投资美股必备！嘉信理财，2026最新开户教程", u:"learn/l1/us-broker.html#schwab", cat:"课程", badge:"L1", path:"系统课程 › L1 Web3 实操基础 › 美股券商开户", kw:"嘉信理财 schwab charles schwab 美股 券商 开户 国际版 护照 w-8ben w8ben 预扣税 非美国居民 出金 入金" },
 
   /* —— L1 · Web3 实操基础（入金与出金） —— */
   { t:"入金", u:"learn/l2/deposit.html", cat:"课程", badge:"L1", path:"系统课程 › L1 Web3 实操基础 › 入金", kw:"入金 充值 法币 c2c onramp 买币" },

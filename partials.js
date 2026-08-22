@@ -27,6 +27,7 @@
         '<a href="'+R+'courses.html#l3">L2  ·  Web3 实操进阶</a>'+
         '<a href="'+R+'courses.html#l4">L3  ·  DeFi 协议实战</a>'+
         '<a href="'+R+'courses.html#l5">L4  ·  10倍项目研报</a>'+
+        '<a href="'+R+'courses.html#l6">L5  ·  理论学习</a>'+
       '</div></div>'+
       '<div class="nav-dropdown"><a href="'+R+'topics.html" class="nav-dropdown-toggle">专题系列 <span class="dropdown-arrow">▾</span></a>'+
       '<div class="nav-dropdown-menu">'+
@@ -54,6 +55,7 @@
       '<a href="'+R+'courses.html#l3" class="mobile-sub">Web3 实操进阶</a>'+
       '<a href="'+R+'courses.html#l4" class="mobile-sub">DeFi 协议实战</a>'+
       '<a href="'+R+'courses.html#l5" class="mobile-sub">10倍项目研报</a>'+
+      '<a href="'+R+'courses.html#l6" class="mobile-sub">理论学习</a>'+
       '<div class="mobile-section-title">专题系列</div>'+
       '<a href="'+R+'tools.html" class="mobile-sub">Web3 工具</a>'+
       '<a href="'+R+'research.html" class="mobile-sub">项目研究</a>'+
@@ -69,7 +71,8 @@
     '<p>面向中文用户的 web3 系列课程。守住本金，系统认知，安全参与。</p></div>'+
     '<div class="foot-col"><h4>课程</h4>'+
       '<a href="'+R+'courses.html#l1">Ⅰ · Web3 实操基础</a><a href="'+R+'courses.html#l3">Ⅱ · Web3 实操进阶</a>'+
-      '<a href="'+R+'courses.html#l4">Ⅲ · DeFi 协议实战</a><a href="'+R+'courses.html#l5">Ⅳ · 10倍项目研报</a></div>'+
+      '<a href="'+R+'courses.html#l4">Ⅲ · DeFi 协议实战</a><a href="'+R+'courses.html#l5">Ⅳ · 10倍项目研报</a>'+
+      '<a href="'+R+'courses.html#l6">Ⅴ · 理论学习</a></div>'+
     '<div class="foot-col"><h4>内容</h4>'+
       '<a href="'+R+'research.html">项目研究</a><a href="'+R+'tools.html">Web3 工具</a>'+
       '<a href="'+R+'topics.html">专题系列</a><a href="'+R+'about.html">关 于</a>'+
